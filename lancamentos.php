@@ -2,12 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Filme app</title>
+<title>Lançamentos</title>
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/menu.css" rel="stylesheet" type="text/css">
-<link href="css/filme.css" rel="stylesheet" type="text/css">
+<link href="css/lancamentos.css" rel="stylesheet" type="text/css">
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
-<meta name="viewport" content="initial-scale=1"> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -16,15 +15,21 @@
 <main role="main">
 	
 <header>
-	
+
 	<?php
 	
 		include('menu.php');
 	
-	?>
+	?>	
 	
 </header>
 
+	<div class='categoriaPaginaLancamentos'>
+
+		<h2>Lançamentos</h2>
+
+	</div>			
+					
 
 <section class="submenu">
 	
@@ -34,23 +39,22 @@
 	
 </section>
 
+
 <section class="lancamentos_container">
 	
 <?php		
 require_once "config/conectar.php";
-
 //Agora é realizar a querie de busca no banco de dados	
+
 	
-	
-$filme = $_GET["filme"];	
-	
-$sql = "SELECT * FROM filmes WHERE idfilmes = $filme";	
+$sql = "SELECT * FROM filmes";	
 	
 $resultado = mysqli_query($strcon, $sql)
 or die ("Não foi possível realizar a consulta ao banco de dados");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
-	
+
+$idfilme = $linha["idfilmes"];	
 $titulo = $linha["titulo"];
 $titoriginal = $linha["titulo_original"];
 $poster = $linha["poster"];	
@@ -64,9 +68,11 @@ $trailer = $linha["trailer"];
 		
 		
 		
-			echo "<div id='filme_info'>
+			echo "
+			
+			<div id='filme_info'>
 		
-				<div id='poster_filme' style='background-image: url(img/posters/backgrounds/$imgFundo)'>
+				<div id='poster_filme'>
 
 					<img src='img/posters/$poster'>
 
@@ -86,29 +92,20 @@ $trailer = $linha["trailer"];
 						<h3>Direção </h3>
 						<p>$diretor</p>
 					</div>
+					
+					<div class='fichaTecnica'>
 
-				
-					<div>
-						<h3>Elenco </h3>
-						<p>$elenco</p>
+						<a href='filme.php?filme=$idfilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+
 					</div>
-
-					<div>
-						<h3>Sinopse </h3>
-						<p class='sinopse'>$sinopse</p>
-					</div>
-
-					<ol>
-						<li><h4>Gênero</h4>Cinema</li>
-						<li><h4>Duração</h4> min</li>
-						<li><h4>País</h4>$pais</li>
-					</ol>
 
 				</div>
+								
 		
 	</div>";
 }
 ?>	
+	
 	
 </section>									
 	

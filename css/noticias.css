@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+.noticia_completa, .topoNoticia {
+	width: 100%;
+	height: auto;
+}
+
+.topoNoticia h1 {
+	font-size: 2em;
+	text-align: center;
+}
+
+.topoNoticia h2 {
+	font-size: 1em;
+	text-align: center;
+}
+
+.topoNoticia p {
+	font-size: 1em;
+	text-align: center;
+}

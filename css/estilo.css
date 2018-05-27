@@ -19,8 +19,43 @@ body{
 	
 	header {
 		width: 100%;
-		height: 50px;
+		height: auto;
 		background-color: aqua;
+	}
+	
+	.categoriaPaginaCinema {
+		width: 100%;
+		height: 40px;
+		background-color: #1F3F60;
+	}
+	
+	.categoriaPaginaGames {
+		width: 100%;
+		height: 40px;
+		background-color: #007F06;
+	}
+	
+	.categoriaPaginaSeries {
+		width: 100%;
+		height: 40px;
+		background-color: #D19600;
+	}
+	
+	.categoriaPaginaLancamentos {
+		width: 100%;
+		height: 40px;
+		background-color: #3D3D3D;
+	}
+	
+	.categoriaPaginaNoticias {
+		width: 100%;
+		height: 40px;
+		background-color: #25043B;
+	}
+	
+	.categoriaPaginaCinema h2, .categoriaPaginaGames h2, .categoriaPaginaSeries h2, .categoriaPaginaLancamentos h2, .categoriaPaginaNoticias h2{
+		text-align: center;
+		color: #FFFFFF;
 	}
 	
 	.slider {
@@ -31,11 +66,36 @@ body{
 	
 	.submenu {
 		width: 100%;
-		height: 80px;
+		height: auto;
 		background-color: cornflowerblue;
 	}
 	
-	.noticias_container {
+	.categorias {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		background-color: bisque;
+		margin: 10px 0px;
+	}
+	
+	.categorias li{
+		float: left;
+		list-style: none;
+		padding: 10px 20px;
+		background-color: #1F3F60;
+		border-radius: 20px;
+	}
+	
+	.categorias li a{
+		text-decoration: none;
+		font-weight: bold;
+		color: #FFFFFF;
+	}
+	
+	
+	
+	
+	.noticias_container, .lancamentos_container, .noticia_container {
 		width: 100%;
 		height: auto;
 		background-color: gray;
@@ -53,12 +113,13 @@ body{
 		height: auto;
 		background-color: aquamarine;
 		display: flex;
-		flex-direction: row
+		flex-direction: row;
+		margin: 15px 0px;
 	}
 	
 	.imgNoticia {
 		width: 30%;
-		height: 100px;
+		height: auto;
 		background-color: blueviolet;
 	}
 	
@@ -69,8 +130,9 @@ body{
 	
 	.infoNoticiaContainer {
 		width: 70%;
-		height: 100px;
+		height: auto;
 		background-color: darkgoldenrod;
+		padding-left: 10px;
 	}
 	
 	.infoNoticia {
@@ -80,129 +142,35 @@ body{
 	}
 	
 	.infoNoticia button {
-		height: 18px;
-		border-radius: 9px;
-		background-color: #1F3F60;
+		height: 16px;
+		border-radius: 8px;
 		border-style: none;
 		color: #FFFFFF;
 	}
 	
+	.infoNoticia .Cinema {
+		background-color: #1F3F60;		
+	}
+	
+	.infoNoticia .Games {
+		background-color: #007F06;		
+	}
+	
+	.infoNoticia .Series {
+		background-color: #D19600;		
+	}
+	
 	.chamadaNoticia {
 		width: 100%;
-		height: 80px;
+		height: auto;
 		background-color: springgreen;
 	}
 	
-	#filme_info {
-	position: relative;
-	width: 100%; 
-	height: auto;
-	background-color: chartreuse;
-	margin: 0 auto;
-}
-
-#poster_filme {
-	position: relative;
-	width: 100%;
-	height: auto;
-	float: left;
-	/*margin-left: 20%;*/
-}
-
-#poster_filme img{
-	width: 60%;
-	margin: 20px 20%;
-	border: 1px solid #000000;
-	box-shadow: 1px 1px 2px #272727;
-	-webkit-box-shadow: 1px 1px 2px #272727;
-}
-
-#info {
-	position: relative;
-	width: 100%;
-	height: auto;
-	margin: 0 auto;
-}
-
-#info h1 {
-	font-size: 2em;
-	font-weight: bold;
-	line-height: normal;
-	color: #000000;
-	text-shadow: 1px 1px 2px #000000;
-	text-align: center;
-}
-
-#info h2 {
-	width: auto;
-	font-size: 1.375em; /*22px*/
-	color: #C0C0C0;
-	text-shadow: 1px 1px 1px #000000;
-	margin-bottom: 10px;
-	text-align: center;
-}
-
-#info a {
-	width: auto;
-	color: #ffffff;
-	text-decoration: none;
-}
-
-	#info div {
-		width: 100%;
-		height: auto;
-		margin-bottom: 5px; 
-		background-color: slateblue;
-		overflow: auto;
-	}	
+	.chamadaNoticia a {
+		text-decoration: none;
+		color: #000000;
+	}
 	
-#info div h3 {
-	width: auto;
-	font-size: 1em;
-	font-weight: bold;
-	float: left;
-	padding-right: 10px;
-	color: #FF5F5E;
-	text-shadow: 1px 1px 1px #000000;
-}
-
-#info div p {
-	width: auto;
-	color: #ffffff;
-	text-shadow: 1px 1px 1px #000000;
-	float: left;
-}
-
-#info ol {
-	display: flex;
-	justify-content: flex-start;
-	width: 100%;
-	height: auto;
-	flex-wrap: wrap;
-	float: left;
-	/*background-color: darkgoldenrod;*/
-	margin-top: 10px;
-}
-
-.sinopse {
-	font-size: .75em; /*12px*/
-}
-
-#info ol li {
-	display: block;
-	width: 30%;
-	color: #ffffff;
-	height: auto;
-	float: left;
-	text-shadow: 1px 1px 1px #000000;
-}
-
-#info ol li h4{
-	color: #FF5F5E;
-	font-weight: bold;
-	text-shadow: 1px 1px 2px #000000;
-}
-
 	
 	
 }
