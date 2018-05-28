@@ -1,0 +1,26 @@
+FUNÇOES DO SQL PARA BUSCA NO BANCO DE DADOS
+
+*Puxar somente generos do filme selecionado:
+
+SELECT nomegenero FROM filmes
+INNER JOIN filmes_has_generos
+ON filmes.idfilmes = filmes_has_generos.filmes_idfilmes
+INNER JOIN generos
+ON filmes_has_generos.generos_idgeneros = generos.idgeneros
+WHERE filmes.idfilmes = 1
+
+$sql2 = "SELECT nomegenero FROM filmes
+				INNER JOIN filmes_has_generos
+				ON filmes.idfilmes = filmes_has_generos.filmes_idfilmes
+				INNER JOIN generos
+				ON filmes_has_generos.generos_idgeneros = generos.idgeneros
+				WHERE filmes.idfilmes = $filme";	
+
+		$resultado = mysqli_query($strcon, $sql2)
+		or die ("Não foi possível realizar a consulta ao banco de dados");
+
+		while ($linha=mysqli_fetch_array($resultado)) {
+
+		$generos = $linha["nomegenero"];
+		
+		}

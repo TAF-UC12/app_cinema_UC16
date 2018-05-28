@@ -1,3 +1,10 @@
+<?php
+
+error_reporting(0);
+ini_set(“display_errors”, 0 );
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -60,7 +67,9 @@ $sinopse = $linha["sinopse"];
 $diretor = $linha["diretor"];
 $pais = $linha["paisOrigem"];
 $imgFundo = $linha["imgFundo"];
-$trailer = $linha["trailer"];		
+$trailer = $linha["trailer"];
+$duracao = $linha["duracao"];
+
 		
 		
 		
@@ -96,19 +105,55 @@ $trailer = $linha["trailer"];
 					<div>
 						<h3>Sinopse </h3>
 						<p class='sinopse'>$sinopse</p>
-					</div>
+					</div>";
 
+?>	
+	
+	
 					<ol>
-						<li><h4>Gênero</h4>Cinema</li>
-						<li><h4>Duração</h4> min</li>
-						<li><h4>País</h4>$pais</li>
+						<li><h4>Gênero</h4></li>
+
+<?php						
+$sql2 = "SELECT nomegenero FROM filmes
+				INNER JOIN filmes_has_generos
+				ON filmes.idfilmes = filmes_has_generos.filmes_idfilmes
+				INNER JOIN generos
+				ON filmes_has_generos.generos_idgeneros = generos.idgeneros
+				WHERE filmes.idfilmes = $filme";	
+
+		$resultado = mysqli_query($strcon, $sql2)
+		or die ("Não foi possível realizar a consulta ao banco de dados");
+
+		while ($linha=mysqli_fetch_array($resultado)) {
+
+		$generos = $linha["nomegenero"];
+		
+								
+						
+						
+						echo "<li>$generos</li>";
+						
+		}
+		?>
+	
+<?php						
+					echo "</ol>
+					
+					<ol>
+						<li><h4>Duração</h4></li>
+						<li>$duracao min</li>
+					</ol>
+						
+					<ol>
+						<li><h4>País</h4></li>
+						<li>$pais</li>
 					</ol>
 
 				</div>
 		
 	</div>";
 }
-?>	
+?>
 	
 </section>									
 	

@@ -1,3 +1,11 @@
+
+<?php
+
+error_reporting(0);
+ini_set(“display_errors”, 0 );
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -66,61 +74,31 @@ while ($linha=mysqli_fetch_array($resultado)) {
 		
 			echo "
 			
-			<div id='filme_info'>
+			<article class='noticia_completa'>
+
+			<header class='topoNoticia'>
+
+				<h1>$titulo </h1>
+				<h2>$subtitulo</h2>
+				<p>Autor da noticia</p>
+
+			</header>
+
+			<section class='corpo_noticia'>
+
+				<img src='img/noticias/$img' alt='$img'>
+				
+				
+				$texto
+
+			</section>
+
+		</article>
 		
-				<div id='poster_filme'>
-
-					<img src='img/posters/$poster'>
-
-				</div>
-
-				<div id='info'>
-
-					<h1>$titulo</h1>
-					<h2>$titoriginal</h2>
-
-					<div>
-						<h3>Lançamento </h3>
-						<p>$estreia</p>
-					</div>
-					
-					<div>
-						<h3>Direção </h3>
-						<p>$diretor</p>
-					</div>
-					
-					<div class='fichaTecnica'>
-
-						<a href='filme.php?filme=$idfilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
-
-					</div>
-
-				</div>
-								
-		
-	</div>";
+			";
 }
 ?>	
-
-<article class="noticia_completa">
-
-	<header class="topoNoticia">
-		
-		<h1>Titulo noticia</h1>
-		<h2>Subtitulo da noticia</h2>
-		<p>Autor da noticia</p>
-		
-	</header>
 	
-	<section class="corpo_noticia">
-		
-		<img src="img/noticias/handmaids.jpg" alt="">
-		
-		
-		
-	</section>
-	
-</article>	
 			
 	
 </section>									

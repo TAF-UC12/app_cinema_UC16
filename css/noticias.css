@@ -1,13 +1,19 @@
 @charset "utf-8";
 /* CSS Document */
 
-.noticia_completa, .topoNoticia {
+.noticia_completa {
+	position: relative;
+	width: 95%;
+	margin: 10px 2.5%;
+}
+
+.topoNoticia {
 	width: 100%;
 	height: auto;
 }
 
 .topoNoticia h1 {
-	font-size: 2em;
+	font-size: 1.375em;
 	text-align: center;
 }
 
@@ -17,6 +23,17 @@
 }
 
 .topoNoticia p {
-	font-size: 1em;
+	display: block;
+	font-size: .875em;
 	text-align: center;
+	margin-top: 20px;
+	width: 80%;
+	/*background-color: blue;*/
+	border-top: 2px inset #4990A6;
+}
+
+.corpo_noticia img {
+	position: relative;
+	width: 100%;
+	margin: 10px 0px;
 }

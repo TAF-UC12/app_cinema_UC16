@@ -94,12 +94,20 @@
 	font-size: .75em; /*12px*/
 }
 
-#info ol li {
+#info ol {
 	display: block;
 	width: 30%;
 	color: #ffffff;
 	height: auto;
 	float: left;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#info ol li {
+	display: block;
+	width: 100%;
+	color: #ffffff;
+	height: auto;
 	text-shadow: 1px 1px 1px #000000;
 }
 

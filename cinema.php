@@ -1,3 +1,10 @@
+<?php
+
+error_reporting(0);
+ini_set(“display_errors”, 0 );
+
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -5,6 +12,7 @@
 <title>Cinema</title>
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/menu.css" rel="stylesheet" type="text/css">
+<script defer src="js/fontawesome/fontawesome-all.js"></script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -43,12 +51,18 @@
 
 			echo "<div class='categoriaPagina$tipo'>
 
-						<h2>$tipo</h2>
+						<h2><i class='fas fa-angle-left' onclick='goBack()'></i> $tipo</h2>
 
 					</div>";
 	}
 	?>
-
+	
+	<script>
+	function goBack() {
+		window.history.back();
+	}
+	</script>
+	
 <section class="slider">
 	
 	
@@ -84,6 +98,7 @@
 
 	while ($linha=mysqli_fetch_array($resultado)) {
 
+	$idnoticia = $linha["idnoticias"];		
 	$titulo = $linha["tituloNoticia"];
 	$subtitulo = $linha["subtitulo"];
 	$texto = $linha["texto"];	
@@ -107,7 +122,7 @@
 					</div>
 
 					<div class='chamadaNoticia'>
-						<p><a href='#'>$titulo</a></p>
+						<p><a href='noticia.php?news=$idnoticia'>$titulo</a></p>
 					</div>
 
 				</div>
