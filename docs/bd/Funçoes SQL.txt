@@ -8,3 +8,20 @@ ON filmes.idfilmes = filmes_has_generos.filmes_idfilmes
 INNER JOIN generos
 ON filmes_has_generos.generos_idgeneros = generos.idgeneros
 WHERE filmes.idfilmes = 1
+
+*Puxar todas noticia de filmes:
+
+SELECT * FROM noticias
+INNER JOIN tipoPostagem
+ON noticias.tipo = tipoPostagem.idtipoPostagem
+INNER JOIN filmes
+ON filmes.idfilmes = noticias.relac_filmes
+
+
+*Puxar todas noticia de games:
+
+SELECT * FROM noticias
+INNER JOIN tipoPostagem
+ON noticias.tipo = tipoPostagem.idtipoPostagem
+INNER JOIN games
+ON games.idgames = noticias.relac_games

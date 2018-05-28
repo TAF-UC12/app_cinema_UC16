@@ -103,7 +103,9 @@ ini_set(“display_errors”, 0 );
 	$texto = $linha["texto"];	
 	$img = $linha["img"];
 	$tipo = $linha["tipoPost"];	
-
+	$rel_filme = $linha["rel_filmes"];	
+	$rel_serie = $linha["rel_series"];	
+	$rel_game = $linha["rel_games"];	
 
 			echo "<div class='noticia'>
 

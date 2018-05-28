@@ -74,19 +74,22 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	$subtitulo = $linha["subtitulo"];
 	$texto = $linha["texto"];	
 	$img = $linha["img"];
-	$tipo = $linha["tipoPost"];			
+	$tipo = $linha["tipoPost"];	
+	$rel_filme = $linha["relac_filmes"];	
+	$rel_serie = $linha["relac_series"];	
+	$rel_game = $linha["relac_games"];	
+	
 		
 		
 		
 			echo "
-			
 			<article class='noticia_completa'>
 
 			<header class='topoNoticia'>
 
 				<h1>$titulo </h1>
 				<h2>$subtitulo</h2>
-				<p>Autor da noticia</p>
+				<p>Autor da noticia $rel_game $rel_serie</p>
 
 			</header>
 
@@ -110,7 +113,57 @@ while ($linha=mysqli_fetch_array($resultado)) {
 </section>									
 	
 	
+<section class="info_relacionado_container">
+
+<?php
+		
 	
+$sql2 = "SELECT * FROM filmes WHERE $rel_filme != 0 OR $rel_serie != 0 OR $rel_game != 0";	
+	
+$resultado = mysqli_query($strcon, $sql2)
+or die ("Não foi possível realizar a consulta ao banco de dados 3");
+	
+while ($linha=mysqli_fetch_array($resultado)) {
+
+$idFilme = $linha["idfilmes"];	
+$titulo = $linha["titulo"];
+$titoriginal = $linha["titulo_original"];
+$poster = $linha["poster"];	
+	
+	
+	echo "<div class='info_relacionado'>
+		
+		<div class='poster_relacionado'><img src='img/posters/$poster' alt=''></div>
+		<div class='info'>
+			
+			<h1>$titulo</h1>
+			<h2>$titoriginal</h2>
+			
+			<div class='fichaTecnica'>
+
+				<a href='filme.php?filme=$idFilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+
+			</div>
+			
+		</div>
+		
+	</div>";
+}
+?>	
+	
+	<div class='noticia_relacionada'>
+		<div class='img_noticia_relacionada'><img src='img/noticias/handmaids.jpg' alt=""></div>
+		
+		<div class="titulo_noticia_relacionada">
+			
+			<h1>$titulo</h1>
+			
+		</div>
+		
+	</div>
+	
+	
+</section>	
 	
 	
 	

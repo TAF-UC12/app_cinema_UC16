@@ -7,9 +7,9 @@
 <file name="cinema.php" server="192.168.1.10//var/www/html/" local="131720011021334809" remote="131720124000000000" Dst="1" />
 <file name="menu.php" server="192.168.1.10//var/www/html/" local="131718598325534968" remote="131718706200000000" Dst="1" />
 <file name="games.php" server="192.168.1.10//var/www/html/" local="131720011021518427" remote="131720124000000000" Dst="1" />
-<file name="series.php" server="192.168.1.10//var/www/html/" local="131720011021598551" remote="131720124000000000" Dst="1" />
+<file name="series.php" server="192.168.1.10//var/www/html/" local="131720117595018575" remote="131720225400000000" Dst="1" />
 <file name="lancamentos.php" server="192.168.1.10//var/www/html/" local="131720060449016671" remote="131720168400000000" Dst="1" />
-<file name="noticia.php" server="192.168.1.10//var/www/html/" local="131720079818946895" remote="131720187600000000" Dst="1" />
+<file name="noticia.php" server="192.168.1.10//var/www/html/" local="131720147963816103" remote="131720255400000000" Dst="1" />
 <file name="filtro.php" server="192.168.1.10//var/www/html/" local="131720041984302054" remote="131720149800000000" Dst="1" />
 <file name="submenu_filme.php" server="192.168.1.10//var/www/html/" local="131720067511887243" remote="131720175000000000" Dst="1" />
 </dwsync>
