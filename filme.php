@@ -36,13 +36,16 @@ ini_set(“display_errors”, 0 );
 <section class="submenu">
 	
 	<?php
-		require_once('submenu.php');
+		require_once('submenu_filme.php');
 	?>
 	
 </section>
 
 <section class="lancamentos_container">
+
 	
+		
+				
 <?php		
 require_once "config/conectar.php";
 

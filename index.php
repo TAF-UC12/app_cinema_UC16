@@ -22,6 +22,7 @@ ini_set(“display_errors”, 0 );
 	
 <header>
 
+	<img src="#" alt="" class="logo">
 	<?php
 	
 		include('menu.php');
