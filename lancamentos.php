@@ -137,12 +137,9 @@ while ($linha=mysqli_fetch_array($resultado)) {
 
 $idfilme = $linha["idfilmes"];	
 $titulo = $linha["titulo"];
-$titoriginal = $linha["titulo_original"];
 $poster = $linha["poster"];	
 $estreia = $linha["lancamento"];
 $elenco = $linha["elenco"];	
-$sinopse = $linha["sinopse"];
-$diretor = $linha["diretor"];
 $pais = $linha["paisOrigem"];
 $imgFundo = $linha["imgFundo"];
 $trailer = $linha["trailer"];		
@@ -162,7 +159,6 @@ $trailer = $linha["trailer"];
 				<div id='info'>
 
 					<h1>$titulo</h1>
-					<h2>$titoriginal</h2>
 
 					<div>
 						<h3>Lançamento </h3>
@@ -170,8 +166,8 @@ $trailer = $linha["trailer"];
 					</div>
 					
 					<div>
-						<h3>Direção </h3>
-						<p>$diretor</p>
+						<h3>Elenco </h3>
+						<p>$elenco</p>
 					</div>
 					
 					<div class='fichaTecnica'>

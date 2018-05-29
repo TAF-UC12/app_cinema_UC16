@@ -116,16 +116,22 @@ while ($linha=mysqli_fetch_array($resultado)) {
 <section class="info_relacionado_container">
 
 <?php
-		
+
+$tipocategoria = $_GET["categoria"];
 	
-$sql2 = "SELECT * FROM filmes WHERE $rel_filme != 0 OR $rel_serie != 0 OR $rel_game != 0";	
+if ($tipocategoria == "Cinema"){$tabela = "filmes" and $coluna = "idfilmes";}
+if ($tipocategoria == "Series"){$tabela = "series" and $coluna = "idseries";}	
+if ($tipocategoria == "Games"){$tabela = "games" and $coluna = "idgames";}
+	
+	
+$sql2 = "SELECT * FROM $tabela WHERE $coluna =";	
 	
 $resultado = mysqli_query($strcon, $sql2)
 or die ("Não foi possível realizar a consulta ao banco de dados 3");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
 
-$idFilme = $linha["idfilmes"];	
+$idFilme = $linha["idfilmes"];
 $titulo = $linha["titulo"];
 $titoriginal = $linha["titulo_original"];
 $poster = $linha["poster"];	

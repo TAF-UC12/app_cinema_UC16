@@ -86,7 +86,7 @@ ini_set(“display_errors”, 0 );
 					</div>
 
 					<div class='chamadaNoticia'>
-						<p><a href='noticia.php?news=$idnoticia'>$titulo</a></p>
+						<p><a href='noticia.php?news=$idnoticia&categoria=$tipo'>$titulo</a></p>
 					</div>
 
 				</div>

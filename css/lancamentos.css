@@ -74,7 +74,7 @@
 	line-height: normal;
 	color: #000000;
 	text-shadow: 1px 1px 2px #000000;
-	text-align: center;
+	text-align: left;
 }
 
 #info h2 {
@@ -83,7 +83,7 @@
 	color: #C0C0C0;
 	text-shadow: 1px 1px 1px #000000;
 	margin-bottom: 10px;
-	text-align: center;
+	text-align: left;
 }
 
 #info a {
