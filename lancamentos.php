@@ -30,6 +30,8 @@ ini_set(“display_errors”, 0 );
 	?>	
 	
 </header>
+	
+	<section class="vazio"></section>
 
 	<div class='categoriaPaginaLancamentos'>
 
@@ -52,6 +54,8 @@ ini_set(“display_errors”, 0 );
 	
 </section>
 
+
+<div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
 <section class="lancamentos_container">
 	
@@ -119,9 +123,14 @@ $trailer = $linha["trailer"];
 					</div>
 
 				</div>
-								
+				
+				<div class='fichaTecnica_desktop'>
+
+						<a href='filme.php?filme=$idfilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+
+					</div>
 		
-	</div>";
+			</div>";
 }
 
 		
@@ -312,14 +321,7 @@ $trailer = $linha["trailer"];
 </section>									
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+</div> <!--FIM DO CORPO DO SITE-->	
 	
 	
 </main>

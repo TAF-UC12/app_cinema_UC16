@@ -116,15 +116,21 @@ while ($linha=mysqli_fetch_array($resultado)) {
 <section class="info_relacionado_container">
 
 <?php
-
-$tipocategoria = $_GET["categoria"];
+require_once "config/conectar.php";
 	
+$tipocategoria = $_GET["categoria"];
+		
 if ($tipocategoria == "Cinema"){$tabela = "filmes" and $coluna = "idfilmes";}
 if ($tipocategoria == "Series"){$tabela = "series" and $coluna = "idseries";}	
 if ($tipocategoria == "Games"){$tabela = "games" and $coluna = "idgames";}
 	
+
+switch ($tipocategoria) {
+		
+    case "Cinema":	
+
 	
-$sql2 = "SELECT * FROM $tabela WHERE $coluna =";	
+$sql2 = "SELECT * FROM $tabela WHERE $coluna = $rel_filme";	
 	
 $resultado = mysqli_query($strcon, $sql2)
 or die ("Não foi possível realizar a consulta ao banco de dados 3");
@@ -155,18 +161,83 @@ $poster = $linha["poster"];
 		
 	</div>";
 }
-?>	
-	
-	<div class='noticia_relacionada'>
-		<div class='img_noticia_relacionada'><img src='img/noticias/handmaids.jpg' alt=""></div>
+
+	 break;
 		
-		<div class="titulo_noticia_relacionada">
+	 case "Series":	
+
+		$sql2 = "SELECT * FROM $tabela WHERE $coluna = $rel_serie";	
+	
+$resultado = mysqli_query($strcon, $sql2)
+or die ("Não foi possível realizar a consulta ao banco de dados 5");
+	
+while ($linha=mysqli_fetch_array($resultado)) {
+
+$idFilme = $linha["idseries"];
+$titulo = $linha["titulo"];
+$titoriginal = $linha["titulo_original"];
+$poster = $linha["poster"];	
+	
+	
+	echo "<div class='info_relacionado'>
+		
+		<div class='poster_relacionado'><img src='img/posters/$poster' alt=''></div>
+		<div class='info'>
 			
 			<h1>$titulo</h1>
+			<h2>$titoriginal</h2>
+			
+			<div class='fichaTecnica'>
+
+				<a href='filme.php?filme=$idFilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+
+			</div>
 			
 		</div>
 		
-	</div>
+	</div>";
+}
+	
+	break;
+		
+	case "Games":	
+
+		$sql2 = "SELECT * FROM $tabela WHERE $coluna = $rel_game";	
+	
+$resultado = mysqli_query($strcon, $sql2)
+or die ("Não foi possível realizar a consulta ao banco de dados 6");
+	
+while ($linha=mysqli_fetch_array($resultado)) {
+
+$idFilme = $linha["idgames"];
+$titulo = $linha["tituloGame"];
+$titoriginal = $linha["titulo_original"];
+$poster = $linha["imgGame"];	
+	
+	
+	echo "<div class='info_relacionado'>
+		
+		<div class='poster_relacionado'><img src='img/posters/$poster' alt=''></div>
+		<div class='info'>
+			
+			<h1>$titulo</h1>
+			<h2>$titoriginal</h2>
+			
+			<div class='fichaTecnica'>
+
+				<a href='filme.php?filme=$idFilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+
+			</div>
+			
+		</div>
+		
+	</div>";
+}	
+	
+	break;	
+		
+}
+?>	
 	
 	
 </section>	

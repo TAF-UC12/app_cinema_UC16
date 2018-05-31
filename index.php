@@ -13,8 +13,108 @@ ini_set(“display_errors”, 0 );
 <title>Home app</title>
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/menu.css" rel="stylesheet" type="text/css">
+<script defer src="js/fontawesome/fontawesome-all.js"></script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--LINKS DOS ARQUIVOS JS-->
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+        jssor_1_slider_init = function() {
+
+            var jssor_1_SlideoTransitions = [
+              [{b:-1,d:1,o:-0.7}],
+              [{b:900,d:2000,x:-379,e:{x:7}}],
+              [{b:900,d:2000,x:-379,e:{x:7}}],
+              [{b:-1,d:1,o:-1,sX:2,sY:2},{b:0,d:900,x:-171,y:-341,o:1,sX:-2,sY:-2,e:{x:3,y:3,sX:3,sY:3}},{b:900,d:1600,x:-283,o:-1,e:{x:16}}]
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideDuration: 800,
+              $SlideEasing: $Jease$.$OutQuint,
+              $CaptionSliderOptions: {
+                $Class: $JssorCaptionSlideo$,
+                $Transitions: jssor_1_SlideoTransitions
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 3000;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+</script>
+
+<script type="text/javascript">
+        function searchToggle(obj, evt){
+            var container = $(obj).closest('.search-wrapper');
+
+            if(!container.hasClass('active')){
+                  container.addClass('active');
+                  evt.preventDefault();
+            }
+            else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+                  container.removeClass('active');
+                  // clear input
+                  container.find('.search-input').val('');
+                  // clear and hide result container when we press close
+                  container.find('.result-container').fadeOut(100, function(){$(this).empty();});
+            }
+        }
+
+        function submitFn(obj, evt){
+            value = $(obj).find('.search-input').val().trim();
+
+            _html = "Yup yup! Your search text sounds like this: ";
+            if(!value.length){
+                _html = "Yup yup! Add some text friend :D";
+            }
+            else{
+                _html += "<b>" + value + "</b>";
+            }
+
+            $(obj).find('.result-container').html('<span>' + _html + '</span>');
+            $(obj).find('.result-container').fadeIn(100);
+
+            evt.preventDefault();
+        }
+</script>
+
+
 </head>
 
 <body>
@@ -32,10 +132,86 @@ ini_set(“display_errors”, 0 );
 
 </header>
 
-<section class="slider">
-	
-	
-</section>
+<section class="vazio"></section>
+
+<div id="topo_slides_container">
+
+		<!--ESTA SECTION SÓ TEM O SLIDER-->
+		<section id='destaques_topo'>
+
+
+
+			<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;visibility:hidden;">
+			<!-- Loading Screen -->
+			<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+				<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+			</div>
+
+			<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
+
+		
+	<?php          
+			 require_once "config/conectar.php";
+
+			//Agora é realizar a querie de busca no banco de dados
+
+			$sql = "SELECT * FROM noticias WHERE destaque = 'on' ORDER BY 
+			idnoticias DESC LIMIT 3";
+
+
+			$resultado = mysqli_query($strcon, $sql)
+			or die ("Não foi possível realizar a consulta ao banco de dados");
+
+			// Agora iremos "pegar" cada campo da notícia
+			// e organizar no HTML
+
+			while ($linha=mysqli_fetch_array($resultado)) {
+
+			$id = $linha["idnoticias"];	
+			$titulo = $linha["tituloNoticia"];
+			$subtitulo = $linha["subtitulo"];
+			$imgDestaque = $linha["imgDestaque"];	
+		
+		
+			echo "<div data-p='225.00'>
+							<img data-u='image' src='img/slideshow/$imgDestaque' />
+							<div class='noticia_titulo_home'>
+								<!--<img style='position:absolute;top:0px;left:0px;width:470px;height:160px;' src='img/c-phone-horizontal.png' />-->
+
+
+								<h1>$titulo</h1>
+								<h2>$subtitulo</h2>
+
+								<a href='noticia.php?news=$id&pgtitulo=$titulo'><i class='fas fa-arrow-circle-right'></i> Continuar lendo</a>
+
+							</div>
+						</div>";
+			        
+}
+			?>
+			
+			</div>
+				
+				
+				
+			<!-- Bullet Navigator -->
+			<div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;left:150px;" data-scale="0.5" data-scale-bottom="0.75">
+				<div data-u="prototype" class="i" style="width:16px;height:16px;">
+					<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+						<circle class="b" cx="8000" cy="8000" r="5800"></circle>
+					</svg>
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript">jssor_1_slider_init();</script>
+		<!-- #endregion Jssor Slider End -->
+
+		</section>
+		<!--FIM DA SECTION QUE SÓ TEM O SLIDER-->
+
+	</div>
 
 <section class="submenu">
 
@@ -45,68 +221,107 @@ ini_set(“display_errors”, 0 );
 	
 </section>
 
+<div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
+
 <section class="noticias_container">
 	
-	
-	
-	<article class="lista_noticias">
-
-	<?php
-	require_once "config/conectar.php";	
-
-	$sql = "SELECT * FROM noticias
+    <article class="lista_noticias">
+    
+	    <?php
+    include "config/conectar.php";
+    $qtde_registros = 2;
+    @$page = $_GET['pag'];
+    if(!$page){
+        $pagina = 1;
+    }else{
+        $pagina = $page;
+    }
+    
+    $inicio = $pagina  - 1;
+    $inicio = $inicio * $qtde_registros;
+    $sel_parcial = mysqli_query($strcon,"SELECT * FROM noticias
 			INNER JOIN tipoPostagem
-			ON noticias.tipo = tipoPostagem.idtipoPostagem";	
-
-	$resultado = mysqli_query($strcon, $sql)
-	or die ("Não foi possível realizar a consulta ao banco de dados");
-
-	while ($linha=mysqli_fetch_array($resultado)) {
-
-	$idnoticia = $linha["idnoticias"];	
-	$titulo = $linha["tituloNoticia"];
-	$subtitulo = $linha["subtitulo"];
-	$texto = $linha["texto"];	
-	$img = $linha["img"];
-	$tipo = $linha["tipoPost"];	
-
-			echo "<div class='noticia'>
+			ON noticias.tipo = tipoPostagem.idtipoPostagem LIMIT $inicio, $qtde_registros");
+	
+    $sel_total = mysqli_query($strcon,"SELECT * FROM noticias
+			INNER JOIN tipoPostagem
+			ON noticias.tipo = tipoPostagem.idtipoPostagem");
+    
+    $contar = mysqli_num_rows($sel_total);
+    $contar_pages = $contar / $qtde_registros;
+    //echo $contar_pages;
+    
+    while($linha  = mysqli_fetch_array($sel_parcial)){
+            $idnoticia = $linha["idnoticias"];	
+			$titulo = $linha["tituloNoticia"];
+			$subtitulo = $linha["subtitulo"];
+			$texto = $linha["texto"];	
+			$img = $linha["img"];
+			$tipo = $linha["tipoPost"];	
+			$id_tipo_post = $linha["idtipoPostagem"];
+		
+	if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
+	if ($id_tipo_post == 2){$tipo_categoria = "Games";}
+	if ($id_tipo_post == 3){$tipo_categoria = "Series";}	
+		
+	?>
+	
+	
+	<div class='noticia'>
 
 				<div class='imgNoticia'>
-					<img src='img/noticias/$img' alt='$img'>
+					<img src='img/noticias/<?php echo $img; ?>' alt='<?php echo $img; ?>'>
 
 				</div>
 
 				<div class='infoNoticiaContainer'>
 					<div class='infoNoticia'>
 
-						<button type='button' class='$tipo'>$tipo</button>
+						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo; ?></button>
 
 
 					</div>
 
 					<div class='chamadaNoticia'>
-						<p><a href='noticia.php?news=$idnoticia&categoria=$tipo'>$titulo</a></p>
+						<p><a href='noticia.php?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>'><?php echo $titulo; ?></a></p>
 					</div>
 
 				</div>
 
-			</div>";
+			</div>
+   
+   <?php
+     }	
+	
+	$anterior = $pagina - 1;
+    $proximo = $pagina + 1;
+    
+    echo "<div class='pg_seletor'>";
+    if($pagina > 1){
+        echo "<a href=?pag=$anterior> <i class='fas fa-angle-left'></i> </a>";
+    }
+    
+    for($i = 1;$i<$contar_pages+1;$i++){
+        echo "<a href=?pag=".$i.">".$i."</a>";
+    }
+    
+    if($pagina < $contar_pages){
+        echo "<a href=?pag=$proximo> <i class='fas fa-angle-right'></i> </a>";
+    }
+	echo "</div>";	
+    ?>
+		
+		</article>	
+	
+</section>	
 
-	}
-	?>
-			</article>	
-	
-	
-</section>									
+<aside class="categorias_lancamento_container">
 	
 	
 	
+</aside>																
 	
-	
-	
-	
-	
+</div> <!--FIM DO CORPO DO SITE-->	
 	
 	
 	

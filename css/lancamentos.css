@@ -1,6 +1,101 @@
 @charset "utf-8";
 /* CSS Document */
 
+@media only screen and (min-width: 769px){
+	
+	.lancamentos_container {
+		position: relative;
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	
+	#filme_info {
+		width: 200px;
+		height: auto;
+		background-color: aquamarine;
+		margin: 15px 0px;
+		overflow: hidden;
+}
+
+	
+#poster_filme {
+	width: auto;
+	height: auto;
+	background-color: blueviolet;
+}
+
+#poster_filme img{
+	width: 100%;
+	border: 1px solid #000000;
+	box-shadow: 1px 1px 2px #272727;
+	-webkit-box-shadow: 1px 1px 2px #272727;
+}
+
+	
+.filtro_container{
+	position: relative;
+	width: 100%;
+	height: auto;
+	background-color: violet;
+}
+
+.form_filtro {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.col-20 {
+    float: left;
+    width: 20%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row_small:after {
+    content: "";
+    display: table;
+}
+
+
+.row_medium:after {
+    content: "";
+    display: table;
+	clear: both;
+}	
+	
+.fichaTecnica {
+	width: 100%;
+	float: left;
+}
+
+.fichaTecnica button{
+	width: 80%;
+	height: 32px;
+	border-radius: 16px;
+	border-style: none;
+	background-color: #FF5F5E;
+	color: #FFFFFF;
+	text-align: center;
+	float: right;
+	margin-right: 10%;
+}	
+	
+}
+
+
+
+@media only screen and (max-width: 768px){
+
 .filtro_container{
 	position: relative;
 	width: 100%;
@@ -64,7 +159,7 @@
 #info {
 	width: 70%;
 	height: auto;
-	background-color: darkgoldenrod;
+	/*background-color: darkgoldenrod;*/
 	padding-left: 10px;
 }
 
@@ -164,3 +259,6 @@
 	float: right;
 	margin-right: 10%;
 }
+	
+}
+	
