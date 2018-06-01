@@ -53,8 +53,9 @@ ini_set(“display_errors”, 0 );
 	
 </section>
 
+<div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
-<section class="noticia_container">
+<section class="noticias_container">
 	
 <?php		
 require_once "config/conectar.php";
@@ -242,7 +243,9 @@ $poster = $linha["imgGame"];
 	
 </section>	
 	
+																
 	
+</div> <!--FIM DO CORPO DO SITE-->	
 	
 	
 	
