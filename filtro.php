@@ -18,9 +18,23 @@
 		  <div class="col-20">
 		  
 			<select id="" name="filtro_genero">
-			  <option value="sim">Terror</option>
-			  <option value="nao">Ação</option>
-			  <option value="off">Comédia</option>
+		  		<option value=''>Gêneros</option>
+		  <?php 
+				include_once("config/conectar.php");
+				
+				$sql = "SELECT * FROM generos";
+				
+				$resultado = mysqli_query($strcon, $sql)
+					or die ("Não foi possível realizar a consulta ao banco de dados para obter os generos");
+				
+				while ($linha=mysqli_fetch_array($resultado)) {
+					
+					$id_generos = $linha["idgeneros"];
+					$nome_generos = $linha["nomegenero"];
+		  
+			  echo "<option value='$id_generos'>$nome_generos</option>";
+				}
+				?>
 			</select>
 			
 		  </div>
@@ -28,9 +42,19 @@
 		  <div class="col-20">
 		  
 			<select id="" name="filtro_mes">
-			  <option value="sim">Janeiro</option>
-			  <option value="nao">Fevereiro</option>
-			  <option value="off">Março</option>
+		  		<option value="">Mês</option>
+			  <option value="1">Janeiro</option>
+			  <option value="2">Fevereiro</option>
+			  <option value="3">Março</option>
+			  <option value="4">Abril</option>
+			  <option value="5">Maio</option>
+			  <option value="6">Junho</option>
+			  <option value="7">Julho</option>
+			  <option value="8">Agosto</option>
+			  <option value="9">Setembro</option>
+			  <option value="10">Outubro</option>
+			  <option value="11">Novembro</option>
+			  <option value="12">Desembro</option>
 			</select>
 			
 		  </div>

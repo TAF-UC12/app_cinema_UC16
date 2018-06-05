@@ -1,0 +1,359 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@media only screen and (min-width: 769px){
+	
+	
+#filme_info {
+	width: 100%;
+	height: auto;
+	background-color: #232323;
+	margin: 15px 0px;
+	display: flex;
+	flex-direction: row;
+}
+
+#poster_filme {
+	width: 100%;
+	height: auto;
+	background-color: blueviolet;
+	
+}
+
+	#poster_filme img{
+	width: 60%;
+	margin: 10px 20%;
+	border: 1px solid #000000;
+	box-shadow: 1px 1px 2px #272727;
+	-webkit-box-shadow: 1px 1px 2px #272727;
+}
+
+#info {
+	width: 100%;
+	height: auto;
+/*	background-color: darkgoldenrod;*/
+	padding: 10px;
+}
+
+#info h1 {
+	font-size: 1.375em; /*22px*/
+	font-weight: bold;
+	line-height: normal;
+	color: #ffffff;
+	text-shadow: 1px 1px 2px #000000;
+	text-align: center;
+}
+
+#info h2 {
+	width: auto;
+	font-size: .875em; /*14px*/
+	color: #C0C0C0;
+	text-shadow: 1px 1px 1px #000000;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#info a {
+	width: auto;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+	#info div {
+		width: 100%;
+		height: auto;
+		margin-bottom: 5px; 
+		background-color: slateblue;
+		overflow: auto;
+	}	
+	
+#info div h3 {
+	width: auto;
+	font-size: .75em;
+	font-weight: bold;
+	float: left;
+	padding-right: 10px;
+	color: #FF5F5E;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#info div p {
+	width: auto;
+	font-size: .75em;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #000000;
+	float: left;
+}
+
+
+#info ol {
+	width: 33.33333333333333%;
+	height: auto;
+	/*background-color: aqua;*/
+	float: left;
+}	
+	
+	#info ol li {
+	display: block;
+	width: 100%;
+	color: #ffffff;
+	height: auto;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#info ol li h4{
+	color: #FF5F5E;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px #000000;
+}
+
+.fichaTecnica {
+	width: 100%;
+	float: left;
+}
+
+.fichaTecnica button{
+	width: 80%;
+	height: 32px;
+	border-radius: 16px;
+	border-style: none;
+	background-color: #FF5F5E;
+	color: #FFFFFF;
+	text-align: center;
+	float: right;
+	margin-right: 10%;
+}	
+	
+	
+}
+
+
+
+
+
+@media only screen and (max-width: 768px){
+	
+#filme_info {
+	width: 100%;
+	height: auto;
+	background-color: aquamarine;
+	margin: 15px 0px;
+}
+
+#poster_filme {
+	width: 100%;
+	height: auto;
+	background-color: blueviolet;
+}
+
+#poster_filme img{
+	width: 60%;
+	margin: 10px 20%;
+	border: 1px solid #000000;
+	box-shadow: 1px 1px 2px #272727;
+	-webkit-box-shadow: 1px 1px 2px #272727;
+}
+
+#info {
+	width: 100%;
+	height: auto;
+	/*background-color: darkgoldenrod;*/
+	padding: 10px;
+}
+
+#info h1 {
+	font-size: 1.375em; /*22px*/
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-shadow: 1px 1px 2px #000000;
+	text-align: center;
+}
+
+#info h2 {
+	width: auto;
+	font-size: .875em; /*14px*/
+	color: #C0C0C0;
+	text-shadow: 1px 1px 1px #000000;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#info a {
+	width: auto;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#info div {
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px; 
+	background-color: slateblue;
+	overflow: auto;
+}	
+	
+#info div h3 {
+	width: auto;
+	font-size: .75em;
+	font-weight: bold;
+	float: left;
+	padding-right: 10px;
+	color: #FF5F5E;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#info div p {
+	width: auto;
+	font-size: .75em;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #000000;
+	float: left;
+}	
+	
+.sinopse {
+	font-size: .75em; /*12px*/
+}
+
+#info ol {
+	width: 33.33333333333333%;
+	height: auto;
+	/*background-color: aqua;*/
+	float: left;
+}	
+
+#info ol li {
+	display: block;
+	width: 100%;
+	color: #ffffff;
+	height: auto;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#info ol li h4{
+	color: #FF5F5E;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px #000000;
+}
+
+.fichaTecnica {
+	width: 100%;
+	float: left;
+}
+
+.fichaTecnica button{
+	width: 80%;
+	height: 32px;
+	border-radius: 16px;
+	border-style: none;
+	background-color: #FF5F5E;
+	color: #FFFFFF;
+	text-align: center;
+	float: right;
+	margin-right: 10%;
+}
+	
+	
+	
+}
+
+
+
+
+
+
+@media only screen and (max-width: 360px){
+	
+	#poster_filme {
+	width: 100%;
+	height: auto;
+	background-color: blueviolet;
+}
+	
+	#poster_filme img{
+	width: 60%;
+	margin: 10px 20%;
+	border: 1px solid #000000;
+	box-shadow: 1px 1px 2px #272727;
+	-webkit-box-shadow: 1px 1px 2px #272727;
+}
+
+#info {
+	width: 100%;
+	height: auto;
+	/*background-color: darkgoldenrod;*/
+	padding: 5px;
+}	
+	
+#info div h3 {
+	width: auto;
+	font-size: .75em;
+	font-weight: bold;
+	float: left;
+	padding-right: 10px;
+	color: #FF5F5E;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#info div p {
+	width: auto;
+	font-size: .75em;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #000000;
+	float: left;
+}
+
+
+.sinopse {
+	font-size: .75em; /*12px*/
+}
+
+#info ol {
+	width: 33.33333333333333%;
+	height: auto;
+	/*background-color: aqua;*/
+	float: left;
+}	
+	
+
+#info ol li {
+	display: block;
+	width: 100%;
+	color: #ffffff;
+	height: auto;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#info ol li h4{
+	color: #FF5F5E;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px #000000;
+}
+
+.fichaTecnica {
+	width: 100%;
+	float: left;
+}
+
+.fichaTecnica button{
+	width: 80%;
+	height: 32px;
+	border-radius: 16px;
+	border-style: none;
+	background-color: #FF5F5E;
+	color: #FFFFFF;
+	text-align: center;
+	float: right;
+	margin-right: 10%;
+}	
+	
+	
+}
+
+
+
+
+
+
+	

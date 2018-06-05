@@ -230,7 +230,7 @@ ini_set(“display_errors”, 0 );
     
 	    <?php
     include "config/conectar.php";
-    $qtde_registros = 2;
+    $qtde_registros = 4;
     @$page = $_GET['pag'];
     if(!$page){
         $pagina = 1;
@@ -242,7 +242,7 @@ ini_set(“display_errors”, 0 );
     $inicio = $inicio * $qtde_registros;
     $sel_parcial = mysqli_query($strcon,"SELECT * FROM noticias
 			INNER JOIN tipoPostagem
-			ON noticias.tipo = tipoPostagem.idtipoPostagem LIMIT $inicio, $qtde_registros");
+			ON noticias.tipo = tipoPostagem.idtipoPostagem ORDER BY idnoticias DESC LIMIT $inicio, $qtde_registros");
 	
     $sel_total = mysqli_query($strcon,"SELECT * FROM noticias
 			INNER JOIN tipoPostagem

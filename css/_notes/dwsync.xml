@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="estilo.css" server="192.168.1.10//var/www/html/" local="131722705977552579" remote="131722813800000000" Dst="1" />
-<file name="menu.css" server="192.168.1.10//var/www/html/" local="131718561756744670" remote="131718669600000000" Dst="1" />
-<file name="lancamentos.css" server="192.168.1.10//var/www/html/" local="131721865824073490" remote="131721973800000000" Dst="1" />
-<file name="filme.css" server="192.168.1.10//var/www/html/" local="131720011021355010" remote="131720124000000000" Dst="1" />
-<file name="noticias.css" server="192.168.1.10//var/www/html/" local="131722718563479854" remote="131722826400000000" Dst="1" />
-<file name="index.css" server="192.168.1.10//var/www/html/" local="131722715891957171" remote="131722823400000000" Dst="1" />
+<file name="estilo.css" server="192.168.1.10//var/www/html/" local="131726333593428426" remote="131726423400000000" Dst="1" />
+<file name="menu.css" server="192.168.1.10//var/www/html/" local="131718561756744670" remote="131725413600000000" Dst="1" />
+<file name="lancamentos.css" server="192.168.1.10//var/www/html/" local="131726279408194122" remote="131726369400000000" Dst="1" />
+<file name="noticias.css" server="192.168.1.10//var/www/html/" local="131723729375927643" remote="131725413600000000" Dst="1" />
+<file name="index.css" server="192.168.1.10//var/www/html/" local="131725230754183524" remote="131725413600000000" Dst="1" />
+<file name="ficha_tecnica.css" server="192.168.1.10//var/www/html/" local="131725253000509252" remote="131725413000000000" Dst="1" />
+<file name="categorias.css" server="192.168.1.10//var/www/html/" local="131726319248370462" remote="131726409000000000" Dst="1" />
 </dwsync>

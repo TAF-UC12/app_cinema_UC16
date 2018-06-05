@@ -58,46 +58,58 @@ ini_set(“display_errors”, 0 );
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
 <section class="lancamentos_container">
+<div class="lancamentos_lista">
+
 	
 <?php		
 require_once "config/conectar.php";
 //Agora é realizar a querie de busca no banco de dados	
 
-$filtro_teste = $_GET["filtro_categoria"];	
+$filtro_categoria = $_GET["filtro_categoria"];	
+$filtro_genero = $_GET["filtro_genero"];	
 	
 	
-switch ($filtro_teste) {
+switch ($filtro_categoria) {
 		
     case "filmes":
         
-		$sql = "SELECT * FROM filmes";	
-	
-$resultado = mysqli_query($strcon, $sql)
-or die ("Não foi possível realizar a consulta ao banco de dados");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
 
-$idfilme = $linha["idfilmes"];	
-$titulo = $linha["titulo"];
-$titoriginal = $linha["titulo_original"];
-$poster = $linha["poster"];	
-$estreia = $linha["lancamento"];
-$elenco = $linha["elenco"];	
-$sinopse = $linha["sinopse"];
-$diretor = $linha["diretor"];
-$pais = $linha["paisOrigem"];
-$imgFundo = $linha["imgFundo"];
-$trailer = $linha["trailer"];		
+    include "config/conectar.php";
+    $qtde_registros = 3;
+    @$page = $_GET['pag'];
+    if(!$page){
+        $pagina = 1;
+    }else{
+        $pagina = $page;
+    }
+    
+    $inicio = $pagina  - 1;
+    $inicio = $inicio * $qtde_registros;
+    $sel_parcial = mysqli_query($strcon,"SELECT * FROM filmes ORDER BY idfilmes DESC LIMIT $inicio, $qtde_registros");
+	
+    $sel_total = mysqli_query($strcon,"SELECT * FROM filmes");
+    
+    $contar = mysqli_num_rows($sel_total);
+    $contar_pages = $contar / $qtde_registros;
+    //echo $contar_pages;
+    
+    while($linha  = mysqli_fetch_array($sel_parcial)){
+            $id = $linha["idfilmes"];	
+			$titulo = $linha["titulo"];
+			$titoriginal = $linha["titulo_original"];
+			$poster = $linha["poster"];	
+			$estreia = $linha["lancamento"];
+			$elenco = $linha["elenco"];	
+			$sinopse = $linha["sinopse"];
+			$diretor = $linha["diretor"];
+			$pais = $linha["paisOrigem"];
+			$imgFundo = $linha["imgFundo"];
+			$trailer = $linha["trailer"];	
 		
-		
-		
-			echo "
-			
-			<div id='filme_info'>
-		
-				<div id='poster_filme'>
+	
+	echo "<div id='filme_info'>
 
-					<img src='img/posters/$poster'>
+					<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><div id='poster_filme'><img src='img/posters/$poster'></a>
 
 				</div>
 
@@ -118,50 +130,53 @@ $trailer = $linha["trailer"];
 					
 					<div class='fichaTecnica'>
 
-						<a href='filme.php?filme=$idfilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+						<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
 
 					</div>
 
 				</div>
 				
-				<div class='fichaTecnica_desktop'>
-
-						<a href='filme.php?filme=$idfilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
-
-					</div>
-		
 			</div>";
-}
-
+	}
 		
-        break;
-    case "series":
+	break;
+	
+	case "series":
         
-		$sql = "SELECT * FROM series";	
-	
-$resultado = mysqli_query($strcon, $sql)
-or die ("Não foi possível realizar a consulta ao banco de dados");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
 
-$idfilme = $linha["idfilmes"];	
-$titulo = $linha["titulo"];
-$poster = $linha["poster"];	
-$estreia = $linha["lancamento"];
-$elenco = $linha["elenco"];	
-$pais = $linha["paisOrigem"];
-$imgFundo = $linha["imgFundo"];
-$trailer = $linha["trailer"];		
+    include "config/conectar.php";
+    $qtde_registros = 2;
+    @$page = $_GET['pag'];
+    if(!$page){
+        $pagina = 1;
+    }else{
+        $pagina = $page;
+    }
+    
+    $inicio = $pagina  - 1;
+    $inicio = $inicio * $qtde_registros;
+    $sel_parcial = mysqli_query($strcon,"SELECT * FROM series ORDER BY idseries DESC LIMIT $inicio, $qtde_registros");
+	
+    $sel_total = mysqli_query($strcon,"SELECT * FROM filmes");
+    
+    $contar = mysqli_num_rows($sel_total);
+    $contar_pages = $contar / $qtde_registros;
+    //echo $contar_pages;
+    
+    while($linha  = mysqli_fetch_array($sel_parcial)){
+            $id = $linha["idseries"];	
+			$titulo = $linha["titulo"];
+			$poster = $linha["poster"];	
+			$estreia = $linha["lancamento"];
+			$elenco = $linha["elenco"];	
+			$pais = $linha["paisOrigem"];
+			$imgFundo = $linha["imgFundo"];
+			$trailer = $linha["trailer"];	
 		
-		
-		
-			echo "
-			
-			<div id='filme_info'>
-		
-				<div id='poster_filme'>
+	
+	echo "<div id='filme_info'>
 
-					<img src='img/posters/$poster'>
+					<a href='ficha_tecnica.php?selecionado=$id&categoria=series'><div id='poster_filme'><img src='img/posters/$poster'></a>
 
 				</div>
 
@@ -181,54 +196,66 @@ $trailer = $linha["trailer"];
 					
 					<div class='fichaTecnica'>
 
-						<a href='filme.php?filme=$idfilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+						<a href='ficha_tecnica.php?selecionado=$id&categoria=series'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
 
 					</div>
 
 				</div>
-								
+				
+			</div>";
+	}
 		
-	</div>";
-}
-
-		 break;
-    case "games":
+	break;	
+	
+	
+	case "games":
         
-		$sql = "SELECT * FROM games";	
-	
-$resultado = mysqli_query($strcon, $sql)
-or die ("Não foi possível realizar a consulta ao banco de dados");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
 
-$idfilme = $linha["idgames"];	
-$titulo = $linha["tituloGame"];
-$titoriginal = $linha["titulo_original"];
-$poster = $linha["poster"];	
-$estreia = $linha["lancamento"];
-$elenco = $linha["elenco"];	
-$sinopse = $linha["sinopse"];
-$diretor = $linha["diretor"];
-$pais = $linha["paisOrigem"];
-$poster = $linha["imgGame"];
-$trailer = $linha["trailer"];		
+    include "config/conectar.php";
+    $qtde_registros = 2;
+    @$page = $_GET['pag'];
+    if(!$page){
+        $pagina = 1;
+    }else{
+        $pagina = $page;
+    }
+    
+    $inicio = $pagina  - 1;
+    $inicio = $inicio * $qtde_registros;
+    $sel_parcial = mysqli_query($strcon,"SELECT * FROM games
+				INNER JOIN desenvolvedoras
+				ON games.desenvolvedora = desenvolvedoras.iddesenvolvedoras 
+				ORDER BY idgames DESC LIMIT $inicio, $qtde_registros");
+	
+    $sel_total = mysqli_query($strcon,"SELECT * FROM games");
+    
+    $contar = mysqli_num_rows($sel_total);
+    $contar_pages = $contar / $qtde_registros;
+    //echo $contar_pages;
+    
+    while($linha  = mysqli_fetch_array($sel_parcial)){
+           $id = $linha["idgames"];	
+			$titulo = $linha["tituloGame"];
+			$desenvolvedora = $linha["nomeDesenvolvedora"];
+			$poster = $linha["poster"];	
+			$estreia = $linha["lancamentoGame"];
+			$elenco = $linha["elenco"];	
+			$sinopse = $linha["sinopseGame"];
+			$diretor = $linha["diretor"];
+			$pais = $linha["paisOrigem"];
+			$poster = $linha["imgGame"];
+			$trailer = $linha["trailer"];	
 		
-		
-		
-			echo "
-			
-			<div id='filme_info'>
-		
-				<div id='poster_filme'>
+	
+	echo "<div id='filme_info'>
 
-					<img src='img/posters/$poster'>
+					<a href='ficha_tecnica.php?selecionado=$id&categoria=games'><div id='poster_filme'><img src='img/posters/$poster'></a>
 
 				</div>
 
 				<div id='info'>
 
 					<h1>$titulo</h1>
-					<h2>$titoriginal</h2>
 
 					<div>
 						<h3>Lançamento </h3>
@@ -236,90 +263,50 @@ $trailer = $linha["trailer"];
 					</div>
 					
 					<div>
-						<h3>Direção </h3>
-						<p>$diretor</p>
+						<h3>Desenvolvedora </h3>
+						<p>$desenvolvedora</p>
 					</div>
 					
 					<div class='fichaTecnica'>
 
-						<a href='filme.php?filme=$idfilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+						<a href='ficha_tecnica.php?selecionado=$id&categoria=games'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
 
 					</div>
 
 				</div>
-								
+				
+			</div>";
+	}
 		
-	</div>"; 
-}
+	break;	
 		
-    break;
-    default:
-        case "filmes":
-        
-		$sql = "SELECT * FROM filmes";	
+	?>
+ 	
 	
-$resultado = mysqli_query($strcon, $sql)
-or die ("Não foi possível realizar a consulta ao banco de dados");
+</div>
+
+  <?php
+     }	
 	
-while ($linha=mysqli_fetch_array($resultado)) {
-
-$idfilme = $linha["idfilmes"];	
-$titulo = $linha["titulo"];
-$titoriginal = $linha["titulo_original"];
-$poster = $linha["poster"];	
-$estreia = $linha["lancamento"];
-$elenco = $linha["elenco"];	
-$sinopse = $linha["sinopse"];
-$diretor = $linha["diretor"];
-$pais = $linha["paisOrigem"];
-$imgFundo = $linha["imgFundo"];
-$trailer = $linha["trailer"];		
-		
-		
-		
-			echo "
-			
-			<div id='filme_info'>
-		
-				<div id='poster_filme'>
-
-					<img src='img/posters/$poster'>
-
-				</div>
-
-				<div id='info'>
-
-					<h1>$titulo</h1>
-					<h2>$titoriginal</h2>
-
-					<div>
-						<h3>Lançamento </h3>
-						<p>$estreia</p>
-					</div>
-					
-					<div>
-						<h3>Direção </h3>
-						<p>$diretor</p>
-					</div>
-					
-					<div class='fichaTecnica'>
-
-						<a href='filme.php?filme=$idfilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
-
-					</div>
-
-				</div>
-								
-		
-	</div>";
-}
-		
-} 	
+	$anterior = $pagina - 1;
+    $proximo = $pagina + 1;
+    
+    echo "<div class='pg_seletor'>";
+    if($pagina > 1){
+        echo "<a href=?pag=$anterior&filtro_categoria=$filtro_categoria> <i class='fas fa-angle-left'></i> </a>";
+    }
+    
+    for($i = 1;$i<$contar_pages+1;$i++){
+        echo "<a href=?pag=".$i."&filtro_categoria=$filtro_categoria>".$i."</a>";
+    }
+    
+    if($pagina < $contar_pages){
+        echo "<a href=?pag=$proximo&filtro_categoria=$filtro_categoria> <i class='fas fa-angle-right'></i> </a>";
+    }
+	echo "</div>";	
+    ?>																		
 	
-?>	
-	
-</section>									
-	
+</section>
 	
 </div> <!--FIM DO CORPO DO SITE-->	
 	
