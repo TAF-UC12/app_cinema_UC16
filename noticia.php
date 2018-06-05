@@ -65,7 +65,10 @@ require_once "config/conectar.php";
 
 $idNoticia = $_GET["news"];	
 	
-$sql = "SELECT * FROM noticias WHERE idnoticias = $idNoticia";	
+$sql = "SELECT * FROM noticias
+		INNER JOIN login
+		ON noticias.autorPost = login.idlogin
+		WHERE idnoticias = $idNoticia";	
 	
 $resultado = mysqli_query($strcon, $sql)
 or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -80,7 +83,8 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	$tipo = $linha["tipoPost"];	
 	$rel_filme = $linha["relac_filmes"];	
 	$rel_serie = $linha["relac_series"];	
-	$rel_game = $linha["relac_games"];	
+	$rel_game = $linha["relac_games"];
+	$autor = $linha["nome"];	
 	
 		
 		
@@ -92,7 +96,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 
 				<h1>$titulo </h1>
 				<h2>$subtitulo</h2>
-				<p>Autor da noticia</p>
+				<p>$autor</p>
 
 			</header>
 
