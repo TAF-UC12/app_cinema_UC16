@@ -1,7 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
-* {margin: 0 auto; padding: 0; box-sizing: border-box;}
+* {
+	margin: 0 auto;
+	padding: 0; 
+	box-sizing: border-box;
+	-webkit-box-sizing:	border-box;
+	-moz-box-sizing:border-box;
+}
 
 @font-face {
      font-family: minha_font;
@@ -16,65 +22,39 @@ body{
 }
 
 
-
-
-@media only screen and (min-width: 800px){	
-	.vazio {
-		width: 100%;
-		height: 45px;
-		background-color: blueviolet;
-	}	
-	
-	.categoriaPaginaCinema {
-		width: 100%;
-		height: 40px;
-		background-color: #1F3F60;
-	}
-	
-	.categoriaPaginaGames {
-		width: 100%;
-		height: 40px;
-		background-color: #007F06;
-	}
-	
-	.categoriaPaginaSeries {
-		width: 100%;
-		height: 40px;
-		background-color: #D19600;
-	}
-	
-	.categoriaPaginaLancamentos {
-		width: 100%;
-		height: 40px;
-		background-color: #3D3D3D;
-	}
-	
-	.categoriaPaginaNoticias {
-		width: 100%;
-		height: 40px;
-		background-color: #25043B;
-	}
-	
-	.categoriaPaginaCinema h2, .categoriaPaginaGames h2, .categoriaPaginaSeries h2, .categoriaPaginaLancamentos h2, .categoriaPaginaNoticias h2{
-		text-align: center;
-		color: #FFFFFF;
-		margin-top: 0px;
-	}
-	
-}
-
-
-
-
-
-
 @media only screen and (min-width: 769px){	
+	
 	header {
 		width: 100%;
 		height: auto;
-		background-color: aqua;
+		background-color: #1F3F60;
+		display: flex;
+		flex-direction: row;
 	}
 
+	#logo_topo {
+		width: 200px;
+		height: 60px;
+		/*background-color: yellow; */
+	}
+	
+	.logo {
+		width: 100%;
+		height: auto;
+		padding: 0px 10%;
+	}
+	
+	#menu_topo {
+		width: auto;
+		height: 40px;
+		background-color: #1F3F60;
+		float: left;
+		flex-grow: 1;
+		padding-top: 14px;
+	}
+	
+	
+	
 .categoriaPaginaCinema {
 		width: 100%;
 		height: 40px;
@@ -145,11 +125,44 @@ body{
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		width: 100%;
+		width: 90%;
 		height: auto;
 		/*background-color: teal;*/
 	}
 
+	footer {
+		width: 100%;
+		height: 50px;
+		background-color: yellow;
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+	}
+	
+	#logo_rodape {
+		width: 150px;
+		height: auto;
+		padding-left: 20px
+	}
+	
+	#logo_rodape img {
+		width: 100%;
+		height: auto;
+	}
+	
+	#rodape_info {
+		width: auto;
+		height: auto;
+		flex-grow: 1;
+	}
+	
+	#rodape_info p {
+		padding-top: 15px;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+	
 }
 	
 
@@ -158,6 +171,30 @@ body{
 
 
 @media only screen and (max-width: 768px){
+	
+	header {
+		width: 100%;
+		height: auto;
+		background-color: #8aa8bd;
+	}
+
+	#logo_topo {
+		width: 100%;
+		height: 60px;
+		display: flex;
+		justify-content: center;
+	}
+	
+	.logo {
+		width: 200px;
+		height: auto;
+	}
+	
+	#menu_topo {
+		width: 100%;
+		height: auto;
+		background-color: #1F3F60;
+	}
 	
 	.categoriaPaginaCinema {
 		width: 100%;
@@ -231,12 +268,42 @@ body{
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		width: 100%;
+		width: 90%;
 		height: auto;
 		/*background-color: teal;*/
 	}
 	
+		footer {
+		width: 100%;
+		height: 50px;
+		background-color: yellow;
+		margin-top: 20px;
+		display: flex;
+		flex-direction: row;
+	}
 	
+	#logo_rodape {
+		width: 150px;
+		height: auto;
+		padding-left: 20px
+	}
+	
+	#logo_rodape img {
+		width: 100%;
+		height: auto;
+	}
+	
+	#rodape_info {
+		width: auto;
+		height: auto;
+		flex-grow: 1;
+	}
+	
+	#rodape_info p {
+		padding-top: 15px;
+		text-align: center;
+		font-weight: bold;
+	}
 	
 }
 	
@@ -250,8 +317,27 @@ body{
 	header {
 		width: 100%;
 		height: auto;
-		background-color: aqua;
+		background-color: #8aa8bd;
 	}
+
+	#logo_topo {
+		width: 100%;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+	}
+	
+	.logo {
+		width: 150px;
+		height: auto;
+	}
+	
+	#menu_topo {
+		width: 100%;
+		height: auto;
+		background-color: orchid;
+	}
+	
 	
 	.categoriaPaginaCinema {
 		width: 100%;
@@ -317,6 +403,46 @@ body{
 		text-decoration: none;
 		font-weight: bold;
 		color: #FFFFFF;
+	}
+	
+	#corpo_container {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		width: 95%;
+		height: auto;
+		/*background-color: teal;*/
+	}	
+	
+		footer {
+		display: block;
+		width: 100%;
+		height: auto;
+		background-color: yellow;
+		margin-top: 20px;
+	}
+	
+	#logo_rodape {
+		width: 20%;
+		height: auto;
+		padding-left: 0px;
+	}
+	
+	#logo_rodape img {
+		width: 100%;
+		height: auto;
+	}
+	
+	#rodape_info {
+		width: 100%;
+		height: auto;
+	}
+	
+	#rodape_info p {
+		font-size: 1em;
+		padding-top: 0px;
+		text-align: center;
+		font-weight: bold;
 	}
 	
 }

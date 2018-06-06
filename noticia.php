@@ -23,13 +23,20 @@ ini_set(“display_errors”, 0 );
 <main role="main">
 	
 <header>
-
+	
+	<div id="logo_topo">
+		<img src="img/logo.png" alt="logo do site" class="logo">
+	</div>	
+	
+	<div id="menu_topo">		
 	<?php
 	
 		include('menu.php');
 	
-	?>	
+	?>
+	</div>	
 	
+
 </header>
 
 	<div class='categoriaPaginaNoticias'>
@@ -347,14 +354,21 @@ while ($linha=mysqli_fetch_array($resultado)) {
 ?>
 	
 </aside>
-				
-	
-	
-																
+																			
 	
 </div> <!--FIM DO CORPO DO SITE-->	
 	
+<footer>
 	
+	<div id="logo_rodape">
+		<img src="img/logo.png" alt="logo do site">
+	</div>
+	
+	<div id="rodape_info">
+		<p>2018 Todos os diretos reservados</p>
+	</div>		
+		
+</footer>	
 	
 	
 	

@@ -15,10 +15,12 @@ ini_set(“display_errors”, 0 );
 <link href="css/menu.css" rel="stylesheet" type="text/css">
 <link href="css/index.css" rel="stylesheet" type="text/css">
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
+	
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no> 
 
 <!--LINKS DOS ARQUIVOS JS-->
+<link rel="js/manifest" href="manifest.json">
 <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
 
@@ -122,18 +124,23 @@ ini_set(“display_errors”, 0 );
 <main role="main">
 	
 <header>
-
-	<img src="#" alt="" class="logo">
+	
+	<div id="logo_topo">
+		<img src="img/logo.png" alt="logo do site" class="logo">
+	</div>	
+	
+	<div id="menu_topo">		
 	<?php
 	
 		include('menu.php');
 	
 	?>
+	</div>	
 	
 
 </header>
 
-<section class="vazio"></section>
+<!--<section class="vazio"></section>-->
 
 <div id="topo_slides_container">
 
@@ -325,10 +332,36 @@ ini_set(“display_errors”, 0 );
 </div> <!--FIM DO CORPO DO SITE-->	
 	
 	
+<footer>
 	
+	<div id="logo_rodape">
+		<img src="img/logo.png" alt="logo do site">
+	</div>
+	
+	<div id="rodape_info">
+		<p>2018 Todos os diretos reservados</p>
+	</div>		
+		
+</footer>	
 	
 </main>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
 
+	//service worker
+
+  	if ('serviceWorker' in navigator) {
+  		navigator.serviceWorker.register('js/service-worker.js')
+    	.then(function () {
+        console.log('service worker registered');
+      })
+      .catch(function () {
+        console.log('service worker failed');
+      });
+  }
+
+</script>
+	
 </body>
 </html>

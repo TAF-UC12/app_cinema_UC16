@@ -1,13 +1,13 @@
 
 .mobile-menu {
-  display:block;
-  width:100%;
+display:block;
+width:100%;
 background: #1F3F60/*e0b88f/*c99393/*e5d1a4/*dcc591/*EFD3A3*/;
 line-height: 1.6em;
 font-weight: 400;
 text-align:center;
-	position: relative;
-  margin:0 auto;
+position: relative;
+margin:0 auto;
 }
 /*Strip the ul of padding and list styling*/
 .mobile-menu ul {
@@ -17,7 +17,7 @@ text-align:center;
   text-align:center;
   width:100%;
   position: absolute;
-  background: #8aa8bd;
+  background: #1F3F60;
 }
 
 /*Create a horizontal list with spacing*/
@@ -30,7 +30,7 @@ text-align:center;
 /*Style for menu links*/
 .mobile-menu li a {
 	display:block;
-	min-width:140px;
+	min-width:100px;
 	text-align: center;
 	color: #fff;
   text-transform:uppercase;

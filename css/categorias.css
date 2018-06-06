@@ -392,15 +392,7 @@ estilização do slideshow*/
 		height: 150px;
 		background-color: chartreuse;
 	}
-	
-#corpo_container {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		height: auto;
-		/*background-color: teal;*/
-	}	
+
 	
 	.noticias_container, .lancamentos_container, .noticia_container {
 		width: 100%;

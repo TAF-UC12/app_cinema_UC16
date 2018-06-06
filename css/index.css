@@ -188,6 +188,7 @@ estilização do slideshow*/
 	.chamadaNoticia a {
 		text-decoration: none;
 		color: #000000;
+		font-size: 1.375em;
 	}
 	
 	.pg_seletor {
@@ -320,16 +321,17 @@ estilização do slideshow*/
 	
 	.infoNoticia {
 		width: 100%;
-		height: 24px;
-		/*background-color: violet;*/
+		height: 30px;
+/*		background-color: violet;*/	
 	}
 	
 	.infoNoticia button {
-		height: 20px;
-		border-radius: 10px;
+		height: 22px;
+		border-radius: 11px;
 		border-style: none;
 		color: #FFFFFF;
-		padding: 0px 12px 0px 12px;
+		padding: 0px 15px 2px 15px;
+		font-size: 1em;
 	}
 	
 	.infoNoticia .Cinema {
@@ -353,6 +355,7 @@ estilização do slideshow*/
 	.chamadaNoticia a {
 		text-decoration: none;
 		color: #000000;
+		font-size: 1.125em;
 	}
 
 		.pg_seletor {
@@ -392,15 +395,6 @@ estilização do slideshow*/
 		height: 150px;
 		background-color: chartreuse;
 	}
-	
-#corpo_container {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		height: auto;
-		/*background-color: teal;*/
-	}	
 	
 	.noticias_container, .lancamentos_container, .noticia_container {
 		width: 100%;
@@ -444,17 +438,17 @@ estilização do slideshow*/
 	
 	.infoNoticia {
 		width: 100%;
-		height: 20px;
+		height: 30px;
 /*		background-color: violet;*/	
 	}
 	
 	.infoNoticia button {
-		height: 16px;
-		border-radius: 8px;
+		height: 18px;
+		border-radius: 9px;
 		border-style: none;
 		color: #FFFFFF;
-		padding: 0px 10px 2px 10px;
-		font-size: .75em;
+		padding: 0px 12px 2px 12px;
+		font-size: .875em;
 	}
 	
 	.infoNoticia .Cinema {
@@ -475,9 +469,14 @@ estilização do slideshow*/
 		/*background-color: goldenrod;*/
 	}
 	
+	.chamadaNoticia p {
+		line-height: 1em;
+	}
+	
 	.chamadaNoticia a {
 		text-decoration: none;
 		color: #000000;
+		font-size: .75em;
 	}
 	
 		.pg_seletor {

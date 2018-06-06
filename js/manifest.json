@@ -1,0 +1,27 @@
+{
+
+
+	"short_name": "PLAY",
+	"name": "PlayPontoCom",
+	"icons": [
+{
+	"src": "../img/icon48px.png",
+	"type": "image/png",
+	"sizes": "48x48"
+} ,
+{
+	"src": "../img/icon96px.png",
+	"type": "image/png",
+	"sizes": "96x96"
+} ,
+{
+	"src": "../img/icon192px.png",
+	"type": "image/png",
+	"sizes": "192x192"
+} 
+	],
+
+	"start_url":"index.html?launcher=true",
+	"background_color": "#2196F3",
+	"display": "standalone"
+}
