@@ -112,11 +112,6 @@ estilização do slideshow*/
 		flex-grow: 1;
 	}
 	
-	.categorias_lancamento_container {
-		width: 400px;
-		height: 1000px;
-		background-color: brown;
-	}
 	
 	.lista_noticias {
 		position: relative;
@@ -189,6 +184,14 @@ estilização do slideshow*/
 		text-decoration: none;
 		color: #000000;
 		font-size: 1.375em;
+	}
+	
+	
+	
+	.categorias_lancamento_container {
+		width: 500px;
+		height: 600px;
+		background-color: brown;
 	}
 	
 	.pg_seletor {

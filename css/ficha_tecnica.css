@@ -9,7 +9,7 @@
 	width: 100%;
 	height: auto;
 	background-color: #232323;
-	margin: 15px 0px;
+	margin-top: 15px;
 	display: flex;
 	flex-direction: row;
 }

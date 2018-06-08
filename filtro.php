@@ -5,7 +5,7 @@
 	<form action="" method='get' class="form_filtro">
 		
 	
-		  <div class="col-20">
+		  <div class="col-20 black rounded">
 		  
 			<select id="" name="filtro_categoria">
 			  <option value="filmes">Filmes</option>
@@ -15,7 +15,7 @@
 			
 		  </div>
 		  
-		  <div class="col-20">
+		  <div class="col-20 black rounded">
 		  
 			<select id="" name="filtro_genero">
 		  		<option value=''>Gêneros</option>
@@ -39,10 +39,10 @@
 			
 		  </div>
 		  
-		  <div class="col-20">
+		  <div class="col-20 black rounded">
 		  
-			<select id="" name="filtro_mes">
-		  		<option value="">Mês</option>
+			<select id="" name="filtro_ano">
+		  	  <option value="">Mês</option>
 			  <option value="1">Janeiro</option>
 			  <option value="2">Fevereiro</option>
 			  <option value="3">Março</option>
@@ -59,7 +59,7 @@
 			
 		  </div>
 		  
-		  <div class="col-20">
+		  <div class="btn_submit_filtro black rounded">
 		  
 			<input type="submit" value="Filtrar" name='submit'>
 			

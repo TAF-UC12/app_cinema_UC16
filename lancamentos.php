@@ -72,7 +72,7 @@ require_once "config/conectar.php";
 
 $filtro_categoria = $_GET["filtro_categoria"];	
 $filtro_genero = $_GET["filtro_genero"];	
-	
+$filtro_mes = $_GET["filtro_mes"];	
 	
 switch ($filtro_categoria) {
 		
@@ -80,7 +80,7 @@ switch ($filtro_categoria) {
         
 
     include "config/conectar.php";
-    $qtde_registros = 3;
+    $qtde_registros = 2;
     @$page = $_GET['pag'];
     if(!$page){
         $pagina = 1;
