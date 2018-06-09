@@ -94,18 +94,12 @@ $duracao = $linha["duracao"];
 			
 				<div id='menu_filme'>
 				
-					<div id='submenu_filme'>
-				
+					<div id='submenu_filme'>";	
+				?>
 					
-				<nav class='mais_info_filme'>		
-
-	<li><a href='ficha_tecnica_full.php?selecionado=$id&categoria=filmes'>Informações</a></li>	
-	<li><a href='ficha_tecnica_full.php'>Notícias</a></li>
-	<li><a href='ficha_tecnica_full.php'>Trailers</a></li>
-	
-</nav>
+				<?php require_once "submenu_filme.php";
 						
-				</div>
+				echo "</div>
 				
 				
 					<div id='poster_filme'>
@@ -202,8 +196,7 @@ $resultado = mysqli_query($strcon, $sql)
 or die ("Não foi possível realizar a consulta ao banco de dados");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
-
-$id = $linha["idseries"];	
+	
 $titulo = $linha["titulo"];
 $titoriginal = $linha["titulo_original"];
 $poster = $linha["poster"];	
@@ -215,6 +208,9 @@ $pais = $linha["paisOrigem"];
 $imgFundo = $linha["imgFundo"];
 $trailer = $linha["trailer"];
 $duracao = $linha["duracao"];
+$ano = $linha["ano"];
+$temp = $linha["temporadas"];
+
 
 		
 		
@@ -223,18 +219,12 @@ $duracao = $linha["duracao"];
 		
 				<div id='menu_filme'>
 				
-					<div id='submenu_filme'>	
-				
-					<nav class='mais_info_filme'>		
-
-						<li><a href='ficha_tecnica_full.php?selecionado=$id&categoria=series'>Informações</a></li>	
-						<li><a href='ficha_tecnica_full.php'>Notícias</a></li>
-						<li><a href='ficha_tecnica_full.php'>Trailers</a></li>
-
-					</nav>
-
+					<div id='submenu_filme'>";	
+				?>
+					
+				<?php require_once "submenu_filme.php";
 						
-				    </div>
+				echo "</div>
 				
 				
 					<div id='poster_filme'>
@@ -247,11 +237,21 @@ $duracao = $linha["duracao"];
 
 					<h1>$titulo</h1>
 					<h2>$titoriginal</h2>
+					
+					<div>
+						<h3>Ano lançamento </h3>
+						<p>$ano</p>
+					</div>
 
 					<div>
 						<h3>Lançamento </h3>
 						<p>$estreia</p>
-					</div>				
+					</div>	
+					
+					<div>
+						<h3>Temporadas </h3>
+						<p>$temp temporadas</p>
+					</div>	
 				
 					<div>
 						<h3>Elenco </h3>
@@ -330,7 +330,7 @@ or die ("Não foi possível realizar a consulta ao banco de dados");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
 
-$id = $linha["idgames"];	
+$idfilme = $linha["idgames"];	
 $titulo = $linha["tituloGame"];
 $desenvolvedora = $linha["nomeDesenvolvedora"];
 $publicadora = $linha["nomePublicadora"];
@@ -351,18 +351,12 @@ $trailer = $linha["trailer"];
 		
 				<div id='menu_filme'>
 				
-					<div id='submenu_filme'>	
-				
-					<nav class='mais_info_filme'>		
-
-						<li><a href='ficha_tecnica_full.php?selecionado=$id&categoria=games'>Informações</a></li>	
-						<li><a href='ficha_tecnica_full.php'>Notícias</a></li>
-						<li><a href='ficha_tecnica_full.php'>Trailers</a></li>
-
-					</nav>
-
+					<div id='submenu_filme'>";	
+				?>
+					
+				<?php require_once "submenu_filme.php";
 						
-				    </div>
+				echo "</div>
 				
 				
 					<div id='poster_filme'>
@@ -389,6 +383,11 @@ $trailer = $linha["trailer"];
 					<div>
 						<h3>Desenvolvedora </h3>
 						<p>$desenvolvedora</p>
+					</div>
+					
+					<div>
+						<h3>Públicado por </h3>
+						<p>$publicadora</p>
 					</div>
 
 					<div>

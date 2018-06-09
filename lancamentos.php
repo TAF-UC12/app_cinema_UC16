@@ -80,7 +80,7 @@ switch ($filtro_categoria) {
         
 
     include "config/conectar.php";
-    $qtde_registros = 2;
+    $qtde_registros = 6;
     @$page = $_GET['pag'];
     if(!$page){
         $pagina = 1;
@@ -150,7 +150,7 @@ switch ($filtro_categoria) {
         
 
     include "config/conectar.php";
-    $qtde_registros = 2;
+    $qtde_registros = 3;
     @$page = $_GET['pag'];
     if(!$page){
         $pagina = 1;
@@ -217,7 +217,7 @@ switch ($filtro_categoria) {
         
 
     include "config/conectar.php";
-    $qtde_registros = 2;
+    $qtde_registros = 3;
     @$page = $_GET['pag'];
     if(!$page){
         $pagina = 1;

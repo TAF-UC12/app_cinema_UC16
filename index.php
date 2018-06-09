@@ -20,7 +20,7 @@ ini_set(“display_errors”, 0 );
 <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no> 
 
 <!--LINKS DOS ARQUIVOS JS-->
-<link rel="js/manifest" href="manifest.json">
+<link rel="manifest" href="js/manifest.json">
 <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
 
@@ -140,7 +140,13 @@ ini_set(“display_errors”, 0 );
 
 </header>
 
-<!--<section class="vazio"></section>-->
+<section class="submenu">
+
+	<?php
+		require_once('submenu.php');
+	?>
+	
+</section>
 
 <div id="topo_slides_container">
 
@@ -220,14 +226,6 @@ ini_set(“display_errors”, 0 );
 		<!--FIM DA SECTION QUE SÓ TEM O SLIDER-->
 
 	</div>
-
-<section class="submenu">
-
-	<?php
-		require_once('submenu.php');
-	?>
-	
-</section>
 
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 

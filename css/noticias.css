@@ -3,15 +3,29 @@
 
 
 @media only screen and (min-width: 769px){
+	
+	#corpo_container {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		width: 90%;
+		height: auto;
+		/*background-color: teal;*/
+	}
 
 	.noticias_container {
-		width: 70%;
+		position: relative;
+		width: 100%;
+		height: auto;
 		flex-grow: 1;
+/*		background-color: violet;*/
+		margin-right: 20px;
 	}
+
 	
 	.categorias_lancamento_container {
-		width: 30%;
-		height: 1000px;
+		width: 400px;
+		height: auto;
 		background-color: brown;
 	}
 	
@@ -37,27 +51,30 @@
 	
 .noticia_completa {
 	position: relative;
-	width: 95%;
-	margin: 10px 2.5%;
+	width: 100%;
+	/*background-color: slategrey;*/
 }
 
 .topoNoticia {
 	width: 100%;
 	height: auto;
+/*	background-color: yellow;*/
 }
 
 .topoNoticia h1 {
+	width: 100%;
 	font-size: 1.375em;
 	text-align: center;
+	margin-top: 15px;
 }
 
 .topoNoticia h2 {
+	width: 100%;
 	font-size: 1em;
 	text-align: center;
 }
 
 .topoNoticia p {
-	display: block;
 	font-size: .875em;
 	text-align: center;
 	margin: 20px 10% 5px 10%;
@@ -93,6 +110,7 @@
 .fichaTecnica {
 	width: 100%;
 	float: left;
+	padding-top: 5px;
 }
 
 .fichaTecnica button{
@@ -184,8 +202,8 @@
 	
 .noticia_completa {
 	position: relative;
-	width: 95%;
-	margin: 10px 2.5%;
+	width: 100%;
+	margin: 10px 0px;
 }
 
 .topoNoticia {
@@ -306,7 +324,6 @@
 		position: relative;
 		width: 100%;
 		height: auto;
-		background-color: violet;
 	}
 	
 	.lista_noticias {
@@ -317,8 +334,8 @@
 	
 .noticia_completa {
 	position: relative;
-	width: 95%;
-	margin: 10px 2.5%;
+	width: 100%;
+	margin: 10px 0px;
 }
 
 .topoNoticia {

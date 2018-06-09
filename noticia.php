@@ -52,14 +52,6 @@ ini_set(“display_errors”, 0 );
 	</div>			
 					
 
-<section class="submenu">
-	
-	<?php
-		require_once('submenu.php');
-	?>
-	
-</section>
-
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
 
@@ -99,13 +91,13 @@ while ($linha=mysqli_fetch_array($resultado)) {
 			echo "
 			<article class='noticia_completa'>
 
-			<header class='topoNoticia'>
+			<div class='topoNoticia'>
 
 				<h1>$titulo </h1>
 				<h2>$subtitulo</h2>
 				<p>$autor</p>
 
-			</header>
+			</div>
 
 			<section class='corpo_noticia'>
 
@@ -124,7 +116,8 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	
 			
 	
-</section>									
+</section>
+									
 
 <aside class="categorias_lancamento_container">
 	
@@ -211,7 +204,10 @@ while ($linha=mysqli_fetch_array($resultado)) {
 		
 	 case "Series":	
 
-		$sql2 = "SELECT * FROM $tabela WHERE $coluna = $rel_serie";	
+		$sql2 = "SELECT * FROM $tabela
+		INNER JOIN emissoras
+		ON series.canal = emissoras.idemissoras
+		WHERE $coluna = $rel_serie";	
 	
 $resultado = mysqli_query($strcon, $sql2)
 or die ("Não foi possível realizar a consulta ao banco de dados 5");
@@ -220,7 +216,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 
 $idFilme = $linha["idseries"];
 $titulo = $linha["titulo"];
-$titoriginal = $linha["titulo_original"];
+$emissora = $linha["nomeEmissora"];
 $poster = $linha["poster"];	
 	
 	
@@ -230,7 +226,7 @@ $poster = $linha["poster"];
 		<div class='info'>
 			
 			<h1>$titulo</h1>
-			<h2>$titoriginal</h2>
+			<h2>$emissora</h2>
 			
 			<div class='fichaTecnica'>
 

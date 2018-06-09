@@ -368,7 +368,7 @@ input {
 }
 
 #info h1 {
-	font-size: 1em;
+	font-size: 1.375em; /*22px*/
 	font-weight: bold;
 	line-height: normal;
 	color: #000000;
