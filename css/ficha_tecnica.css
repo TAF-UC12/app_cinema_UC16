@@ -46,6 +46,7 @@
 		color: #FFFFFF;
 	}	
 	
+	
 #poster_filme {
 	width: 100%;
 	height: auto;
@@ -65,7 +66,21 @@
 	background-color: #232323;
 	padding: 10px;
 }
-
+	
+#info2 {
+	width: 100%;
+	height: auto;
+	background-color: #232323;
+	padding: 10px;
+}
+	
+#info3 {
+	width: 100%;
+	height: auto;
+	background-color: #17067E;
+	padding: 10px;
+}
+	
 #info h1 {
 	font-size: 2em; 
 	font-weight: bold;
@@ -138,6 +153,112 @@
 	text-shadow: 1px 1px 2px #000000;
 }
 
+.noticias_container {
+		width: auto;
+		flex-grow: 1;
+		margin-top: 15px;
+	}
+	
+	
+	.lista_noticias {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: #555454;*/
+	}
+	
+	.lista_noticias h3{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+	}
+
+	.noticia {
+		width: 100%;
+		height: auto;
+		background-color: rgba(217,217,217,1.00);
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 20px;
+		padding: 5px;
+		border-radius: 5px;
+	}
+	
+	.imgNoticia {
+		width: 30%;
+		height: auto;
+		/*background-color: blueviolet;*/
+	}
+	
+	.imgNoticia img{
+		width: 100%;
+		height: auto;
+	}
+	
+	.infoNoticiaContainer {
+		width: 70%;
+		height: auto;
+		/*background-color: darkgoldenrod;*/
+		padding: 0px 0px 0px 10px;
+	}
+	
+	.infoNoticia {
+		width: 100%;
+		height: auto;
+/*		background-color: violet;*/	
+	}
+	
+	.infoNoticia button {
+		height: 26px;
+		border-radius: 13px;
+		border-style: none;
+		color: #FFFFFF;
+		padding: 0px 15px 2px 15px;
+		font-size: 1.125em;
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.infoNoticia p {
+		width: auto;
+		float: left;
+		font-size: .75em;
+		padding-top: 3px;
+	}
+	
+	.infoNoticia .Cinema {
+		background-color: #1F3F60;		
+	}
+	
+	.infoNoticia .Games {
+		background-color: #007F06;		
+	}
+	
+	.infoNoticia .Series {
+		background-color: #D19600;		
+	}
+	
+	.chamadaNoticia {
+		width: 100%;
+		height: auto;
+		/*background-color: springgreen;*/
+		clear: both;
+		margin-top: 15px;
+	}
+	
+	.chamadaNoticia p {
+		line-height: normal;
+		font-size: 1.125em;
+		font-weight: bold;
+	}
+	
+	.chamadaNoticia a {
+		text-decoration: none;
+		color: #000000;
+	}	
+	
 .fichaTecnica {
 	width: 100%;
 	float: left;
@@ -226,6 +347,13 @@
 	overflow: auto;
 }
 
+#info2 {
+	width: 100%;
+	height: auto;
+	background-color: #232323;
+	padding: 10px;
+}
+	
 #info h1 {
 	font-size: 2em;
 	font-weight: bold;
@@ -298,6 +426,114 @@
 	text-shadow: 1px 1px 2px #000000;
 }
 
+.noticias_container {
+		width: auto;
+		flex-grow: 1;
+		margin-top: 15px;
+	}
+	
+	
+	.lista_noticias {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: #555454;*/
+	}
+
+	.lista_noticias h3{
+		width: 100%;
+		font-size: 1.125em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+	}
+	
+	.noticia {
+		width: 100%;
+		height: auto;
+		background-color: rgba(217,217,217,1.00);
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 20px;
+		padding: 5px;
+		border-radius: 5px;
+	}
+	
+	.imgNoticia {
+		width: 20%;
+		height: auto;
+		/*background-color: blueviolet;*/
+	}
+	
+	.imgNoticia img{
+		width: 100%;
+		height: auto;
+	}
+	
+	.infoNoticiaContainer {
+		width: 80%;
+		height: auto;
+		/*background-color: darkgoldenrod;*/
+		padding: 0px 0px 0px 10px;
+	}
+	
+	.infoNoticia {
+		width: 100%;
+		height: auto;
+/*		background-color: violet;*/	
+	}
+	
+	.infoNoticia button {
+		height: 26px;
+		border-radius: 13px;
+		border-style: none;
+		color: #FFFFFF;
+		padding: 0px 15px 2px 15px;
+		font-size: 1.125em;
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.infoNoticia p {
+		width: auto;
+		float: left;
+		font-size: .75em;
+		padding-top: 0px;
+	}
+	
+	.infoNoticia .Cinema {
+		background-color: #1F3F60;		
+	}
+	
+	.infoNoticia .Games {
+		background-color: #007F06;		
+	}
+	
+	.infoNoticia .Series {
+		background-color: #D19600;		
+	}
+	
+	.chamadaNoticia {
+		width: 100%;
+		height: auto;
+		/*background-color: springgreen;*/
+		clear: both;
+		margin-top: 15px;
+	}
+	
+	.chamadaNoticia p {
+		line-height: normal;
+		font-size: 1em;
+		font-weight: bold;
+	}
+	
+	.chamadaNoticia a {
+		text-decoration: none;
+		color: #000000;
+		
+	}	
+	
+	
 .fichaTecnica {
 	width: 100%;
 	float: left;
@@ -380,6 +616,13 @@
 	padding: 5px;
 }	
 
+#info2 {
+	width: 100%;
+	height: auto;
+	background-color: #232323;
+	padding: 5px;
+}	
+	
 #info h1 {
 	font-size: 1.5em;
 	font-weight: bold;
@@ -443,6 +686,112 @@
 	text-shadow: 1px 1px 2px #000000;
 }
 
+	.noticias_container {
+		width: auto;
+		flex-grow: 1;
+		margin-top: 15px;
+	}
+	
+	
+	.lista_noticias {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: #555454;*/
+	}
+
+	.lista_noticias h3{
+		width: 100%;
+		font-size: 1em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+	}
+	
+	.noticia {
+		width: 100%;
+		height: auto;
+		background-color: rgba(217,217,217,1.00);
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 10px;
+		padding: 5px;
+		border-radius: 5px;
+	}
+	
+	.imgNoticia {
+		width: 20%;
+		height: auto;
+		/*background-color: blueviolet;*/
+	}
+	
+	.imgNoticia img{
+		width: 100%;
+		height: auto;
+	}
+	
+	.infoNoticiaContainer {
+		width: 80%;
+		height: auto;
+		/*background-color: darkgoldenrod;*/
+		padding: 0px 0px 0px 5px;
+	}
+	
+	.infoNoticia {
+		width: 100%;
+		height: auto;
+/*		background-color: violet;*/	
+	}
+	
+	.infoNoticia button {
+		height: 26px;
+		border-radius: 13px;
+		border-style: none;
+		color: #FFFFFF;
+		padding: 0px 15px 2px 15px;
+		font-size: 1.125em;
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.infoNoticia p {
+		width: auto;
+		float: left;
+		font-size: .5em;
+		padding-top: 0px;
+	}
+	
+	.infoNoticia .Cinema {
+		background-color: #1F3F60;		
+	}
+	
+	.infoNoticia .Games {
+		background-color: #007F06;		
+	}
+	
+	.infoNoticia .Series {
+		background-color: #D19600;		
+	}
+	
+	.chamadaNoticia {
+		width: 100%;
+		height: auto;
+		/*background-color: springgreen;*/
+		clear: both;
+		margin-top: 5px;
+	}
+	
+	.chamadaNoticia p {
+		font-size: .75em;
+		line-height: 1em;
+	}
+	
+	.chamadaNoticia a {
+		text-decoration: none;
+		color: #000000;
+	}
+	
+	
 .fichaTecnica {
 	width: 100%;
 	float: left;

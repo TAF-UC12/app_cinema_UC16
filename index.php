@@ -247,11 +247,16 @@ ini_set(“display_errors”, 0 );
     $inicio = $inicio * $qtde_registros;
     $sel_parcial = mysqli_query($strcon,"SELECT * FROM noticias
 			INNER JOIN tipoPostagem
-			ON noticias.tipo = tipoPostagem.idtipoPostagem ORDER BY idnoticias DESC LIMIT $inicio, $qtde_registros");
+			ON noticias.tipo = tipoPostagem.idtipoPostagem
+			INNER JOIN login
+			ON noticias.autorPost = login.idlogin
+			ORDER BY idnoticias DESC LIMIT $inicio, $qtde_registros");
 	
     $sel_total = mysqli_query($strcon,"SELECT * FROM noticias
 			INNER JOIN tipoPostagem
-			ON noticias.tipo = tipoPostagem.idtipoPostagem");
+			ON noticias.tipo = tipoPostagem.idtipoPostagem
+			INNER JOIN login
+			ON noticias.autorPost = login.idlogin");
     
     $contar = mysqli_num_rows($sel_total);
     $contar_pages = $contar / $qtde_registros;
@@ -265,6 +270,8 @@ ini_set(“display_errors”, 0 );
 			$img = $linha["img"];
 			$tipo = $linha["tipoPost"];	
 			$id_tipo_post = $linha["idtipoPostagem"];
+			$data = $linha["dataPost"];
+			$autor = $linha["nome"];
 		
 	if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
 	if ($id_tipo_post == 2){$tipo_categoria = "Games";}
@@ -285,6 +292,7 @@ ini_set(“display_errors”, 0 );
 
 						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo; ?></button>
 
+						<p>Postado em <?php echo $data; ?> por <?php echo $autor; ?></p>
 
 					</div>
 

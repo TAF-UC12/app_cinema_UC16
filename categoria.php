@@ -240,14 +240,6 @@ $categoria = $_GET["tipo"];
 
 	</div>
 
-<section class="submenu">
-
-	<?php
-		require_once('submenu.php');
-	?>
-	
-</section>
-
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
 <section class="noticias_container">
@@ -256,7 +248,7 @@ $categoria = $_GET["tipo"];
     
 	    <?php
     include "config/conectar.php";
-    $qtde_registros = 1;
+    $qtde_registros = 3;
     @$page = $_GET['pag'];
     if(!$page){
         $pagina = 1;
@@ -269,11 +261,15 @@ $categoria = $_GET["tipo"];
     $sel_parcial = mysqli_query($strcon,"SELECT * FROM noticias
 			INNER JOIN tipoPostagem
 			ON noticias.tipo = tipoPostagem.idtipoPostagem
+			INNER JOIN login
+			ON noticias.autorPost = login.idlogin
 			WHERE tipo = $categoria ORDER BY idnoticias DESC LIMIT $inicio, $qtde_registros");
 	
     $sel_total = mysqli_query($strcon,"SELECT * FROM noticias
 			INNER JOIN tipoPostagem
 			ON noticias.tipo = tipoPostagem.idtipoPostagem
+			INNER JOIN login
+			ON noticias.autorPost = login.idlogin
 			WHERE tipo = $categoria");
     
     $contar = mysqli_num_rows($sel_total);
@@ -288,6 +284,8 @@ $categoria = $_GET["tipo"];
 			$img = $linha["img"];
 			$tipo = $linha["tipoPost"];	
 			$id_tipo_post = $linha["idtipoPostagem"];
+			$data = $linha["dataPost"];
+			$autor = $linha["nome"];
 		
 	if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
 	if ($id_tipo_post == 2){$tipo_categoria = "Games";}
@@ -308,6 +306,7 @@ $categoria = $_GET["tipo"];
 
 						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo; ?></button>
 
+						<p>Postado em <?php echo $data; ?> por <?php echo $autor; ?></p>
 
 					</div>
 

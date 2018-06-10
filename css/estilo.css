@@ -127,7 +127,7 @@ body{
 		flex-direction: row;
 		width: 90%;
 		height: auto;
-		/*background-color: teal;*/
+		margin-top: 20px;
 	}
 
 	footer {

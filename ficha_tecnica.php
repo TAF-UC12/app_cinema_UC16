@@ -17,6 +17,16 @@ ini_set(“display_errors”, 0 );
 <meta name="viewport" content="initial-scale=1"> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<style>
+.invisivel { display: none; }
+.visivel { visibility: visible; }
+.cor_selecionado { background-color: aqua; border:solid rgba(151,4,6,1.00) 5px; }	
+</style>
+
+
 </head>
 
 <body>
@@ -94,18 +104,12 @@ $duracao = $linha["duracao"];
 			
 				<div id='menu_filme'>
 				
-					<div id='submenu_filme'>
-				
+						<div id='submenu_filme'>";	
+				?>
 					
-				<nav class='mais_info_filme'>		
-
-	<li><a href='ficha_tecnica_full.php?selecionado=$id&categoria=filmes'>Informações</a></li>	
-	<li><a href='ficha_tecnica_full.php'>Notícias</a></li>
-	<li><a href='ficha_tecnica_full.php'>Trailers</a></li>
-	
-</nav>
+				<?php require_once "submenu_filme.php";
 						
-				</div>
+				echo "</div>
 				
 				
 					<div id='poster_filme'>
@@ -114,7 +118,7 @@ $duracao = $linha["duracao"];
 
 				</div>
 				
-				<div id='info'>
+				<div id='info' class='invisivel'>
 
 					<h1>$titulo</h1>
 					<h2>$titoriginal</h2>
@@ -184,6 +188,183 @@ $sql2 = "SELECT nomegenero FROM filmes
 
 				</div>
 		
+		
+		
+		
+				<div id='info2' class='invisivel'>";?>
+
+					<article class="lista_noticias">
+					<h3>Notícias relacionadas</h3>
+    
+	    <?php
+    include "config/conectar.php";
+    $qtde_registros = 4;
+    @$page = $_GET['pag'];
+    if(!$page){
+        $pagina = 1;
+    }else{
+        $pagina = $page;
+    }
+    
+    $inicio = $pagina  - 1;
+    $inicio = $inicio * $qtde_registros;
+    $sel_parcial = mysqli_query($strcon,"SELECT * FROM noticias
+			INNER JOIN tipoPostagem
+			ON noticias.tipo = tipoPostagem.idtipoPostagem
+			INNER JOIN login
+			ON noticias.autorPost = login.idlogin
+			ORDER BY idnoticias DESC LIMIT $inicio, $qtde_registros");
+	
+    $sel_total = mysqli_query($strcon,"SELECT * FROM noticias
+			INNER JOIN tipoPostagem
+			ON noticias.tipo = tipoPostagem.idtipoPostagem
+			INNER JOIN login
+			ON noticias.autorPost = login.idlogin");
+    
+    $contar = mysqli_num_rows($sel_total);
+    $contar_pages = $contar / $qtde_registros;
+    //echo $contar_pages;
+    
+    while($linha  = mysqli_fetch_array($sel_parcial)){
+            $idnoticia = $linha["idnoticias"];	
+			$titulo = $linha["tituloNoticia"];
+			$subtitulo = $linha["subtitulo"];
+			$texto = $linha["texto"];	
+			$img = $linha["img"];
+			$tipo = $linha["tipoPost"];	
+			$id_tipo_post = $linha["idtipoPostagem"];
+			$data = $linha["dataPost"];
+			$autor = $linha["nome"];
+		
+	if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
+	if ($id_tipo_post == 2){$tipo_categoria = "Games";}
+	if ($id_tipo_post == 3){$tipo_categoria = "Series";}	
+		
+	?>
+	
+	
+	<div class='noticia'>
+
+				<div class='imgNoticia'>
+					<img src='img/noticias/<?php echo $img; ?>' alt='<?php echo $img; ?>'>
+
+				</div>
+
+				<div class='infoNoticiaContainer'>
+					<div class='infoNoticia'>
+
+						<p>Postado em <?php echo $data; ?> por <?php echo $autor; ?></p>
+
+					</div>
+
+					<div class='chamadaNoticia'>
+						<p><a href='noticia.php?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>'><?php echo $titulo; ?></a></p>
+					</div>
+
+				</div>
+
+			</div>
+   
+   <?php
+     }	
+	
+	$anterior = $pagina - 1;
+    $proximo = $pagina + 1;
+    
+    echo "<div class='pg_seletor'>";
+    if($pagina > 1){
+        echo "<a href=?pag=$anterior> <i class='fas fa-angle-left'></i> </a>";
+    }
+    
+    for($i = 1;$i<$contar_pages+1;$i++){
+        echo "<a href=?pag=".$i.">".$i."</a>";
+    }
+    
+    if($pagina < $contar_pages){
+        echo "<a href=?pag=$proximo> <i class='fas fa-angle-right'></i> </a>";
+    }
+	echo "</div>";	
+    ?>
+		
+		</article>
+
+				<?php echo "</div>
+				
+				
+				
+				<div id='info3' class='invisivel'>
+
+					<h1>$titulo</h1>
+					<h2>$titoriginal</h2>
+
+					<div>
+						<h3>Lançamento </h3>
+						<p>$estreia</p>
+					</div>
+					
+					<div>
+						<h3>Direção </h3>
+						<p>$diretor</p>
+					</div>
+
+				
+					<div>
+						<h3>Elenco </h3>
+						<p>$elenco</p>
+					</div>
+
+					<div>
+						<h3>Sinopse </h3>
+						<p class='sinopse'>$sinopse</p>
+					</div>";
+
+?>	
+	
+	
+					<ol>
+						<li><h4>Gênero</h4></li>
+
+<?php						
+$sql2 = "SELECT nomegenero FROM filmes
+				INNER JOIN filmes_has_generos
+				ON filmes.idfilmes = filmes_has_generos.filmes_idfilmes
+				INNER JOIN generos
+				ON filmes_has_generos.generos_idgeneros = generos.idgeneros
+				WHERE filmes.idfilmes = $idSelecionado";	
+
+		$resultado = mysqli_query($strcon, $sql2)
+		or die ("Não foi possível realizar a consulta ao banco de dados");
+
+		while ($linha=mysqli_fetch_array($resultado)) {
+
+		$generos = $linha["nomegenero"];
+		
+								
+						
+						
+						echo "<li>$generos</li>";
+						
+		}
+		?>
+	
+<?php						
+					echo "</ol>
+					
+					<ol>
+						<li><h4>Duração</h4></li>
+						<li>$duracao min</li>
+					</ol>
+						
+					<ol>
+						<li><h4>País</h4></li>
+						<li>$pais</li>
+					</ol>
+
+				</div>
+				
+				
+				
+				
 	</div>";
 }
 		
@@ -202,8 +383,7 @@ $resultado = mysqli_query($strcon, $sql)
 or die ("Não foi possível realizar a consulta ao banco de dados");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
-
-$id = $linha["idseries"];	
+	
 $titulo = $linha["titulo"];
 $titoriginal = $linha["titulo_original"];
 $poster = $linha["poster"];	
@@ -215,6 +395,9 @@ $pais = $linha["paisOrigem"];
 $imgFundo = $linha["imgFundo"];
 $trailer = $linha["trailer"];
 $duracao = $linha["duracao"];
+$ano = $linha["ano"];
+$temp = $linha["temporadas"];
+
 
 		
 		
@@ -223,18 +406,12 @@ $duracao = $linha["duracao"];
 		
 				<div id='menu_filme'>
 				
-					<div id='submenu_filme'>	
-				
-					<nav class='mais_info_filme'>		
-
-						<li><a href='ficha_tecnica_full.php?selecionado=$id&categoria=series'>Informações</a></li>	
-						<li><a href='ficha_tecnica_full.php'>Notícias</a></li>
-						<li><a href='ficha_tecnica_full.php'>Trailers</a></li>
-
-					</nav>
-
+					<div id='submenu_filme'>";	
+				?>
+					
+				<?php require_once "submenu_filme.php";
 						
-				    </div>
+				echo "</div>
 				
 				
 					<div id='poster_filme'>
@@ -247,11 +424,21 @@ $duracao = $linha["duracao"];
 
 					<h1>$titulo</h1>
 					<h2>$titoriginal</h2>
+					
+					<div>
+						<h3>Ano lançamento </h3>
+						<p>$ano</p>
+					</div>
 
 					<div>
 						<h3>Lançamento </h3>
 						<p>$estreia</p>
-					</div>				
+					</div>	
+					
+					<div>
+						<h3>Temporadas </h3>
+						<p>$temp temporadas</p>
+					</div>	
 				
 					<div>
 						<h3>Elenco </h3>
@@ -330,7 +517,7 @@ or die ("Não foi possível realizar a consulta ao banco de dados");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
 
-$id = $linha["idgames"];	
+$idfilme = $linha["idgames"];	
 $titulo = $linha["tituloGame"];
 $desenvolvedora = $linha["nomeDesenvolvedora"];
 $publicadora = $linha["nomePublicadora"];
@@ -351,18 +538,12 @@ $trailer = $linha["trailer"];
 		
 				<div id='menu_filme'>
 				
-					<div id='submenu_filme'>	
-				
-					<nav class='mais_info_filme'>		
-
-						<li><a href='ficha_tecnica_full.php?selecionado=$id&categoria=games'>Informações</a></li>	
-						<li><a href='ficha_tecnica_full.php'>Notícias</a></li>
-						<li><a href='ficha_tecnica_full.php'>Trailers</a></li>
-
-					</nav>
-
+					<div id='submenu_filme'>";	
+				?>
+					
+				<?php require_once "submenu_filme.php";
 						
-				    </div>
+				echo "</div>
 				
 				
 					<div id='poster_filme'>
@@ -389,6 +570,11 @@ $trailer = $linha["trailer"];
 					<div>
 						<h3>Desenvolvedora </h3>
 						<p>$desenvolvedora</p>
+					</div>
+					
+					<div>
+						<h3>Públicado por </h3>
+						<p>$publicadora</p>
 					</div>
 
 					<div>
@@ -490,7 +676,35 @@ break;
 </footer>	
 
 </main>
+<script language="Javascript">
 
-
+	function myFunction() {
+	var element = document.getElementById("info");
+	element.classList.toggle("invisivel");	
+	var element = document.getElementById("info2");
+	element.classList.add("invisivel");		
+	var element = document.getElementById("info3");
+	element.classList.add("invisivel");
+}
+	
+	function myFunction2() {
+	 var element = document.getElementById("info");
+	element.classList.add("invisivel");		
+    var element = document.getElementById("info2");
+	element.classList.toggle("invisivel");	
+	 var element = document.getElementById("info3");
+	element.classList.add("invisivel");	
+}
+	
+	function myFunction3() {
+	 var element = document.getElementById("info");
+	element.classList.add("invisivel");		
+    var element = document.getElementById("info2");
+	element.classList.add("invisivel");	
+	 var element = document.getElementById("info3");
+	element.classList.toggle("invisivel");	
+}
+	
+</script>
 </body>
 </html>

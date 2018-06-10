@@ -154,7 +154,7 @@ estilização do slideshow*/
 	
 	.infoNoticia {
 		width: 100%;
-		height: 30px;
+		height: auto;
 /*		background-color: violet;*/	
 	}
 	
@@ -165,6 +165,15 @@ estilização do slideshow*/
 		color: #FFFFFF;
 		padding: 0px 15px 2px 15px;
 		font-size: 1.125em;
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.infoNoticia p {
+		width: auto;
+		float: left;
+		font-size: .75em;
+		padding-top: 3px;
 	}
 	
 	.infoNoticia .Cinema {
@@ -183,6 +192,8 @@ estilização do slideshow*/
 		width: 100%;
 		height: auto;
 		/*background-color: springgreen;*/
+		clear: both;
+		margin-top: 15px;
 	}
 	
 	.chamadaNoticia a {
@@ -320,16 +331,26 @@ estilização do slideshow*/
 	
 	.infoNoticia {
 		width: 100%;
-		height: 24px;
-		/*background-color: violet;*/
+		height: auto;
+/*		background-color: violet;*/	
 	}
 	
 	.infoNoticia button {
 		height: 20px;
-		border-radius: 10px;
+		border-radius: 11px;
 		border-style: none;
 		color: #FFFFFF;
-		padding: 0px 12px 0px 12px;
+		padding: 0px 10px 0px 15px;
+		font-size: 1em;
+		float: left;
+		margin-right: 10px;
+	}
+	
+	.infoNoticia p {
+		width: auto;
+		float: left;
+		font-size: .75em;
+		padding-top: 0px;
 	}
 	
 	.infoNoticia .Cinema {
@@ -348,6 +369,8 @@ estilização do slideshow*/
 		width: 100%;
 		height: auto;
 		/*background-color: springgreen;*/
+		clear: both;
+		margin-top: 10px;
 	}
 	
 	.chamadaNoticia a {
@@ -436,17 +459,26 @@ estilização do slideshow*/
 	
 	.infoNoticia {
 		width: 100%;
-		height: 20px;
+		height: auto;
 /*		background-color: violet;*/	
 	}
 	
 	.infoNoticia button {
-		height: 16px;
-		border-radius: 8px;
+		height: 14px;
+		border-radius: 7px;
 		border-style: none;
 		color: #FFFFFF;
-		padding: 0px 10px 2px 10px;
+		padding: 0px 8px 0px 8px;
 		font-size: .75em;
+		float: left;
+		margin-right: 5px;
+	}
+	
+	.infoNoticia p {
+		width: auto;
+		float: left;
+		font-size: .5em;
+		padding-top: 0px;
 	}
 	
 	.infoNoticia .Cinema {
@@ -465,6 +497,8 @@ estilização do slideshow*/
 		width: 100%;
 		height: auto;
 		/*background-color: goldenrod;*/
+		clear: both;
+		margin-top: 5px;
 	}
 	
 	.chamadaNoticia a {

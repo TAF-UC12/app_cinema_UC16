@@ -160,9 +160,10 @@ switch ($filtro_categoria) {
     
     $inicio = $pagina  - 1;
     $inicio = $inicio * $qtde_registros;
-    $sel_parcial = mysqli_query($strcon,"SELECT * FROM series ORDER BY idseries DESC LIMIT $inicio, $qtde_registros");
+    $sel_parcial = mysqli_query($strcon,"SELECT * FROM series
+			ORDER BY idseries DESC LIMIT $inicio, $qtde_registros");
 	
-    $sel_total = mysqli_query($strcon,"SELECT * FROM filmes");
+    $sel_total = mysqli_query($strcon,"SELECT * FROM series");
     
     $contar = mysqli_num_rows($sel_total);
     $contar_pages = $contar / $qtde_registros;
