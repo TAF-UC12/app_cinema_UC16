@@ -2,6 +2,12 @@
 /* CSS Document */
 
 
+/*ESTILOS DASS CLASSES PARA OCULTAR ABAS*/
+.invisivel { display: none; }
+.visivel { visibility: visible; }
+.cor_selecionado { background-color: aqua; border:solid rgba(151,4,6,1.00) 5px; }
+
+
 @media only screen and (min-width: 769px){
 	
 	
@@ -110,11 +116,11 @@
 #info3 {
 	width: 100%;
 	height: auto;
-	background-color: #17067E;
+	background-color: #000000;
 	padding: 10px;
 }
 	
-#info h1 {
+#info h1, #info3 h1 {
 	font-size: 2em; 
 	font-weight: bold;
 	line-height: normal;
@@ -291,6 +297,28 @@
 		text-decoration: none;
 		color: #000000;
 	}	
+
+	
+/*CONFIGURAÇÃO DO IFRAME DO TRAILER RESPONSIVO*/	
+.trailer_container {
+	position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+	margin-top: 50px;
+	
+}
+	
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+	
+	
+	
 	
 .fichaTecnica {
 	width: 100%;
@@ -416,8 +444,15 @@
 	background-color: #232323;
 	padding: 10px;
 }
+
+#info3 {
+	width: 100%;
+	height: auto;
+	background-color: #000000;
+	padding: 10px;
+}	
 	
-#info h1 {
+#info h1, #info3 h1 {
 	font-size: 2em;
 	font-weight: bold;
 	line-height: normal;
@@ -595,6 +630,25 @@
 		color: #000000;
 		
 	}	
+	
+
+/*CONFIGURAÇÃO DO IFRAME DO TRAILER RESPONSIVO*/	
+.trailer_container {
+	position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+	margin: 25px 0px;
+	
+}
+	
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}	
 	
 	
 .fichaTecnica {
@@ -881,3 +935,5 @@
 
 
 	
+
+
