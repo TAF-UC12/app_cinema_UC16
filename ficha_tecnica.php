@@ -678,29 +678,77 @@ break;
 </main>
 <script language="Javascript">
 
-	function myFunction() {
+	function myFunction() {	
+		
+	var element = document.getElementById("lista");	
+	element.classList.toggle("info_ativa");	
+	
+	var element = document.getElementById("lista2");	
+	element.classList.remove("info_ativa");		
+		
+	var element = document.getElementById("lista3");	
+	element.classList.remove("info_ativa");	
+		
+		
+
 	var element = document.getElementById("info");
-	element.classList.toggle("invisivel");	
+	element.classList.toggle("invisivel");
+		
 	var element = document.getElementById("info2");
 	element.classList.add("invisivel");		
+			
 	var element = document.getElementById("info3");
 	element.classList.add("invisivel");
+		
 }
 	
+	
+	
 	function myFunction2() {
+		
+	var element = document.getElementById("lista");	
+	element.classList.remove("info_ativa");	
+	
+	var element = document.getElementById("lista2");	
+	element.classList.toggle("info_ativa");		
+		
+	var element = document.getElementById("lista3");	
+	element.classList.remove("info_ativa");	
+		
+		
+		
 	 var element = document.getElementById("info");
-	element.classList.add("invisivel");		
+	element.classList.add("invisivel");	
+		
     var element = document.getElementById("info2");
-	element.classList.toggle("invisivel");	
+	element.classList.toggle("invisivel");
+		
+		
+		
 	 var element = document.getElementById("info3");
 	element.classList.add("invisivel");	
 }
 	
 	function myFunction3() {
+		
+	var element = document.getElementById("lista");	
+	element.classList.remove("info_ativa");	
+	
+	var element = document.getElementById("lista2");	
+	element.classList.remove("info_ativa");		
+		
+	var element = document.getElementById("lista3");	
+	element.classList.toggle("info_ativa");	
+		
+		
+		
 	 var element = document.getElementById("info");
 	element.classList.add("invisivel");		
+					
     var element = document.getElementById("info2");
 	element.classList.add("invisivel");	
+		
+		
 	 var element = document.getElementById("info3");
 	element.classList.toggle("invisivel");	
 }
