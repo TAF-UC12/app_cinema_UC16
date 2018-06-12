@@ -291,7 +291,6 @@ estilização do slideshow*/
 		width: 400px;
 		height: 1000px;
 		background-color: brown;
-		margin-top: 15px;
 		display: none;
 	}
 	
@@ -501,9 +500,14 @@ estilização do slideshow*/
 		margin-top: 5px;
 	}
 	
+	.chamadaNoticia p {
+		line-height: 1em;
+	}
+	
 	.chamadaNoticia a {
 		text-decoration: none;
 		color: #000000;
+		font-size: .75em;
 	}
 	
 		.pg_seletor {

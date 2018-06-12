@@ -54,25 +54,27 @@ estilização do slideshow*/
 	position:absolute;
 	right: 8.333333333333333%; /*100px de 1200px de borda*/
 	bottom: 10px;
-	width:480px;
+	width:680px;
 	height:auto;
-	/*background-color:rgba(255,188,5,0.8);*/
+	background-color: rgba(61,61,61,0.80);
 	line-height:1.27;
 	padding:5px 5px 5px 5px;
+	border-radius: 10px;
 	box-sizing:border-box;
 	z-index: 1;
 }
 
 .noticia_titulo_home h1 {
 	font-size: 2em;
-	color: #44B4FF;
+	color: #ffffff;
 	text-shadow: 1px 1px 2px #000000;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .noticia_titulo_home h2 {
 	font-size: 1em; /*12px*/
-	color: #ffffff;
+	color: #B5B5B5;
 	/*text-shadow: 1px 1px 2px #000000;*/
 	
 }
@@ -80,10 +82,12 @@ estilização do slideshow*/
 .noticia_titulo_home a {
 	text-decoration: none;
 	font-size: 1em;
-	color: #1E76B2;
+	color: #FFFFFF;
+	background-color: #000000;
 	float: right;
-	border-bottom: 2px solid #1E76B2;
 	margin-top: 10px;
+	border-radius: 30px;
+	padding: 5px 15px;
 }
 
 .noticia_titulo_home a:hover {
@@ -242,38 +246,43 @@ estilização do slideshow*/
 	
 .noticia_titulo_home{
 	position:absolute;
-	right: 5%;
+	right: 20px;
 	bottom: 10px;
-	width:90%;
+	width: 90%;
 	height:auto;
-	/*background-color:rgba(255,188,5,0.8);*/
+	background-color: rgba(61,61,61,0.80);
 	line-height:1.27;
 	padding:5px 5px 5px 5px;
+	border-radius: 10px;
 	box-sizing:border-box;
 	z-index: 1;
 }
 
 .noticia_titulo_home h1 {
-	font-size: 3em;
-	color: #44B4FF;
+	color: #ffffff;
 	text-shadow: 1px 1px 2px #000000;
+	font-size: 2.5em;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .noticia_titulo_home h2 {
 	font-size: 1.5em; /*12px*/
-	color: #ffffff;
+	color: #B5B5B5;
 	/*text-shadow: 1px 1px 2px #000000;*/
+	display: none;
 	
 }
 
 .noticia_titulo_home a {
 	text-decoration: none;
-	font-size: 1em;
-	color: #1E76B2;
+	font-size: 1.5em;
+	color: #FFFFFF;
+	background-color: #000000;
 	float: right;
-	border-bottom: 2px solid #1E76B2;
 	margin-top: 10px;
+	border-radius: 30px;
+	padding: 10px 25px;
 }
 
 .noticia_titulo_home a:hover {
@@ -285,7 +294,6 @@ estilização do slideshow*/
 	.noticias_container {
 		width: auto;
 		flex-grow: 1;
-		margin-top: 10px;
 	}
 	
 	.categorias_lancamento_container {
@@ -421,8 +429,7 @@ estilização do slideshow*/
 	.noticias_container, .lancamentos_container, .noticia_container {
 		width: 100%;
 		height: auto;
-/*		background-color: gray;*/	
-		margin-top: 10px;
+/*		background-color: gray;*/
 	}
 	
 	.lista_noticias {

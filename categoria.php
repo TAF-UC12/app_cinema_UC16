@@ -149,7 +149,7 @@ $categoria = $_GET["tipo"];
 	
 	echo "<div class='categoriaPagina$tipo'>
 
-			<h2><i class='fas fa-angle-left' onclick='goBack()'></i> $tipo</h2>
+			<h2><i class='fas fa-chevron-circle-left' onclick='goBack()'></i> &thinsp;&thinsp; $tipo</h2>
 
 		</div>";
 	
@@ -306,7 +306,7 @@ $categoria = $_GET["tipo"];
 
 						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo; ?></button>
 
-						<p>Postado em <?php echo $data; ?> por <?php echo $autor; ?></p>
+						<p><i class="far fa-calendar-alt"></i> <?php echo $data; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i><?php echo $autor; ?></p>
 
 					</div>
 

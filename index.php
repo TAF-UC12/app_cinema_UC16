@@ -292,7 +292,7 @@ ini_set(“display_errors”, 0 );
 
 						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo; ?></button>
 
-						<p>Postado em <?php echo $data; ?> por <?php echo $autor; ?></p>
+						<p><i class="far fa-calendar-alt"></i> <?php echo $data; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i> <?php echo $autor; ?></p>
 
 					</div>
 

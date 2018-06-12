@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="index.php" server="192.168.1.10//var/www/html/" local="131730626976946641" remote="131730734400000000" Dst="1" />
-<file name="submenu.php" server="192.168.1.10//var/www/html/" local="131729807476093869" remote="131729915400000000" Dst="1" />
+<file name="index.php" server="192.168.1.10//var/www/html/" local="131732347582207870" remote="131732455200000000" Dst="1" />
+<file name="submenu.php" server="192.168.1.10//var/www/html/" local="131732267515204210" remote="131732375400000000" Dst="1" />
 <file name="menu.php" server="192.168.1.10//var/www/html/" local="131726326925782959" remote="131726416800000000" Dst="1" />
-<file name="noticia.php" server="192.168.1.10//var/www/html/" local="131729661204209625" remote="131729769000000000" Dst="1" />
+<file name="noticia.php" server="192.168.1.10//var/www/html/" local="131732360475394481" remote="131732468400000000" Dst="1" />
 <file name="filtro.php" server="192.168.1.10//var/www/html/" local="131729527730560241" remote="131729637000000000" Dst="1" />
-<file name="submenu_filme.php" server="192.168.1.10//var/www/html/" local="131731577604627531" remote="131731685400000000" Dst="1" />
-<file name="categoria.php" server="192.168.1.10//var/www/html/" local="131730631559284174" remote="131730739200000000" Dst="1" />
-<file name="lancamentos.php" server="192.168.1.10//var/www/html/" local="131730475391800297" remote="131730583200000000" Dst="1" />
-<file name="ficha_tecnica.php" server="192.168.1.10//var/www/html/" local="131731568568114748" remote="131731676400000000" Dst="1" />
+<file name="submenu_filme.php" server="192.168.1.10//var/www/html/" local="131732143044468260" remote="131732250600000000" Dst="1" />
+<file name="categoria.php" server="192.168.1.10//var/www/html/" local="131732357929911378" remote="131732465400000000" Dst="1" />
+<file name="lancamentos.php" server="192.168.1.10//var/www/html/" local="131732320604972463" remote="131732428200000000" Dst="1" />
+<file name="ficha_tecnica.php" server="192.168.1.10//var/www/html/" local="131732338148079325" remote="131732445600000000" Dst="1" />
+<file name="ficha_tec_aba_filme.php" server="192.168.1.10//var/www/html/" local="131732254167664152" remote="131732361600000000" Dst="1" />
+<file name="ficha_tec_aba_serie.php" server="192.168.1.10//var/www/html/" local="131732252959815954" remote="131732360400000000" Dst="1" />
+<file name="ficha_tec_aba_game.php" server="192.168.1.10//var/www/html/" local="131732255037639700" remote="131732362800000000" Dst="1" />
 </dwsync>

@@ -40,7 +40,7 @@ ini_set(“display_errors”, 0 );
 
 	<div class='categoriaPaginaLancamentos'>
 
-		<h2><i class='fas fa-angle-left' onclick='goBack()'></i> Lançamentos</h2>
+		<h2><i class='fas fa-chevron-circle-left' onclick='goBack()'></i> &thinsp;&thinsp; Lançamentos</h2>
 		
 		<script>
 		function goBack() {

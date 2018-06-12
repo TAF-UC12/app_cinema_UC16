@@ -4,14 +4,6 @@
 
 @media only screen and (min-width: 769px){
 	
-	#corpo_container {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		width: 90%;
-		height: auto;
-		/*background-color: teal;*/
-	}
 
 	.noticias_container {
 		position: relative;
