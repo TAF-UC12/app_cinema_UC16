@@ -232,7 +232,8 @@ ini_set(“display_errors”, 0 );
 <section class="noticias_container">
 	
     <article class="lista_noticias">
-    
+    	<h3>Últimas notícias</h3>
+    	
 	    <?php
     include "config/conectar.php";
     $qtde_registros = 4;

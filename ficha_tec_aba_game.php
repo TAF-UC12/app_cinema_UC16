@@ -58,6 +58,11 @@ $trailer = $linha["trailer"];
 					</div>
 					
 					<div>
+						<h3>Direção </h3>
+						<p>$diretor</p>
+					</div>
+					
+					<div>
 						<h3>Desenvolvedora </h3>
 						<p>$desenvolvedora</p>
 					</div>
@@ -140,7 +145,7 @@ $sql2 = "SELECT nomeConsole FROM games
 				<div id='info2' class='invisivel'>";?>
 
 					<article class="lista_noticias">
-					<h3>Notícias relacionadas</h3>
+					<h3>Notícias sobre <?php echo"$titulo";?></h3>
     
 	    <?php
     include "config/conectar.php";

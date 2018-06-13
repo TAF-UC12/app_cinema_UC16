@@ -118,7 +118,7 @@ $sql2 = "SELECT nomegenero FROM filmes
 				<div id='info2' class='invisivel'>";?>
 
 					<article class="lista_noticias">
-					<h3>Notícias relacionadas</h3>
+					<h3>Notícias sobre <?php echo"$titulo";?></h3>
     
 	    <?php
     include "config/conectar.php";

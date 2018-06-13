@@ -245,8 +245,9 @@ $categoria = $_GET["tipo"];
 <section class="noticias_container">
 	
     <article class="lista_noticias">
-    
-	    <?php
+    	<h3>Últimas notícias em <?php echo"$tipo";?></h3>
+    	
+      <?php
     include "config/conectar.php";
     $qtde_registros = 3;
     @$page = $_GET['pag'];

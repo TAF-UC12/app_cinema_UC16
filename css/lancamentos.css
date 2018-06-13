@@ -54,6 +54,7 @@
 		height: auto;
 		/*background-color: aquamarine;*/
 		margin: 15px 0px;
+		padding: 0px;
 }
 
 
@@ -65,6 +66,7 @@
 	width: auto;
 	height: auto;
 	/*background-color: blueviolet;*/
+	margin: 5px;
 }
 
 #poster_filme img{
@@ -345,12 +347,14 @@ input {
 		display: flex;
 		flex-direction: row;
 		margin: 15px 0px;
+		padding: 10px;
 }
 
 #poster_filme {
 	width: 30%;
 	height: auto;
 	background-color: blueviolet;
+	margin: 0px;
 }
 
 #poster_filme img{
@@ -599,6 +603,110 @@ input {
    *background: #58B14C;
    -webkit-appearance: none;
 }	
+
+#filme_info {
+	width: 100%;
+		height: auto;
+		background-color: aquamarine;
+		display: flex;
+		flex-direction: row;
+		margin: 15px 0px;
+		padding: 5px;
+}	
+
+#poster_filme {
+	width: 30%;
+	height: auto;
+	background-color: blueviolet;
+	margin: 0px;
+}
+
+#poster_filme img{
+	width: 100%;
+	border: 1px solid #000000;
+	box-shadow: 1px 1px 2px #272727;
+	-webkit-box-shadow: 1px 1px 2px #272727;
+}	
+	
+#info {
+	width: 70%;
+	height: auto;
+	/*background-color: darkgoldenrod;*/
+	padding-left: 5px;
+}
+
+#info h1 {
+	font-size: 1.125em; /*18px*/
+	font-weight: bold;
+	line-height: normal;
+	color: #000000;
+	text-shadow: 1px 1px 2px #000000;
+	text-align: left;
+}
+
+#info h2 {
+	width: auto;
+	font-size: .875em; /*14px*/
+	color: #C0C0C0;
+	text-shadow: 1px 1px 1px #000000;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+#info a {
+	width: auto;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+	#info div {
+		position: relative;
+		width: 100%;
+		height: auto;
+		margin-bottom: 5px; 
+		background-color: slateblue;
+		overflow: auto;
+	}
+	
+	#info div:last-child {
+		margin-bottom: 0px;
+	}
+	
+#info div h3 {
+	width: auto;
+	font-size: .75em;
+	font-weight: bold;
+	float: left;
+	padding-right: 10px;
+	color: #FF5F5E;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+#info div p {
+	width: auto;
+	font-size: .75em;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #000000;
+	float: left;
+}
+	
+.fichaTecnica {
+	width: 100%;
+	float: left;
+}
+
+.fichaTecnica button{
+	width: 80%;
+	height: 32px;
+	border-radius: 16px;
+	border-style: none;
+	background-color: #FF5F5E;
+	color: #FFFFFF;
+	text-align: center;
+	float: right;
+	margin-right: 10%;
+}	
+	
 	
 }
 	
