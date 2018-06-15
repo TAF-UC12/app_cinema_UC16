@@ -20,7 +20,8 @@ ini_set(“display_errors”, 0 );
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
 	
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no>
+<meta name="mobile-web-app-capable" content="yes">
 
 <!--LINKS DOS ARQUIVOS JS-->
 <link rel="manifest" href="js/manifest.json">
@@ -146,10 +147,16 @@ ini_set(“display_errors”, 0 );
 <section class="submenu">
 
 	<?php
-		require_once('submenu.php');
+		require('submenu.php');
 	?>
 	
 </section>
+	
+<div class='categoriaPaginaHome'>
+
+	<h2>Home</h2>
+
+</div>	
 
 <div id="topo_slides_container">
 
@@ -340,6 +347,15 @@ ini_set(“display_errors”, 0 );
 </aside>																
 	
 </div> <!--FIM DO CORPO DO SITE-->	
+	
+	
+<div id="submenu_inferior">
+	
+	<?php
+		require('submenu.php');
+	?>
+	
+</div>
 	
 	
 <footer>

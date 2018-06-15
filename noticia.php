@@ -143,7 +143,7 @@ or die ("Não foi possível realizar a consulta ao banco de dados 3");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
 
-$idFilme = $linha["idfilmes"];
+$id = $linha["idfilmes"];
 $titulo = $linha["titulo"];
 $titoriginal = $linha["titulo_original"];
 $poster = $linha["poster"];	
@@ -159,7 +159,7 @@ $poster = $linha["poster"];
 			
 			<div class='fichaTecnica'>
 
-				<a href='filme.php?filme=$idFilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+				<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
 
 			</div>
 			
@@ -171,7 +171,7 @@ $poster = $linha["poster"];
 		
 		<p>Notícias sobre $titulo</p>";
 			
-$sql4 = "SELECT * FROM noticias WHERE relac_filmes = $idFilme";	
+$sql4 = "SELECT * FROM noticias WHERE relac_filmes = $id";	
 	
 $resultado = mysqli_query($strcon, $sql4)
 or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -214,7 +214,7 @@ or die ("Não foi possível realizar a consulta ao banco de dados 5");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
 
-$idserie = $linha["idseries"];
+$id = $linha["idseries"];
 $titulo = $linha["titulo"];
 $emissora = $linha["nomeEmissora"];
 $poster = $linha["poster"];	
@@ -230,7 +230,7 @@ $poster = $linha["poster"];
 			
 			<div class='fichaTecnica'>
 
-				<a href='series.php?filme=$idserie'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Info</button></a>
+				<a href='ficha_tecnica.php?selecionado=$id&categoria=series'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Info</button></a>
 
 			</div>
 			
@@ -245,11 +245,11 @@ $poster = $linha["poster"];
 $sql4 = "SELECT * FROM `noticias`
 		 INNER JOIN series
 		 ON noticias.relac_series = series.idseries
-		 WHERE relac_series = $idserie AND idnoticias != $idNoticia ORDER BY idnoticias DESC
+		 WHERE relac_series = $id AND idnoticias != $idNoticia ORDER BY idnoticias DESC
 		 LIMIT 3";	
 	
 $resultado = mysqli_query($strcon, $sql4)
-or die ("Não foi possível realizar a consulta ao banco de dados");
+or die ("Não foi possível realizar a consulta ao banco de dados 666");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
 
@@ -290,7 +290,7 @@ or die ("Não foi possível realizar a consulta ao banco de dados 6");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
 
-$idFilme = $linha["idgames"];
+$id = $linha["idgames"];
 $titulo = $linha["tituloGame"];
 $desenvolvedora = $linha["nomeDesenvolvedora"];	
 $titoriginal = $linha["titulo_original"];
@@ -307,7 +307,7 @@ $poster = $linha["imgGame"];
 			
 			<div class='fichaTecnica'>
 
-				<a href='games.php?filme=$idFilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+				<a href='ficha_tecnica.php?selecionado=$id&categoria=games'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
 
 			</div>
 			
@@ -319,7 +319,7 @@ $poster = $linha["imgGame"];
 		
 		<p>Notícias sobre $titulo</p>";
 			
-$sql4 = "SELECT * FROM noticias WHERE relac_games = $idFilme";	
+$sql4 = "SELECT * FROM noticias WHERE relac_games = $id";	
 	
 $resultado = mysqli_query($strcon, $sql4)
 or die ("Não foi possível realizar a consulta ao banco de dados");

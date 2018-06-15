@@ -135,7 +135,7 @@ switch ($filtro_categoria) {
 					
 					<div class='fichaTecnica'>
 
-						<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+						<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Info</button></a>
 
 					</div>
 
