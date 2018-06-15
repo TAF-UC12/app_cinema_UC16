@@ -93,9 +93,9 @@ while ($linha=mysqli_fetch_array($resultado)) {
 
 			<div class='topoNoticia'>
 
-				<h1>$titulo </h1>
+				<h1>$titulo</h1>
 				<h2>$subtitulo</h2>
-				<p>$autor</p>
+				<p><i class='fas fa-user'></i> $autor</p>
 
 			</div>
 
@@ -192,7 +192,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 		echo "<div class='noticia_relacionada'>
 			
 			<img src='img/noticias/$img' alt=''>
-			<a href=''><h1>$titulo</h1></a>
+			<a href='noticia.php?news=$idnoticia&categoria=Cinema'><h1>$titulo</h1></a>
 			
 		</div>
 		
@@ -204,7 +204,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 		
 	 case "Series":	
 
-		$sql2 = "SELECT * FROM $tabela
+		$sql2 = "SELECT * FROM series
 		INNER JOIN emissoras
 		ON series.canal = emissoras.idemissoras
 		WHERE $coluna = $rel_serie";	
@@ -214,7 +214,7 @@ or die ("Não foi possível realizar a consulta ao banco de dados 5");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
 
-$idFilme = $linha["idseries"];
+$idserie = $linha["idseries"];
 $titulo = $linha["titulo"];
 $emissora = $linha["nomeEmissora"];
 $poster = $linha["poster"];	
@@ -230,7 +230,7 @@ $poster = $linha["poster"];
 			
 			<div class='fichaTecnica'>
 
-				<a href='series.php?filme=$idFilme'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
+				<a href='series.php?filme=$idserie'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Info</button></a>
 
 			</div>
 			
@@ -240,9 +240,13 @@ $poster = $linha["poster"];
 	
 	<div class='noticias_relacionadas_container'>
 		
-		<p>Notícias sobre Titulo</p>";
+		<p>Notícias sobre $titulo</p>";
 			
-$sql4 = "SELECT * FROM noticias WHERE relac_series = $idFilme";	
+$sql4 = "SELECT * FROM `noticias`
+		 INNER JOIN series
+		 ON noticias.relac_series = series.idseries
+		 WHERE relac_series = $idserie AND idnoticias != $idNoticia ORDER BY idnoticias DESC
+		 LIMIT 3";	
 	
 $resultado = mysqli_query($strcon, $sql4)
 or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -263,7 +267,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 		echo "<div class='noticia_relacionada'>
 			
 			<img src='img/noticias/$img' alt=''>
-			<a href=''><h1>$titulo</h1></a>
+			<a href='noticia.php?news=$idnoticia&categoria=Series'><h1>$titulo</h1></a>
 			
 		</div>
 		
@@ -313,7 +317,7 @@ $poster = $linha["imgGame"];
 	
 	<div class='noticias_relacionadas_container'>
 		
-		<p>Notícias sobre Titulo</p>";
+		<p>Notícias sobre $titulo</p>";
 			
 $sql4 = "SELECT * FROM noticias WHERE relac_games = $idFilme";	
 	
@@ -336,7 +340,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 		echo "<div class='noticia_relacionada'>
 			
 			<img src='img/noticias/$img' alt=''>
-			<a href=''><h1>$titulo</h1></a>
+			<a href='noticia.php?news=$idnoticia&categoria=Games'><h1>$titulo</h1></a>
 			
 		</div>
 		

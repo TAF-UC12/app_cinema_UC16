@@ -4,7 +4,7 @@
 <file name="jquery-3.3.1.js" server="192.168.1.10//var/www/html/" local="131687257669421973" remote="131725417800000000" Dst="1" />
 <file name="jssor.slider-27.1.0.min.js" server="192.168.1.10//var/www/html/" local="131687257669447044" remote="131725417800000000" Dst="1" />
 <file name="app.js" server="192.168.1.10//var/www/html/" local="131727723960000000" remote="131727922800000000" Dst="1" />
-<file name="manifest.json" server="192.168.1.10//var/www/html/" local="131727723980000000" remote="131727922800000000" Dst="1" />
-<file name="service-worker.js" server="192.168.1.10//var/www/html/" local="131727723980000000" remote="131727922800000000" Dst="1" />
+<file name="manifest.json" server="192.168.1.10//var/www/html/" local="131734831696750428" remote="131734939200000000" Dst="1" />
+<file name="service-worker.js" server="192.168.1.10//var/www/html/" local="131734849981314929" remote="131734957800000000" Dst="1" />
 <file name="npm.js" server="192.168.1.10//var/www/html/" local="131727723990000000" remote="131727922800000000" Dst="1" />
 </dwsync>

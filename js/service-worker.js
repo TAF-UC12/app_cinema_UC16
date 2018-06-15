@@ -1,17 +1,22 @@
-var CACHE_NAME = 'CAS-static-v1';
+var CACHE_NAME = 'PLAY-static-v1';
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       return cache.addAll([
 
-      '/',
-      '/index.html',
+      '../index.php',
       '/js/app.js',
-      '/estilo/estiloCas.css',
-      '/imagens/cas.png',
-      '/imagens/cas2x.png',
-      '/imagens/cas4x.png',
+      '../css/estilo.css',
+	  '../css/index.css',  
+	  '../css/menu.css',
+	  '../css/categorias.css',
+	  '../css/ficha_tecnica.css',
+	  '../css/lancamentos.css',
+	  '../css/noticias.css',    
+      '../img/icon48px.png',
+      '../img/icon96px.png',
+	  '../img/icon192px.png',
 
       ]);
     })

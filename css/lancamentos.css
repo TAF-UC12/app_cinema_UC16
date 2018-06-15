@@ -72,8 +72,15 @@
 #poster_filme img{
 	width: 100%;
 	border: 1px solid #000000;
-	box-shadow: 2px 2px 3px #000000;
 	-webkit-box-shadow: 2px 2px 3px #000000;
+	box-shadow: 2px 2px 3px #000000;
+	transition: .5s ease all;
+}
+
+#poster_filme img:hover {
+	-webkit-box-shadow: 4px 4px 6px #000000;
+	box-shadow: 4px 4px 6px #000000;
+	transition: 1s ease all;
 }
 	
 .filtro_container{

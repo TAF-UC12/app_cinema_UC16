@@ -247,7 +247,7 @@ body{
 	.categoriaPaginaCinema h2, .categoriaPaginaGames h2, .categoriaPaginaSeries h2, .categoriaPaginaLancamentos h2, .categoriaPaginaNoticias h2{
 		text-align: center;
 		color: #FFFFFF;
-		padding: 10px 0px;
+		padding: 7px 0px;
 	}
 	
 	.submenu {
@@ -302,7 +302,7 @@ body{
 		position: relative;
 		display: flex;
 		flex-direction: row;
-		width: 90%;
+		width: 95%;
 		height: auto;
 		/*background-color: teal;*/
 		margin-top: 15px;
@@ -406,7 +406,7 @@ footer {
 	.categoriaPaginaCinema h2, .categoriaPaginaGames h2, .categoriaPaginaSeries h2, .categoriaPaginaLancamentos h2, .categoriaPaginaNoticias h2{
 		text-align: center;
 		color: #FFFFFF;
-		padding: 10px 0px;
+		padding: 5px 0px;
 	}
 	
 	.submenu {

@@ -11,6 +11,9 @@ ini_set(“display_errors”, 0 );
 <head>
 <meta charset="utf-8">
 <title>Home app</title>
+
+<link rel="shortcut icon" href="img/icon48px.png">
+
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/menu.css" rel="stylesheet" type="text/css">
 <link href="css/index.css" rel="stylesheet" type="text/css">
@@ -353,7 +356,6 @@ ini_set(“display_errors”, 0 );
 	
 </main>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
 
 	//service worker

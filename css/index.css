@@ -74,7 +74,7 @@ estilização do slideshow*/
 
 .noticia_titulo_home h2 {
 	font-size: 1em; /*12px*/
-	color: #B5B5B5;
+	color: #B5B5B5
 	/*text-shadow: 1px 1px 2px #000000;*/
 	
 }
@@ -92,6 +92,7 @@ estilização do slideshow*/
 
 .noticia_titulo_home a:hover {
 	color: #44B4FF;
+	box-shadow: 0px 0px 2px #ffffff;
 	transition: .5s all ease;
 }
 
@@ -118,7 +119,7 @@ estilização do slideshow*/
 	
 	.categorias_lancamento_container {
 		width: 400px;
-		height: 1000px;
+		height: 500px;
 		background-color: brown;
 	}
 	
@@ -148,7 +149,7 @@ estilização do slideshow*/
 	}
 	
 	.imgNoticia {
-		width: 30%;
+		width: 20%;
 		height: auto;
 		/*background-color: blueviolet;*/
 	}
@@ -159,7 +160,7 @@ estilização do slideshow*/
 	}
 	
 	.infoNoticiaContainer {
-		width: 70%;
+		width: 80%;
 		height: auto;
 		/*background-color: darkgoldenrod;*/
 		padding: 0px 10px;
@@ -209,7 +210,7 @@ estilização do slideshow*/
 		height: auto;
 		/*background-color: springgreen;*/
 		clear: both;
-		margin-top: 15px;
+		margin-top: 30px;
 	}
 	
 	.chamadaNoticia a {
@@ -342,7 +343,7 @@ estilização do slideshow*/
 	}
 	
 	.imgNoticia {
-		width: 30%;
+		width: 25%;
 		height: auto;
 		/*background-color: blueviolet;*/
 	}
@@ -353,7 +354,7 @@ estilização do slideshow*/
 	}
 	
 	.infoNoticiaContainer {
-		width: 70%;
+		width: 75%;
 		height: auto;
 		/*background-color: darkgoldenrod;*/
 		padding: 0px 0px 0px 10px;
@@ -403,7 +404,7 @@ estilização do slideshow*/
 		height: auto;
 		/*background-color: springgreen;*/
 		clear: both;
-		margin-top: 10px;
+		margin-top: 25px;
 	}
 	
 	.chamadaNoticia a {
@@ -523,7 +524,7 @@ estilização do slideshow*/
 		width: auto;
 		float: left;
 		font-size: .5em;
-		padding-top: 3px;
+		padding-top: 2px;
 	}
 	
 	.infoNoticia .Cinema {
@@ -543,7 +544,7 @@ estilização do slideshow*/
 		height: auto;
 		/*background-color: goldenrod;*/
 		clear: both;
-		margin-top: 5px;
+		margin-top: 15px;
 	}
 	
 	.chamadaNoticia p {
