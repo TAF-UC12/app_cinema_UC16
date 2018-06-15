@@ -101,7 +101,15 @@ break;
 	
 </section>									
 	
+
+<div id="submenu_inferior">
 	
+	<?php
+		require('submenu.php');
+	?>
+	
+</div>	
+			
 <footer>
 	
 	<div id="logo_rodape">

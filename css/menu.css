@@ -2,7 +2,7 @@
 .mobile-menu {
 display:block;
 width:100%;
-background: #1F3F60/*e0b88f/*c99393/*e5d1a4/*dcc591/*EFD3A3*/;
+background: #313131/*e0b88f/*c99393/*e5d1a4/*dcc591/*EFD3A3*/;
 line-height: 1.6em;
 font-weight: 400;
 text-align:center;
@@ -17,7 +17,7 @@ margin:0 auto;
   text-align:center;
   width:100%;
   position: absolute;
-  background: #1F3F60;
+  background: #313131;
 }
 
 /*Create a horizontal list with spacing*/
@@ -34,9 +34,8 @@ margin:0 auto;
 	text-align: center;
 	color: #fff;
   text-transform:uppercase;
-	background: #1F3F60;
+	background: #313131;
 	text-decoration: none;
-  margin-left:-5px;
   padding: 10px 0;  
 -webkit-transition: all 0.4s ease 0s;
 -moz-transition: all 0.4s ease 0s;
@@ -87,16 +86,18 @@ transition: all 0.4s ease 0s;
 .mobile-menu .show-menu {
 	text-decoration: none;
 	color: #fff;
-	background: #8aa8bd;
+	background: #313131;
 	text-align: center;
 	padding: 10px 15px;
 	display: none;
   cursor: pointer;
   text-transform: uppercase;
+	border-bottom: 5px ridge #000000;
 }
 
 .mobile-menu .show-menu span{
-   padding-left: 35px;
+   padding-left: 15px;
+
 }
 
 /*Hide checkbox*/

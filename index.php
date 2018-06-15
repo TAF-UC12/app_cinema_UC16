@@ -144,6 +144,12 @@ ini_set(“display_errors”, 0 );
 
 </header>
 
+<div class='categoriaPaginaHome'>
+
+	<h2>Home</h2>
+
+</div>	
+
 <section class="submenu">
 
 	<?php
@@ -152,11 +158,6 @@ ini_set(“display_errors”, 0 );
 	
 </section>
 	
-<div class='categoriaPaginaHome'>
-
-	<h2>Home</h2>
-
-</div>	
 
 <div id="topo_slides_container">
 
@@ -237,6 +238,8 @@ ini_set(“display_errors”, 0 );
 
 	</div>
 
+
+
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
 <section class="noticias_container">
@@ -246,7 +249,7 @@ ini_set(“display_errors”, 0 );
     	
 	    <?php
     include "config/conectar.php";
-    $qtde_registros = 4;
+    $qtde_registros = 8;
     @$page = $_GET['pag'];
     if(!$page){
         $pagina = 1;
@@ -286,7 +289,11 @@ ini_set(“display_errors”, 0 );
 		
 	if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
 	if ($id_tipo_post == 2){$tipo_categoria = "Games";}
-	if ($id_tipo_post == 3){$tipo_categoria = "Series";}	
+	if ($id_tipo_post == 3){$tipo_categoria = "Series";}
+		
+	if ($tipo == 1){$tipo_icon = "<i class='fas fa-film'></i>";}
+	if ($tipo == 2){$tipo_icon = "<i class='fas fa-gamepad'></i>";}
+	if ($tipo == 3){$tipo_icon = "<i class='fas fa-tv'></i>";}
 		
 	?>
 	
@@ -301,7 +308,7 @@ ini_set(“display_errors”, 0 );
 				<div class='infoNoticiaContainer'>
 					<div class='infoNoticia'>
 
-						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo; ?></button>
+						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo_icon; ?></button>
 
 						<p><i class="far fa-calendar-alt"></i> <?php echo $data; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i> <?php echo $autor; ?></p>
 

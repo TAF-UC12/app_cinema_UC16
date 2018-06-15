@@ -51,7 +51,7 @@ ini_set(“display_errors”, 0 );
 	</div>			
 					
 
-<section class="submenu">
+<section class="submenu_filtro">
 	
 	<?php
 		require_once('filtro.php');
@@ -315,6 +315,15 @@ switch ($filtro_categoria) {
 </section>
 	
 </div> <!--FIM DO CORPO DO SITE-->	
+	
+<div id="submenu_inferior">
+	
+	<?php
+		require('submenu.php');
+	?>
+	
+</div>	
+	
 	
 <footer>
 	

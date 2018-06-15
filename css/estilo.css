@@ -27,7 +27,7 @@ body{
 	header {
 		width: 100%;
 		height: auto;
-		background-color: #1F3F60;
+		background-color: #313131;
 		display: flex;
 		flex-direction: row;
 	}
@@ -47,15 +47,19 @@ body{
 	#menu_topo {
 		width: auto;
 		height: 40px;
-		background-color: #1F3F60;
+		background-color: #313131;
 		float: left;
 		flex-grow: 1;
 		padding-top: 14px;
 	}
 	
+	.categoriaPaginaHome {
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+	}
 	
-	
-.categoriaPaginaCinema {
+	.categoriaPaginaCinema {
 		width: 100%;
 		height: auto;
 		background-color: #1F3F60;
@@ -85,7 +89,7 @@ body{
 		background-color: #25043B;
 	}
 	
-	.categoriaPaginaCinema h2, .categoriaPaginaGames h2, .categoriaPaginaSeries h2, .categoriaPaginaLancamentos h2, .categoriaPaginaNoticias h2{
+	.categoriaPaginaHome h2, .categoriaPaginaCinema h2, .categoriaPaginaGames h2, .categoriaPaginaSeries h2, .categoriaPaginaLancamentos h2, .categoriaPaginaNoticias h2{
 		text-align: center;
 		color: #FFFFFF;
 		padding: 10px 0px;
@@ -140,6 +144,22 @@ body{
 		transition: 1s ease all;
 	}
 	
+	#categoria_filme p, #categoria_serie p, #categoria_game p {
+		text-transform: uppercase;
+		font-size: .5em;
+		padding: 0 auto;
+		height: auto;
+		display: inherit;
+	}
+	
+	#lancamentos_container_mobile {
+		width: 100%;
+		height: auto;
+		background-color: blueviolet;
+		padding: 10px;
+		display: none;
+	}
+	
 	#corpo_container {
 		position: relative;
 		display: flex;
@@ -149,6 +169,19 @@ body{
 		margin-top: 20px;
 	}
 
+	
+	#submenu_inferior {
+		display: none;
+		width: 100%;
+		height: auto;
+		position: -webkit-sticky;
+		position: sticky;
+		bottom: 0;
+		padding-top: 5px;
+		background-color: #3d3d3d;
+		z-index: 1;
+	}
+	
 	footer {
 		width: 100%;
 		height: 50px;
@@ -193,7 +226,7 @@ body{
 	header {
 		width: 100%;
 		height: auto;
-		background-color: #8aa8bd;
+		background-color: #313131;
 	}
 
 	#logo_topo {
@@ -211,7 +244,13 @@ body{
 	#menu_topo {
 		width: 100%;
 		height: auto;
-		background-color: #1F3F60;
+		background-color: #313131;
+	}
+	
+	.categoriaPaginaHome {
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
 	}
 	
 	.categoriaPaginaCinema {
@@ -244,7 +283,7 @@ body{
 		background-color: #25043B;
 	}
 	
-	.categoriaPaginaCinema h2, .categoriaPaginaGames h2, .categoriaPaginaSeries h2, .categoriaPaginaLancamentos h2, .categoriaPaginaNoticias h2{
+	.categoriaPaginaHome h2, .categoriaPaginaCinema h2, .categoriaPaginaGames h2, .categoriaPaginaSeries h2, .categoriaPaginaLancamentos h2, .categoriaPaginaNoticias h2{
 		text-align: center;
 		color: #FFFFFF;
 		padding: 7px 0px;
@@ -255,6 +294,12 @@ body{
 		height: auto;
 		background-color: #3d3d3d;
 		display: none;
+	}
+	
+	.submenu_filtro {
+		width: 100%;
+		height: auto;
+		background-color: #3d3d3d;
 	}
 	
 	.categorias {
@@ -299,6 +344,14 @@ body{
 		transition: 1s ease all;
 	}
 	
+	#categoria_filme p, #categoria_serie p, #categoria_game p {
+		text-transform: uppercase;
+		font-size: .5em;
+		padding: 0 auto;
+		height: auto;
+		display: inherit;
+	}
+	
 	#corpo_container {
 		position: relative;
 		display: flex;
@@ -309,13 +362,70 @@ body{
 		margin-top: 15px;
 	}
 	
+	#lancamentos_container_mobile {
+		width: 100%;
+		height: auto;
+		background-color: blueviolet;
+		padding: 15px;
+	}
+	
+	#lancamentos_container_mobile h3{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 15px;
+	}
+	
+	#lancamentos_mobile {
+		width: 100%;
+		height: 170px;
+		background-color: gold;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.mobile_info {
+		width: 100px;
+		height: auto;
+		background-color: aqua;
+		margin: 10px;
+		float: left;
+	}
+	
+	.mobile_info img{
+		width: 100%;
+		height: auto;
+		border: 0;
+	}
+	
+	.lancamentos_btn {
+	width: 100%;
+}
+	
+	.lancamentos_btn button{
+		width: 40%;
+		height: 22px;
+		border-radius: 11px;
+		border-style: none;
+		background-color: #FF5F5E;
+		color: #FFFFFF;
+		text-align: center;
+		margin-left: 30%;
+	}
+	
+	
 	#submenu_inferior {
 		width: 100%;
-		height: 60px;
+		height: auto;
 		position: -webkit-sticky;
 		position: sticky;
 		bottom: 0;
-		padding-top: 10px;
+		padding-top: 5px;
 		background-color: #3d3d3d;
 		z-index: 1;
 	}
@@ -324,7 +434,7 @@ footer {
 		width: 100%;
 		height: auto;
 		background-color: yellow;
-		display: flex;
+		display: none;
 		flex-direction: row;
 	}
 	
@@ -363,7 +473,7 @@ footer {
 	header {
 		width: 100%;
 		height: auto;
-		background-color: #8aa8bd;
+		background-color: #313131;
 	}
 
 	#logo_topo {
@@ -381,7 +491,7 @@ footer {
 	#menu_topo {
 		width: 100%;
 		height: auto;
-		background-color: orchid;
+		background-color: #313131;
 	}
 	
 	.categoriaPaginaHome {
@@ -461,6 +571,7 @@ footer {
 		background-color: #1F3F60;
 	}
 	
+	
 	#categoria_serie {
 		background-color: #D19600;
 	}
@@ -473,6 +584,72 @@ footer {
 		box-shadow: 0px 0px 4px #ffffff;
 		transition: 1s ease all;
 	}
+	
+	#categoria_filme p, #categoria_serie p, #categoria_game p {
+		text-transform: uppercase;
+		font-size: .4em;
+		padding: 0 auto;
+		height: auto;
+		display: inherit;
+	}
+	
+	
+	#lancamentos_container_mobile {
+		width: 100%;
+		height: auto;
+		background-color: blueviolet;
+		padding: 5px;
+	}
+	
+	#lancamentos_container_mobile h3{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 10px;
+	}
+	
+	#lancamentos_mobile {
+		width: 100%;
+		height: 125px;
+		background-color: gold;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.mobile_info {
+		width: 80px;
+		height: auto;
+		background-color: aqua;
+		margin: 2px;
+		float: left;
+	}
+	
+	.mobile_info img{
+		width: 100%;
+		height: auto;
+		border: 0;
+	}
+	
+	.lancamentos_btn {
+	width: 100%;
+}
+	
+	.lancamentos_btn button{
+		width: 30%;
+		height: 22px;
+		border-radius: 11px;
+		border-style: none;
+		background-color: #FF5F5E;
+		color: #FFFFFF;
+		text-align: center;
+		margin-left: 35%;
+	}
+	
 	
 	#corpo_container {
 		position: relative;
@@ -487,11 +664,11 @@ footer {
 	
 	#submenu_inferior {
 		width: 100%;
-		height: 60px;
+		height: auto;
 		position: -webkit-sticky;
 		position: sticky;
 		bottom: 0;
-		padding-top: 10px;
+		padding: 5px;
 		background-color: #3d3d3d;
 		z-index: 1;
 	}

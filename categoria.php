@@ -240,6 +240,53 @@ $categoria = $_GET["tipo"];
 
 	</div>
 
+
+<section id="lancamentos_container_mobile">
+	
+	<h3>Últimos lançamentos em <?php echo"$tipo";?></h3>
+	
+	<div id="lancamentos_mobile">
+		
+		<div class='mobile_info'>
+
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+		<div class='mobile_info'>
+
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+		<div class='mobile_info'>
+
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+		<div class='mobile_info'>
+
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+		<div class='mobile_info'>
+
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+	</div>
+	
+	<div class='lancamentos_btn'>
+
+		<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ver todos</button></a>
+
+	</div>
+	
+</section>
+
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
 <section class="noticias_container">
@@ -290,7 +337,11 @@ $categoria = $_GET["tipo"];
 		
 	if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
 	if ($id_tipo_post == 2){$tipo_categoria = "Games";}
-	if ($id_tipo_post == 3){$tipo_categoria = "Series";}	
+	if ($id_tipo_post == 3){$tipo_categoria = "Series";}
+		
+	if ($tipo == 1){$tipo_icon = "<i class='fas fa-film'></i>";}
+	if ($tipo == 2){$tipo_icon = "<i class='fas fa-gamepad'></i>";}
+	if ($tipo == 3){$tipo_icon = "<i class='fas fa-tv'></i>";}	
 		
 	?>
 	
@@ -305,7 +356,7 @@ $categoria = $_GET["tipo"];
 				<div class='infoNoticiaContainer'>
 					<div class='infoNoticia'>
 
-						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo; ?></button>
+						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo_icon; ?></button>
 
 						<p><i class="far fa-calendar-alt"></i> <?php echo $data; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i><?php echo $autor; ?></p>
 
@@ -351,7 +402,16 @@ $categoria = $_GET["tipo"];
 </aside>																
 	
 </div> <!--FIM DO CORPO DO SITE-->	
+
 	
+<div id="submenu_inferior">
+	
+	<?php
+		require('submenu.php');
+	?>
+	
+</div>		
+				
 <footer>
 	
 	<div id="logo_rodape">
