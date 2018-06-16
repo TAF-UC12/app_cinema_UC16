@@ -1,11 +1,12 @@
-var CACHE_NAME = 'PLAY-static-v1';
+var CACHE_NAME = 'PLAY';
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       return cache.addAll([
-		   
-      '../index.php',
+		
+	  '/',  
+      '/index.php',
       '/js/app.js',
       '../css/estilo.css',
 	  '../css/index.css',  

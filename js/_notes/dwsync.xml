@@ -3,8 +3,8 @@
 <file name="js-image-slider.js" server="192.168.1.10//var/www/html/" local="131687257669437015" remote="131725417800000000" Dst="1" />
 <file name="jquery-3.3.1.js" server="192.168.1.10//var/www/html/" local="131687257669421973" remote="131725417800000000" Dst="1" />
 <file name="jssor.slider-27.1.0.min.js" server="192.168.1.10//var/www/html/" local="131687257669447044" remote="131725417800000000" Dst="1" />
-<file name="app.js" server="192.168.1.10//var/www/html/" local="131727723960000000" remote="131727922800000000" Dst="1" />
 <file name="manifest.json" server="192.168.1.10//var/www/html/" local="131735599404481232" remote="131735283000000000" Dst="1" />
-<file name="service-worker.js" server="192.168.1.10//var/www/html/" local="131735669177863074" remote="131735353200000000" Dst="1" />
+<file name="service-worker.js" server="192.168.1.10//var/www/html/" local="131735804157410051" remote="131735488200000000" Dst="1" />
 <file name="npm.js" server="192.168.1.10//var/www/html/" local="131727723990000000" remote="131727922800000000" Dst="1" />
+<file name="app.js" server="192.168.1.10//var/www/html/" local="131735808447335585" remote="131735492400000000" Dst="1" />
 </dwsync>
