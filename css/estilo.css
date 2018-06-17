@@ -139,12 +139,16 @@ body{
 		background-color: #007F06;
 	}
 	
+	#categoria_lanc {
+		background-color: #313131;
+	}
+	
 	.categorias li:hover {
 		box-shadow: 0px 0px 4px #ffffff;
 		transition: 1s ease all;
 	}
 	
-	#categoria_filme p, #categoria_serie p, #categoria_game p {
+	#categoria_lanc p, #categoria_filme p, #categoria_serie p, #categoria_game p {
 		text-transform: uppercase;
 		font-size: .5em;
 		padding: 0 auto;
@@ -155,7 +159,7 @@ body{
 	#lancamentos_container_mobile {
 		width: 100%;
 		height: auto;
-		background-color: blueviolet;
+		/*background-color: blueviolet;*/
 		padding: 10px;
 		display: none;
 	}
@@ -177,7 +181,7 @@ body{
 		position: -webkit-sticky;
 		position: sticky;
 		bottom: 0;
-		padding-top: 5px;
+		padding: 5px;
 		background-color: #3d3d3d;
 		z-index: 1;
 	}
@@ -185,7 +189,7 @@ body{
 	footer {
 		width: 100%;
 		height: 50px;
-		background-color: yellow;
+		background-color: #313131;
 		display: flex;
 		flex-direction: row;
 	}
@@ -197,7 +201,7 @@ body{
 	}
 	
 	#logo_rodape img {
-		width: 100%;
+		width: 60%;
 		height: auto;
 	}
 	
@@ -310,13 +314,18 @@ body{
 	}
 	
 	.categorias li{
-		width: 33%;
+		width: 100%;
 		float: left;
 		list-style: none;
-		border-radius: 25px;
+		border-radius: 5px;
 		text-align: center;
-		margin: 5px 10px;
+		font-size: 1em;
+		margin-right:5px ;
 		border: 2px solid #ffffff;
+	}
+	
+	.categorias li:last-child{
+		margin-right: 0px ;
 	}
 	
 	.categorias li a{
@@ -339,12 +348,16 @@ body{
 		background-color: #007F06;
 	}
 	
+	#categoria_lanc {
+		background-color: #313131;
+	}
+	
 	.categorias li:hover {
 		box-shadow: 0px 0px 4px #ffffff;
 		transition: 1s ease all;
 	}
 	
-	#categoria_filme p, #categoria_serie p, #categoria_game p {
+	#categoria_lanc p, #categoria_filme p, #categoria_serie p, #categoria_game p {
 		text-transform: uppercase;
 		font-size: .5em;
 		padding: 0 auto;
@@ -365,7 +378,7 @@ body{
 	#lancamentos_container_mobile {
 		width: 100%;
 		height: auto;
-		background-color: blueviolet;
+		/*background-color: blueviolet;*/
 		padding: 15px;
 	}
 	
@@ -425,7 +438,7 @@ body{
 		position: -webkit-sticky;
 		position: sticky;
 		bottom: 0;
-		padding-top: 5px;
+		padding: 5px;
 		background-color: #3d3d3d;
 		z-index: 1;
 	}
@@ -433,7 +446,7 @@ body{
 footer {
 		width: 100%;
 		height: auto;
-		background-color: yellow;
+		background-color: #313131;
 		display: none;
 		flex-direction: row;
 	}
@@ -543,25 +556,29 @@ footer {
 	}
 	
 	.categorias {
-		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		/*background-color: bisque;*/
 	}
 	
 	.categorias li{
-		width: 33%;
+		width: 100%;
 		float: left;
 		list-style: none;
-		border-radius: 20px;
+		border-radius: 5px;
 		text-align: center;
 		font-size: 1em;
-		margin: 5px 10px;
+		margin-right:5px ;
 		border: 2px solid #ffffff;
+	}
+	
+	.categorias li:last-child{
+		margin-right: 0px ;
 	}
 	
 	.categorias li a{
 		display: block;
+		padding: 5px;
 		text-decoration: none;
 		font-weight: bold;
 		color: #FFFFFF;
@@ -580,12 +597,16 @@ footer {
 		background-color: #007F06;
 	}
 	
+	#categoria_lanc {
+		background-color: #313131;
+	}
+	
 	.categorias li:hover {
 		box-shadow: 0px 0px 4px #ffffff;
 		transition: 1s ease all;
 	}
 	
-	#categoria_filme p, #categoria_serie p, #categoria_game p {
+	#categoria_lanc p, #categoria_filme p, #categoria_serie p, #categoria_game p {
 		text-transform: uppercase;
 		font-size: .4em;
 		padding: 0 auto;
@@ -597,7 +618,7 @@ footer {
 	#lancamentos_container_mobile {
 		width: 100%;
 		height: auto;
-		background-color: blueviolet;
+		/*background-color: blueviolet;*/
 		padding: 5px;
 	}
 	
@@ -676,7 +697,7 @@ footer {
 footer {
 		width: 100%;
 		height: auto;
-		background-color: yellow;
+		background-color: #313131;
 		display: none;
 		flex-direction: column;
 	}

@@ -6,7 +6,7 @@ self.addEventListener('install', function (event) {
       return cache.addAll([
 		
 	  '/',  
-      '/index.php',
+      '../index.php',
       '/js/app.js',
       '../css/estilo.css',
 	  '../css/index.css',  

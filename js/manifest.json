@@ -2,7 +2,7 @@
 
 
 	"short_name": "PLAY",
-	"name": "PlayPontoCom",
+	"name": "Mundo Play",
 	"icons": [
 {
 	"src": "../img/icon48px.png",
@@ -22,6 +22,6 @@
 	],
 
 	"start_url":"../index.php?launcher=true",
-	"background_color": "#2196F3",
+	"background_color": "#3D3D3D",
 	"display": "standalone"
 }

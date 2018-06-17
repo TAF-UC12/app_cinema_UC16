@@ -8,6 +8,7 @@
 		  <div class="col-20 black rounded">
 		  
 			<select id="" name="filtro_categoria">
+		  	  <option value="">Categoria...</option>
 			  <option value="filmes">Filmes</option>
 			  <option value="series">Séries</option>
 			  <option value="games">Games</option>
@@ -18,7 +19,7 @@
 		  <div class="col-20 black rounded">
 		  
 			<select id="" name="filtro_genero">
-		  		<option value=''>Gêneros</option>
+		  		<option value=''>Gêneros...</option>
 		  <?php 
 				include_once("config/conectar.php");
 				
@@ -42,7 +43,7 @@
 		  <div class="col-20 black rounded">
 		  
 			<select id="" name="filtro_ano">
-		  	  <option value="">Mês</option>
+		  	  <option value="">Mês...</option>
 			  <option value="1">Janeiro</option>
 			  <option value="2">Fevereiro</option>
 			  <option value="3">Março</option>

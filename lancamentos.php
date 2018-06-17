@@ -9,7 +9,7 @@ ini_set(“display_errors”, 0 );
 <html>
 <head>
 <meta charset="utf-8">
-<title>Lançamentos</title>
+<title>Títulos</title>
 <link href="css/estilo.css" rel="stylesheet" type="text/css">
 <link href="css/menu.css" rel="stylesheet" type="text/css">
 <link href="css/lancamentos.css" rel="stylesheet" type="text/css">
@@ -40,7 +40,7 @@ ini_set(“display_errors”, 0 );
 
 	<div class='categoriaPaginaLancamentos'>
 
-		<h2><i class='fas fa-chevron-circle-left' onclick='goBack()'></i> &thinsp;&thinsp; Lançamentos</h2>
+		<h2><i class='fas fa-chevron-circle-left' onclick='goBack()'></i> &thinsp;&thinsp; Títulos</h2>
 		
 		<script>
 		function goBack() {
