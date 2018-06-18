@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="index.php" server="192.168.1.10//var/www/html/" local="131735712177309196" remote="131735395800000000" Dst="1" />
-<file name="submenu.php" server="192.168.1.10//var/www/html/" local="131736712535074780" remote="131736820200000000" Dst="1" />
-<file name="menu.php" server="192.168.1.10//var/www/html/" local="131736759777783241" remote="131736867600000000" Dst="1" />
-<file name="noticia.php" server="192.168.1.10//var/www/html/" local="131735587353059066" remote="131735277600000000" Dst="1" />
+<file name="index.php" server="192.168.1.10//var/www/html/" local="131738286085402578" remote="131737972800000000" Dst="1" />
+<file name="submenu.php" server="192.168.1.10//var/www/html/" local="131738355627788565" remote="131738042400000000" Dst="1" />
+<file name="menu.php" server="192.168.1.10//var/www/html/" local="131738374128184719" remote="131738061000000000" Dst="1" />
+<file name="noticia.php" server="192.168.1.10//var/www/html/" local="131738359644525725" remote="131738046000000000" Dst="1" />
 <file name="filtro.php" server="192.168.1.10//var/www/html/" local="131736815618226709" remote="131736923400000000" Dst="1" />
 <file name="submenu_filme.php" server="192.168.1.10//var/www/html/" local="131732143044468260" remote="131732250600000000" Dst="1" />
 <file name="categoria.php" server="192.168.1.10//var/www/html/" local="131735729006772301" remote="131735412600000000" Dst="1" />
@@ -13,4 +13,6 @@
 <file name="ficha_tec_aba_serie.php" server="192.168.1.10//var/www/html/" local="131733324133000733" remote="131733432000000000" Dst="1" />
 <file name="ficha_tec_aba_game.php" server="192.168.1.10//var/www/html/" local="131733327530796454" remote="131733435000000000" Dst="1" />
 <file name="ficha_tec_aba_seriephp.php" server="192.168.1.10//var/www/html/" local="131733214118173207" remote="131735277600000000" Dst="1" />
+<file name="noticias_index.php" server="192.168.1.10//var/www/html/" local="131738374043466434" remote="131738060400000000" Dst="1" />
+<file name="filtro_noticias.php" server="192.168.1.10//var/www/html/" local="131738299374095039" remote="131737986000000000" Dst="1" />
 </dwsync>

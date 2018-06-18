@@ -357,7 +357,16 @@ while ($linha=mysqli_fetch_array($resultado)) {
 																			
 	
 </div> <!--FIM DO CORPO DO SITE-->	
+
+<div id="submenu_inferior">
 	
+	<?php
+		require('submenu.php');
+	?>
+	
+</div>	
+		
+				
 <footer>
 	
 	<div id="logo_rodape">

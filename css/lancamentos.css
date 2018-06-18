@@ -30,24 +30,6 @@
 		margin: auto;
 	}
 	
-	.pg_seletor a {
-		width: auto;
-		text-decoration: none;
-		background-color: steelblue;
-		color: #ffffff;
-		padding: 0px 10px;
-		font-size: 2em;
-	}
-	
-	.pg_seletor a:first-child {
-		border-bottom-left-radius: 25px;
-		border-top-left-radius: 25px;
-}
-
-	.pg_seletor a:last-child {
-		border-bottom-right-radius: 25px;
-		border-top-right-radius: 25px;
-}
 	
 	#filme_info {
 		width: 200px;
@@ -350,7 +332,7 @@ input {
 #filme_info {
 	width: 100%;
 		height: auto;
-		background-color: aquamarine;
+		/*background-color: aquamarine;*/
 		display: flex;
 		flex-direction: row;
 		margin: 15px 0px;
@@ -360,7 +342,7 @@ input {
 #poster_filme {
 	width: 30%;
 	height: auto;
-	background-color: blueviolet;
+	/*background-color: blueviolet;*/
 	margin: 0px;
 }
 
@@ -382,7 +364,7 @@ input {
 	font-size: 1.375em; /*22px*/
 	font-weight: bold;
 	line-height: normal;
-	color: #000000;
+	color: #ffffff;
 	text-shadow: 1px 1px 2px #000000;
 	text-align: left;
 }
@@ -406,7 +388,7 @@ input {
 		width: 100%;
 		height: auto;
 		margin-bottom: 5px; 
-		background-color: slateblue;
+		/*background-color: slateblue;*/
 		overflow: auto;
 	}	
 	
@@ -475,32 +457,6 @@ input {
 	margin-right: 10%;
 }
 
-.pg_seletor {
-		width: auto;
-		position: relative;
-		height: 50px;
-		text-align: center;
-		margin: auto;
-	}
-	
-	.pg_seletor a {
-		width: auto;
-		text-decoration: none;
-		background-color: steelblue;
-		color: #ffffff;
-		padding: 0px 10px;
-		font-size: 2em;
-	}
-	
-	.pg_seletor a:first-child {
-		border-bottom-left-radius: 25px;
-		border-top-left-radius: 25px;
-}
-
-	.pg_seletor a:last-child {
-		border-bottom-right-radius: 25px;
-		border-top-right-radius: 25px;
-}	
 	
 	
 }
@@ -614,7 +570,7 @@ input {
 #filme_info {
 	width: 100%;
 		height: auto;
-		background-color: aquamarine;
+		/*background-color: aquamarine;*/
 		display: flex;
 		flex-direction: row;
 		margin: 15px 0px;
@@ -624,15 +580,15 @@ input {
 #poster_filme {
 	width: 30%;
 	height: auto;
-	background-color: blueviolet;
+	/*background-color: blueviolet;*/
 	margin: 0px;
 }
 
 #poster_filme img{
 	width: 100%;
 	border: 1px solid #000000;
-	box-shadow: 1px 1px 2px #272727;
 	-webkit-box-shadow: 1px 1px 2px #272727;
+	box-shadow: 1px 1px 2px #272727;
 }	
 	
 #info {
@@ -646,7 +602,7 @@ input {
 	font-size: 1.125em; /*18px*/
 	font-weight: bold;
 	line-height: normal;
-	color: #000000;
+	color: #ffffff;
 	text-shadow: 1px 1px 2px #000000;
 	text-align: left;
 }
@@ -671,7 +627,7 @@ input {
 		width: 100%;
 		height: auto;
 		margin-bottom: 5px; 
-		background-color: slateblue;
+		/*background-color: slateblue;*/
 		overflow: auto;
 	}
 	
@@ -704,8 +660,8 @@ input {
 
 .fichaTecnica button{
 	width: 80%;
-	height: 32px;
-	border-radius: 16px;
+	height: 26px;
+	border-radius: 23px;
 	border-style: none;
 	background-color: #FF5F5E;
 	color: #FFFFFF;

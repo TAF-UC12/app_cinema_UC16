@@ -238,7 +238,51 @@ ini_set(“display_errors”, 0 );
 
 	</div>
 
+<section id="lancamentos_container_mobile">
+	
+	<h3>Últimos lançamentos em <?php echo"$tipo";?></h3>
+	
+	<div id="lancamentos_mobile">
+		
+		<div class='mobile_info'>
 
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+		<div class='mobile_info'>
+
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+		<div class='mobile_info'>
+
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+		<div class='mobile_info'>
+
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+		<div class='mobile_info'>
+
+			<a href=""><img src='img/posters/2001.jpg'></a>
+
+		</div>
+		
+	</div>
+	
+	<div class='lancamentos_btn'>
+
+		<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ver todos</button></a>
+
+	</div>
+	
+</section>
 
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
@@ -246,6 +290,7 @@ ini_set(“display_errors”, 0 );
 	
     <article class="lista_noticias">
     	<h3>Últimas notícias</h3>
+    	<p><a href="noticias_index.php">Ver todas</a></p>
     	
 	    <?php
     include "config/conectar.php";

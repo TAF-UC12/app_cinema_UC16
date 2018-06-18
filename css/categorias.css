@@ -4,32 +4,7 @@
 
 @media only screen and (min-width: 800px){	
 	
-		.pg_seletor {
-		width: auto;
-		position: relative;
-		height: 50px;
-		text-align: center;
-		margin: auto;
-	}
-	
-	.pg_seletor a {
-		width: auto;
-		text-decoration: none;
-		background-color: steelblue;
-		color: #ffffff;
-		padding: 0px 10px;
-		font-size: 2em;
-	}
-	
-	.pg_seletor a:first-child {
-		border-bottom-left-radius: 25px;
-		border-top-left-radius: 25px;
-}
-
-	.pg_seletor a:last-child {
-		border-bottom-right-radius: 25px;
-		border-top-right-radius: 25px;
-}
+		
 }
 
 @media only screen and (min-width: 769px){	
@@ -218,32 +193,7 @@ estilização do slideshow*/
 		color: #ffffff;
 	}
 	
-	.pg_seletor {
-		width: auto;
-		position: relative;
-		height: 50px;
-		text-align: center;
-		margin: auto;
-	}
-	
-	.pg_seletor a {
-		width: auto;
-		text-decoration: none;
-		background-color: steelblue;
-		color: #ffffff;
-		padding: 0px 10px;
-		font-size: 2em;
-	}
-	
-	.pg_seletor a:first-child {
-		border-bottom-left-radius: 25px;
-		border-top-left-radius: 25px;
-}
 
-	.pg_seletor a:last-child {
-		border-bottom-right-radius: 25px;
-		border-top-right-radius: 25px;
-}
 
 
 }
@@ -409,33 +359,6 @@ estilização do slideshow*/
 		text-decoration: none;
 		color: #ffffff;
 	}
-
-		.pg_seletor {
-		width: auto;
-		position: relative;
-		height: 50px;
-		text-align: center;
-		margin: auto;
-	}
-	
-	.pg_seletor a {
-		width: auto;
-		text-decoration: none;
-		background-color: steelblue;
-		color: #ffffff;
-		padding: 0px 10px;
-		font-size: 2em;
-	}
-	
-	.pg_seletor a:first-child {
-		border-bottom-left-radius: 25px;
-		border-top-left-radius: 25px;
-}
-
-	.pg_seletor a:last-child {
-		border-bottom-right-radius: 25px;
-		border-top-right-radius: 25px;
-}
 	
 	
 }
@@ -555,31 +478,5 @@ estilização do slideshow*/
 		font-size: .75em;
 	}
 	
-		.pg_seletor {
-		width: auto;
-		position: relative;
-		height: 32px;
-		text-align: center;
-		margin: auto;
-	}
-	
-	.pg_seletor a {
-		width: auto;
-		text-decoration: none;
-		background-color: steelblue;
-		color: #ffffff;
-		padding: 0px 10px;
-		font-size: 1.25em; /*20px*/
-	}
-	
-	.pg_seletor a:first-child {
-		border-bottom-left-radius: 16px;
-		border-top-left-radius: 16px;
-}
-
-	.pg_seletor a:last-child {
-		border-bottom-right-radius: 16px;
-		border-top-right-radius: 16px;
-}
 	
 }

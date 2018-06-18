@@ -5,6 +5,7 @@
 		<input type="checkbox" id="show-menu">
 			<ul id="menu">
 			<li><a href="index.php">Home</a></li>
+			<li><a href="noticias_index.php?tipo=">Notícias</a></li>
 			<li><a href="categoria.php?tipo=1">Cinema</a></li>
 			<li><a href="categoria.php?tipo=3">Series de TV</a></li>
 			<li><a href="categoria.php?tipo=2">Games</a></li>
