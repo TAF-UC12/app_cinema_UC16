@@ -4,9 +4,9 @@
 * {
 	margin: 0 auto;
 	padding: 0; 
-	box-sizing: border-box;
 	-webkit-box-sizing:	border-box;
 	-moz-box-sizing:border-box;
+	box-sizing: border-box;
 }
 
 @font-face {
@@ -127,6 +127,7 @@ body{
 		color: #FFFFFF;
 	}
 	
+	
 	#categoria_filme {
 		background-color: #1F3F60;
 	}
@@ -148,7 +149,7 @@ body{
 		transition: 1s ease all;
 	}
 	
-	#categoria_lanc p, #categoria_filme p, #categoria_serie p, #categoria_game p {
+	#categoria_home p#categoria_lanc p, #categoria_filme p, #categoria_serie p, #categoria_game p {
 		text-transform: uppercase;
 		font-size: .5em;
 		padding: 0 auto;
@@ -224,32 +225,6 @@ body{
 		z-index: 1;
 	}
 	
-	.pg_seletor {
-		width: auto;
-		position: relative;
-		height: 50px;
-		text-align: center;
-		margin: auto;
-	}
-	
-	.pg_seletor a {
-		width: auto;
-		text-decoration: none;
-		/*background-color: steelblue;*/
-		color: #ffffff;
-		padding: 0px 10px;
-		font-size: 2em;
-	}
-	
-	.pg_seletor a:first-child {
-		border-bottom-left-radius: 25px;
-		border-top-left-radius: 25px;
-}
-
-	.pg_seletor a:last-child {
-		border-bottom-right-radius: 25px;
-		border-top-right-radius: 25px;
-}
 	
 	footer {
 		width: 100%;

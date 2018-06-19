@@ -240,7 +240,7 @@ ini_set(“display_errors”, 0 );
 
 <section id="lancamentos_container_mobile">
 	
-	<h3>Últimos lançamentos em <?php echo"$tipo";?></h3>
+	<h3>Últimos lançamentos</h3>
 	
 	<div id="lancamentos_mobile">
 		
