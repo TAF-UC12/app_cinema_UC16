@@ -83,6 +83,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	$rel_filme = $linha["relac_filmes"];	
 	$rel_serie = $linha["relac_series"];	
 	$rel_game = $linha["relac_games"];
+	$rel_evento = $linha["relac_evento"];
 	$autor = $linha["nome"];	
 	
 		
@@ -289,6 +290,7 @@ $resultado = mysqli_query($strcon, $sql2)
 or die ("Não foi possível realizar a consulta ao banco de dados 6");
 	
 while ($linha=mysqli_fetch_array($resultado)) {
+
 
 $id = $linha["idgames"];
 $titulo = $linha["tituloGame"];

@@ -18,6 +18,9 @@ margin:0 auto;
   width:100%;
   position: absolute;
   background: #313131;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 /*Create a horizontal list with spacing*/
@@ -30,7 +33,7 @@ margin:0 auto;
 /*Style for menu links*/
 .mobile-menu li a {
 	display:block;
-	min-width:100px;
+	min-width:80px;
 	text-align: center;
 	color: #fff;
   text-transform:uppercase;
@@ -47,21 +50,21 @@ transition: all 0.4s ease 0s;
 /*Hover state for top level links*/
 .mobile-menu li:hover a {
 	color: #4db3ff;
-  background-color:#ccddee;
+  /*background-color:#ccddee;*/
 }
 
 /*Style for dropdown links*/
 .mobile-menu li:hover ul a {
-	background: #f3f3f3;
+	/*background: #f3f3f3;*/
 	color: #2f3036;
 	height: 40px;
 	line-height: 40px;
 }
 
 /*Hover state for dropdown links*/
-.mobile-menu li:hover .mobile-menu ul a:hover {
+/*.mobile-menu li:hover .mobile-menu ul a:hover {
 	color: #4db3ff;
-}
+}*/
 
 /*Hide dropdown links until they are needed*/
 .mobile-menu li ul {
@@ -112,7 +115,7 @@ transition: all 0.4s ease 0s;
 
 /*Responsive Styles*/
 
-@media screen and (max-width : 800px){
+@media screen and (max-width : 768px){
   .mobile-menu .lines {
     border-bottom: 15px double #f8f8f8; 
     border-top: 5px solid #f8f8f8; 

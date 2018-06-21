@@ -24,7 +24,7 @@ ini_set(“display_errors”, 0 );
 <meta name="mobile-web-app-capable" content="yes">
 
 <!--LINKS DOS ARQUIVOS JS-->
-<link rel="manifest" href="js/manifest.json">
+<link rel="manifest" href="./manifest.json">
 <script src="js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
 
@@ -281,6 +281,43 @@ ini_set(“display_errors”, 0 );
 		<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ver todos</button></a>
 
 	</div>
+	
+</section>
+
+<section id="tendencias_container">
+	
+	<h3>Tendências</h3>
+	
+	<div id="tendencias_mobile">
+		
+		<?php		
+require_once "config/conectar.php";
+//Agora é realizar a querie de busca no banco de dados	
+
+	
+$sql = "SELECT * FROM tendencias ORDER BY idtendencias";	
+	
+$resultado = mysqli_query($strcon, $sql)
+or die ("Não foi possível realizar a consulta ao banco de dados");
+	
+while ($linha=mysqli_fetch_array($resultado)) {
+
+	$idtendencia = $linha["idtendencias"];	
+	$tendencia = $linha["nomeTendencia"];	
+	$img = $linha["imgTendencia"];
+
+		
+		echo "<div class='tendencia'>
+
+			<a href='#'><img src='img/tendencias/$img'></a>
+
+		</div>";
+}
+?>		
+		
+		
+	</div>
+	
 	
 </section>
 

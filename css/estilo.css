@@ -99,6 +99,7 @@ body{
 		width: 100%;
 		height: auto;
 		background-color: #3d3d3d;
+		display: none;
 	}
 	
 	.categorias {
@@ -127,6 +128,9 @@ body{
 		color: #FFFFFF;
 	}
 	
+	#categoria_home {
+		background-color: #969696;
+	}
 	
 	#categoria_filme {
 		background-color: #1F3F60;
@@ -149,7 +153,7 @@ body{
 		transition: 1s ease all;
 	}
 	
-	#categoria_home p#categoria_lanc p, #categoria_filme p, #categoria_serie p, #categoria_game p {
+	#categoria_home p, #categoria_filme p, #categoria_serie p, #categoria_game p, #categoria_lanc p {
 		text-transform: uppercase;
 		font-size: .5em;
 		padding: 0 auto;
@@ -164,10 +168,13 @@ body{
 		padding: 5px 10px;
 		overflow: auto;
 		margin-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 	
 	#filtro_container_noticias li{
-		width: 30%;
+		width: 25%;
 		float: left;
 		background-color: #313131;
 		margin-right: 5%;
@@ -202,6 +209,49 @@ body{
 		padding: 10px;
 		display: none;
 	}
+	
+	
+	#tendencias_container {
+		width: 100%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		padding: 5px;
+	}
+	
+	#tendencias_container h3{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 10px;
+	}
+	
+	#tendencias_mobile {
+		width: 100%;
+		height: auto;
+		background-color: gold;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.tendencia {
+		width: 30%;
+		height: auto;
+		background-color: aqua;
+		margin: 1%;
+		float: left;
+	}
+	
+	.tendencia img{
+		width: 100%;
+		height: auto;
+		border: 0;
+	}
+	
 	
 	#corpo_container {
 		position: relative;
@@ -416,10 +466,13 @@ body{
 		padding: 5px 10px;
 		overflow: auto;
 		margin-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 	
 	#filtro_container_noticias li{
-		width: 30%;
+		width: 25%;
 		float: left;
 		background-color: #313131;
 		margin-right: 5%;
@@ -512,6 +565,48 @@ body{
 		text-align: center;
 		margin-left: 30%;
 	}
+	
+	#tendencias_container {
+		width: 100%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		padding: 5px;
+	}
+	
+	#tendencias_container h3{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 10px;
+	}
+	
+	#tendencias_mobile {
+		width: 100%;
+		height: auto;
+		background-color: gold;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.tendencia {
+		width: 30%;
+		height: auto;
+		background-color: aqua;
+		margin: 1%;
+		float: left;
+	}
+	
+	.tendencia img{
+		width: 100%;
+		height: auto;
+		border: 0;
+	}
+	
 	
 	
 	#submenu_inferior {
@@ -820,6 +915,47 @@ footer {
 		color: #FFFFFF;
 		text-align: center;
 		margin-left: 35%;
+	}
+	
+	#tendencias_container {
+		width: 100%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		padding: 5px;
+	}
+	
+	#tendencias_container h3{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 10px;
+	}
+	
+	#tendencias_mobile {
+		width: 100%;
+		height: auto;
+		background-color: gold;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.tendencia {
+		width: 30%;
+		height: auto;
+		background-color: aqua;
+		margin: 1%;
+		float: left;
+	}
+	
+	.tendencia img{
+		width: 100%;
+		height: auto;
+		border: 0;
 	}
 	
 	

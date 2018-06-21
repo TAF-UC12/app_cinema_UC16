@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="index.php" server="192.168.1.10//var/www/html/" local="131738426589604388" remote="131738113200000000" Dst="1" />
+<file name="index.php" server="192.168.1.10//var/www/html/" local="131740091216218082" remote="131740198800000000" Dst="1" />
 <file name="submenu.php" server="192.168.1.10//var/www/html/" local="131738355627788565" remote="131738042400000000" Dst="1" />
-<file name="menu.php" server="192.168.1.10//var/www/html/" local="131738374128184719" remote="131738061000000000" Dst="1" />
-<file name="noticia.php" server="192.168.1.10//var/www/html/" local="131738410195953791" remote="131738097000000000" Dst="1" />
+<file name="menu.php" server="192.168.1.10//var/www/html/" local="131739993640762367" remote="131740101600000000" Dst="1" />
+<file name="noticia.php" server="192.168.1.10//var/www/html/" local="131740022332251292" remote="131740129800000000" Dst="1" />
 <file name="filtro.php" server="192.168.1.10//var/www/html/" local="131736815618226709" remote="131736923400000000" Dst="1" />
 <file name="submenu_filme.php" server="192.168.1.10//var/www/html/" local="131732143044468260" remote="131732250600000000" Dst="1" />
 <file name="categoria.php" server="192.168.1.10//var/www/html/" local="131738410314926710" remote="131738097000000000" Dst="1" />
@@ -14,5 +14,6 @@
 <file name="ficha_tec_aba_game.php" server="192.168.1.10//var/www/html/" local="131733327530796454" remote="131733435000000000" Dst="1" />
 <file name="ficha_tec_aba_seriephp.php" server="192.168.1.10//var/www/html/" local="131733214118173207" remote="131735277600000000" Dst="1" />
 <file name="noticias_index.php" server="192.168.1.10//var/www/html/" local="131738410496218261" remote="131738097000000000" Dst="1" />
-<file name="filtro_noticias.php" server="192.168.1.10//var/www/html/" local="131738299374095039" remote="131737986000000000" Dst="1" />
+<file name="filtro_noticias.php" server="192.168.1.10//var/www/html/" local="131740125560759869" remote="131740233000000000" Dst="1" />
+<file name="manifest.json" server="192.168.1.10//var/www/html/" local="131739986012654730" remote="131740093800000000" Dst="1" />
 </dwsync>
