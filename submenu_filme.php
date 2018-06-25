@@ -2,8 +2,8 @@
 
 <nav id='mais_info_filme'>		
 
-	<li id='lista' class='info_lista'><a href='#' onclick="myFunction()">Informações</a></li>	
-	<li id='lista2' class='info_lista'><a href='#' onclick="myFunction2()">Notícias</a></li>
-	<li id='lista3' class='info_lista'><a href='#' onclick="myFunction3()">Trailer</a></li>
+	<li id='lista' class='info_lista'><a href='#'>Informações</a></li>	
+	<li id='lista2' class='info_lista'><a href='#'>Notícias</a></li>
+	<li id='lista3' class='info_lista'><a href='#'>Trailer</a></li>
 	
 </nav>
