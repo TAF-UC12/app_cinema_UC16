@@ -1,0 +1,812 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ESTILO PARA PÁGINA INDEX
+	- Todos os estilos do index deve estar aqui
+	- Evitar duplicidade de ids e classes em outras folhas*/
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
+	- Largura miníma: 769px
+
+######################################################*/
+
+
+@media only screen and (min-width: 769px){
+	
+	/*################################
+	SECTION MOBILE
+		- Essas sections ficam ocultas na versão desktop*/
+
+	.destaques_mobile {
+		display: none;
+	}
+
+	
+	
+	
+	/*################################
+	SECTION DESKTOP
+		- Essas sections da versão desktop
+		- Sections do corpo do site e aside*/
+	
+	#corpo_container section {
+		width: 60%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		padding: 10px;
+		float: left;
+	}
+
+	#corpo_container section h2{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 15px;
+	}
+	
+	#corpo_container aside {
+		width: 40%;
+		height: auto;
+		/*background-color: brown;*/
+		float: left;
+	}
+	
+	#corpo_container aside section {
+		width: 100%;
+		height: auto;
+		/*background-color: chartreuse;*/
+	}
+	
+	#corpo_container aside section > h2{
+		width: auto;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 15px;
+		float: left;
+	}
+	
+	#corpo_container aside section > p{
+		font-size: 1em;
+		width: 80px;
+		float: right;
+		text-align: right;
+		background-color: #B5B5B5;
+		border-radius: 10px;
+		padding: 2px 5px;
+	}
+	
+	#lancamentos_desktop {
+		width: 100%;
+		height: auto;
+		/*background-color: gold;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.desktop_info {
+		width: 100px;
+		height: auto;
+		/*background-color: aqua;*/
+		margin: 5px;
+		float: left;
+		border: 1px solid #3d3d3d;
+	}
+	
+	.desktop_info img{
+		width: 100%;
+		height: auto;
+		border: 0;
+	}
+	
+	.lancamentos_btn {
+		width: 100%;
+	}
+	
+	.lancamentos_btn button{
+		width: 40%;
+		height: 22px;
+		border-radius: 11px;
+		border-style: none;
+		background-color: #FF5F5E;
+		color: #FFFFFF;
+		text-align: center;
+		margin-left: 30%;
+	}
+	
+	
+	#tendencias_desktop {
+		width: 100%;
+		height: auto;
+		/*background-color: gold;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.tendencia {
+		position: relative;
+		width: 45%;
+		height: auto;
+		/*background-color: aqua;*/
+		margin: 5px;
+		float: left;
+		overflow: hidden;
+		border: 1px solid #3d3d3d;
+	}
+	
+	.tendencia img{
+		width: 100%;
+		height: auto;
+		border: 0;
+		transition: .5s all;
+	}
+
+	
+	.tendencia h4{
+		position: absolute;
+		bottom: 10px;
+		width: 100%;
+		height: auto;
+		padding: 0px 5px;
+		text-align: center;
+		z-index: 1;
+		text-shadow: 1px 1px 2px #000000;
+		transition: .5s all;
+	}
+	
+	.tendencia a:hover img{
+		transform: scale(1.5);
+		transition: 1s all;
+	}
+	
+	.tendencia a:hover h4{
+		font-size: 1.125em;
+		transition: 1s all;
+	}
+	
+	
+
+	
+	
+	/*################################
+	SECTION LISTA NOTÍCIAS
+		- Estilo do da lista de notícias em home*/
+	
+	section article {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: #555454;*/
+	}
+
+	section article h2{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 30px;
+	}
+	
+	.noticia {
+		width: 100%;
+		height: auto;
+		/*background-color: aquamarine;*/
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 15px
+	}
+	
+	.imgNoticia {
+		width: 20%;
+		height: auto;
+		/*background-color: blueviolet;*/
+	}
+	
+	.imgNoticia img{
+		width: 100%;
+		height: auto;
+	}
+	
+	.infoNoticiaContainer {
+		width: 80%;
+		height: auto;
+		/*background-color: darkgoldenrod;*/
+		padding: 0px 0px 0px 10px;
+	}
+	
+	.infoNoticia {
+		width: 100%;
+		height: auto;
+/*		background-color: violet;*/	
+	}
+	
+	.infoNoticia button {
+		width: auto;
+		display: block;
+		height: 20px;
+		border-radius: 10px;
+		border-style: none;
+		color: #FFFFFF;
+		padding: 0px 10px;
+		font-size: 1em;
+		float: left;
+		margin-right: 10px;
+		text-align: center;
+	}
+	
+	.infoNoticia p {
+		width: auto;
+		float: left;
+		font-size: .75em;
+		padding-top: 3px;
+	}
+	
+	.infoNoticia .Cinema {
+		background-color: #1F3F60;		
+	}
+	
+	.infoNoticia .Games {
+		background-color: #007F06;		
+	}
+	
+	.infoNoticia .Series {
+		background-color: #D19600;		
+	}
+	
+	.chamadaNoticia {
+		width: 100%;
+		height: auto;
+		/*background-color: springgreen;*/
+		clear: both;
+		margin-top: 30px;
+	}
+	
+	.chamadaNoticia a {
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES DO INDEX
+	- Largura miníma: 361px
+	- Largura máxima: 768px
+
+######################################################*/
+
+@media screen and (max-width: 768px) and (min-width: 361px){
+	
+	/*################################
+	ASIDE
+		- Fica oculto na versão mobile*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+	
+	
+	
+	
+	
+	/*################################
+	SECTIONS MOBILE E TABLET
+		- Essas sections da versão mobile e tablet
+		- Sections do aside na versão desktop fica oculta aqui*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+	#corpo_container section {
+		width: 100%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		padding: 10px;
+	}
+	
+	#corpo_container section h2{
+		width: 80%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 15px;
+		float: left;
+	}
+	
+	#corpo_container section > p{
+		font-size: 1em;
+		width: auto;
+		float: right;
+		text-align: right;
+		background-color: #B5B5B5;
+		border-radius: 10px;
+		padding: 2px 5px;
+	}
+	
+	#corpo_container aside section > p{
+		font-size: 1em;
+		width: auto;
+		float: right;
+		text-align: right;
+		background-color: #B5B5B5;
+		border-radius: 10px;
+		padding: 2px 5px;
+	}
+	
+	/*################################
+	TENDENCIAS MOBILE
+		- Estilo do conteúdo da section de tendencias*/
+	
+	#tendencias_mobile {
+		width: 100%;
+		height: auto;
+		/*background-color: gold;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.tendencia {
+		position: relative;
+		width: 30%;
+		height: auto;
+		/*background-color: aqua;*/
+		margin: 1%;
+		float: left;
+		overflow: hidden;
+		border: 1px solid #3d3d3d;
+	}
+	
+	.tendencia img{
+		width: 100%;
+		height: auto;
+		border: 0;
+		transition: .5s all;
+	}
+	
+	.tendencia h4{
+		position: absolute;
+		bottom: 10px;
+		width: 100%;
+		height: auto;
+		padding: 0px 5px;
+		font-size: 1em;
+		text-align: center;
+		z-index: 1;
+		text-shadow: 1px 1px 2px #000000;
+		transition: .5s all;
+	}
+	
+	.tendencia a:hover img{
+		transform: scale(1.5);
+		transition: 1s all;
+	}
+	
+	.tendencia a:hover h4{
+		font-size: 1.125em;
+		transition: 1s all;
+	}
+		
+	
+	/*################################
+	LANÇAMENTOS MOBILE
+		- Estilo do conteúdo da section de lançamentos*/
+	
+	#lancamentos_mobile {
+		width: 100%;
+		height: auto;
+		/*background-color: gold;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		overflow: hidden;
+	}
+	
+	.mobile_info {
+		width: 100px;
+		height: auto;
+		/*background-color: aqua;*/
+		margin: 2px;
+		float: left;
+		border: 1px solid #3d3d3d;
+	}
+	
+	.mobile_info img{
+		width: 100%;
+		height: auto;
+	}
+	
+	.lancamentos_btn {
+		width: 100%;
+	}
+	
+	.lancamentos_btn button{
+		width: 40%;
+		height: 22px;
+		border-radius: 11px;
+		border-style: none;
+		background-color: #FF5F5E;
+		color: #FFFFFF;
+		text-align: center;
+		margin-left: 30%;
+	}
+	
+	
+		
+	
+	
+	/*################################
+	SECTION LISTA NOTÍCIAS
+		- Estilo do da lista de notícias em home*/
+	
+	.noticia {
+		width: 100%;
+		height: auto;
+		/*background-color: aquamarine;*/
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 15px;
+	}
+	
+	.imgNoticia {
+		width: 25%;
+		height: auto;
+		/*background-color: blueviolet;*/
+	}
+	
+	.imgNoticia img{
+		width: 100%;
+		height: auto;
+		vertical-align: middle;
+	}
+	
+	.infoNoticiaContainer {
+		width: 75%;
+		height: auto;
+		/*background-color: darkgoldenrod;*/
+		padding: 0px 0px 0px 10px;
+	}
+	
+	.infoNoticia {
+		width: 100%;
+		height: auto;
+/*		background-color: violet;*/	
+	}
+	
+	.infoNoticia button {
+		width: auto;
+		display: block;
+		height: 20px;
+		border-radius: 11px;
+		border-style: none;
+		color: #FFFFFF;
+		padding: 0px 10px;
+		font-size: 1em;
+		float: left;
+		margin-right: 10px;
+		text-align: center;
+	}
+	
+	.infoNoticia p {
+		width: auto;
+		float: left;
+		font-size: .75em;
+		padding-top: 3px;
+	}
+	
+	.infoNoticia .Cinema {
+		background-color: #1F3F60;		
+	}
+	
+	.infoNoticia .Games {
+		background-color: #007F06;		
+	}
+	
+	.infoNoticia .Series {
+		background-color: #D19600;		
+	}
+	
+	.chamadaNoticia {
+		width: 100%;
+		height: auto;
+		/*background-color: springgreen;*/
+		clear: both;
+		margin-top: 25px;
+	}
+	
+	.chamadaNoticia a {
+		text-decoration: none;
+		color: #ffffff;
+		font-size: 1.125em;
+	}
+
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
+	- Largura máxima: 360px
+
+######################################################*/
+
+@media only screen and (max-width: 360px){
+	
+	/*################################
+	ASIDE
+		- Fica oculto na versão mobile*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+	
+	
+
+	/*################################
+	TÍTULOS DO SLIDESHOW
+		- Estilo do titulo dos slides*/
+	
+	
+	
+	
+	
+	/*################################
+	SECTIONS MOBILE E TABLET
+		- Essas sections da versão mobile e tablet
+		- Sections do aside na versão desktop fica oculta aqui*/
+	
+	#corpo_container section {
+		width: 100%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		padding: 10px;
+	}
+	
+	
+	
+	
+	/*################################
+	TENDENCIAS MOBILE
+		- Estilo do conteúdo da section de tendencias*/
+	
+	#tendencias_mobile {
+		width: 100%;
+		height: auto;
+		/*background-color: gold;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.tendencia {
+		position: relative;
+		width: 30%;
+		height: auto;
+		/*background-color: aqua;*/
+		margin: 1%;
+		float: left;
+		overflow: hidden;
+		border: 1px solid #3d3d3d;
+	}
+	
+	.tendencia img{
+		width: 100%;
+		height: auto;
+		border: 0;
+		transition: .5s all;
+	}
+
+	
+	.tendencia h4{
+		position: absolute;
+		bottom: 10px;
+		width: 100%;
+		height: auto;
+		padding: 0px 2px;
+		font-size: .75em;
+		text-align: center;
+		z-index: 1;
+		text-shadow: 1px 1px 2px #000000;
+		transition: .5s all;
+	}
+	
+	.tendencia a:hover img{
+		transform: scale(1.2);
+		transition: 1s all;
+	}
+	
+	.tendencia a:hover h4{
+		font-size: 1em;
+		transition: 1s all;
+	}
+	
+	
+	/*################################
+	LANÇAMENTOS MOBILE
+		- Estilo do conteúdo da section de lançamentos*/
+	
+	#lancamentos_mobile {
+		width: 100%;
+		height: auto;
+		/*background-color: gold;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	
+	.mobile_info {
+		width: 80px;
+		height: auto;
+		/*background-color: aqua;*/
+		margin: 5px;
+		float: left;
+		border: 1px solid #3d3d3d;
+	}
+	
+	.mobile_info img{
+		width: 100%;
+		height: auto;
+		border: 0;
+	}
+	
+	.lancamentos_btn {
+		width: 100%;
+	}
+	
+	.lancamentos_btn button{
+		width: 40%;
+		height: 22px;
+		border-radius: 11px;
+		border-style: none;
+		background-color: #FF5F5E;
+		color: #FFFFFF;
+		text-align: center;
+		margin-left: 30%;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	/*################################
+	SECTION LISTA NOTÍCIAS
+		- Estilo do da lista de notícias em home*/
+	
+	#corpo_container section article {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: #555454;*/
+	}
+
+	#corpo_container section article h2{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 10px;
+	}
+	
+	.noticia {
+		width: 100%;
+		height: auto;
+/*		background-color: aquamarine;
+*/		display: flex;
+		flex-direction: row;
+		margin-bottom: 10px;
+	}
+	
+	.imgNoticia {
+		width: 30%;
+		height: auto;
+/*		background-color: blueviolet;
+*/	}
+	
+	.imgNoticia img{
+		width: 100%;
+		height: auto;
+	}
+	
+	.infoNoticiaContainer {
+		width: 70%;
+		height: auto;
+/*		background-color: darkgoldenrod;
+*/		padding: 0px 0px 0px 10px;
+	}
+	
+	.infoNoticia {
+		width: 100%;
+		height: auto;
+/*		background-color: violet;*/	
+	}
+	
+	.infoNoticia button {
+		width: auto;
+		display: block;
+		height: 14px;
+		border-radius: 7px;
+		border-style: none;
+		color: #FFFFFF;
+		padding: 0px 8px;
+		font-size: .65em;
+		float: left;
+		margin-right: 5px;
+		text-align: center;
+	}
+	
+	.infoNoticia p {
+		width: auto;
+		float: left;
+		font-size: .5em;
+		padding-top: 2px;
+	}
+	
+	.infoNoticia .Cinema {
+		background-color: #1F3F60;		
+	}
+	
+	.infoNoticia .Games {
+		background-color: #007F06;		
+	}
+	
+	.infoNoticia .Series {
+		background-color: #D19600;		
+	}
+	
+	.chamadaNoticia {
+		width: 100%;
+		height: auto;
+		/*background-color: goldenrod;*/
+		clear: both;
+		margin-top: 15px;
+	}
+	
+	.chamadaNoticia p {
+		line-height: 1em;
+	}
+	
+	.chamadaNoticia a {
+		text-decoration: none;
+		color: #ffffff;
+		font-size: .75em;
+	}
+	
+	
+}

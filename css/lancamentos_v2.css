@@ -1,0 +1,738 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ESTILO PARA PÁGINA TÍTULOS
+	- Todos os estilos de lançamentos devem estar aqui
+	- Evitar duplicidade de ids e classes em outras folhas*/
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA TITULOS
+	- Largura miníma: 769px
+
+######################################################*/
+
+@media only screen and (min-width: 769px) {
+	
+	/*#############################
+	FILTRO DE TÍTULOS
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"*/
+	
+	#filtro_container{
+		position: relative;
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+    }
+
+	.form_filtro {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 5px 0px;
+	}
+
+	.col-20 {
+	    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+	    height: 29px;
+	    overflow: hidden;
+	    width: 25%;
+	}
+
+	.col-20 select{
+		background: transparent;
+		border: none;
+		font-size: 14px;
+		height: 29px;
+		padding: 5px; /* If you add too much padding here, the options won't show in IE */
+		width: 120%;
+		-webkit-appearance: none;
+	}	
+
+	
+	.btn_submit_filtro {
+	    height: 29px;
+	    overflow: hidden;
+	    width: 20%;
+
+	}	
+
+	.btn_submit_filtro input{
+	    background: transparent;
+		border: none;
+		font-size: 14px;
+		height: 29px;
+		padding: 5px; /* If you add too much padding here, the options won't show in IE */
+		width: 100%;
+		color: #FFFFFF;
+	}		
+	
+	.rounded {
+	    -webkit-border-radius: 20px;
+	    -moz-border-radius: 20px;
+	    border-radius: 20px;
+	}
+
+	.semi-square {
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	}
+
+	/* -------------------- Colors: Background */
+	.slate   { background-color: #ddd; }
+	.green   { background-color: #779126; }
+	.blue    { background-color: #3b8ec2; }
+	.yellow  { background-color: #eec111; }
+	.black   { background-color: #000; }
+
+	/* -------------------- Colors: Text */
+	.slate select   { color: #000; }
+	.green select   { color: #fff; }
+	.blue select    { color: #fff; }
+	.yellow select  { color: #000; }
+	.black select   { color: #fff; }	
+	
+	
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+	select {
+	    border: 0;
+	    color: #EEE;
+	    background: transparent;
+	    font-size: 20px;
+	    font-weight: bold;
+	    padding: 2px 10px;
+	    *background: #58B14C;
+	    -webkit-appearance: none;
+	}
+
+	input {
+	    border: 0;
+	    color: #EEE;
+	    background: transparent;
+	    font-size: 20px;
+	    font-weight: bold;
+	    padding: 2px 10px;
+	    *background: #58B14C;
+	   -webkit-appearance: none;
+	}	
+	
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.row_small:after {
+		content: "";
+		display: table;
+	}
+
+
+	.row_medium:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	
+	
+	
+	
+	/*#############################
+	LISTA DE TÍTULOS VERSÃO DESKTOP
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"
+		- Aqui somente é exibido o poster do filme, demais informações são ocultas*/
+	
+	#corpo_container section {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: yellowgreen;*/
+	}
+	
+	#lancamentos_lista {
+		position: relative;
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		/*background-color: aquamarine;*/
+		padding-top: 20px;
+	}
+	
+	#titulo_container {
+		width: 200px;
+		height: auto;
+		/*background-color: aquamarine;*/
+		padding: 0px;
+}
+
+
+	#titulo_container article {
+		display: none;
+	}
+	
+	.titulo_poster {
+		width: auto;
+		height: auto;
+		/*background-color: blueviolet;*/
+		margin: 5px;
+	}
+
+	.titulo_poster img{
+		width: 100%;
+		border: 1px solid #000000;
+		-webkit-box-shadow: 2px 2px 3px #000000;
+		box-shadow: 2px 2px 3px #000000;
+		transition: .5s ease all;
+	}
+
+	.titulo_poster img:hover {
+		-webkit-box-shadow: 4px 4px 6px #000000;
+		box-shadow: 4px 4px 6px #000000;
+		transition: 1s ease all;
+	}
+	
+	.pg_seletor {
+		width: 100%;
+		position: relative;
+		height: 50px;
+		text-align: center;
+		margin: auto;
+	}
+	
+	
+	
+	
+}
+
+
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES DA PÁGINA TITULOS
+	- Largura miníma: 361px
+	- Largura máxima: 768px
+
+######################################################*/
+
+@media screen and (max-width: 768px) and (min-width: 361px){
+	
+	/*#############################
+	FILTRO DE TÍTULOS
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"*/
+	
+	#filtro_container{
+		position: relative;
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+    }
+
+	.form_filtro {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 5px 0px;
+	}
+
+	.col-20 {
+	    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+	    height: 29px;
+	    overflow: hidden;
+	    width: 25%;
+	}
+
+	.col-20 select{
+		background: transparent;
+		border: none;
+		font-size: 14px;
+		height: 29px;
+		padding: 5px; /* If you add too much padding here, the options won't show in IE */
+		width: 120%;
+		-webkit-appearance: none;
+	}	
+
+	
+	.btn_submit_filtro {
+	    height: 29px;
+	    overflow: hidden;
+	    width: 20%;
+
+	}	
+
+	.btn_submit_filtro input{
+	    background: transparent;
+		border: none;
+		font-size: 14px;
+		height: 29px;
+		padding: 5px; /* If you add too much padding here, the options won't show in IE */
+		width: 100%;
+		color: #FFFFFF;
+	}		
+	
+	.rounded {
+	    -webkit-border-radius: 20px;
+	    -moz-border-radius: 20px;
+	    border-radius: 20px;
+	}
+
+	.semi-square {
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	}
+
+	/* -------------------- Colors: Background */
+	.slate   { background-color: #ddd; }
+	.green   { background-color: #779126; }
+	.blue    { background-color: #3b8ec2; }
+	.yellow  { background-color: #eec111; }
+	.black   { background-color: #000; }
+
+	/* -------------------- Colors: Text */
+	.slate select   { color: #000; }
+	.green select   { color: #fff; }
+	.blue select    { color: #fff; }
+	.yellow select  { color: #000; }
+	.black select   { color: #fff; }	
+	
+	
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+	select {
+	    border: 0;
+	    color: #EEE;
+	    background: transparent;
+	    font-size: 20px;
+	    font-weight: bold;
+	    padding: 2px 10px;
+	    *background: #58B14C;
+	    -webkit-appearance: none;
+	}
+
+	input {
+	    border: 0;
+	    color: #EEE;
+	    background: transparent;
+	    font-size: 20px;
+	    font-weight: bold;
+	    padding: 2px 5px;
+	    *background: #58B14C;
+	   -webkit-appearance: none;
+	}	
+	
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.row_small:after {
+		content: "";
+		display: table;
+	}
+
+
+	.row_medium:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	
+	
+	
+	
+	/*#############################
+	LISTA DE TÍTULOS VERSÃO TABLET E TELAS MENORES
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"*/
+	
+	#corpo_container section {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: yellowgreen;*/
+	}
+	
+	
+	
+	
+	
+	/*#############################
+	ESTILO DOS TÍTULOS VERSÃO TABLET E TELAS MENORES
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"
+		- Aqui é exibido o poster do filme e informações relevantes*/
+	
+	#lancamentos_lista {
+		position: relative;
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		/*background-color: aquamarine;*/
+		padding-top: 20px;
+	}
+	
+	#titulo_container {
+		width: 100%;
+		height: auto;
+		/*background-color: aquamarine;*/
+		display: flex;
+		flex-direction: row;
+		padding: 10px;
+	}
+
+	.titulo_poster {
+		width: 30%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		margin: 0px;
+	}
+
+	.titulo_poster img{
+		width: 100%;
+		border: 1px solid #000000;
+		box-shadow: 1px 1px 2px #272727;
+		-webkit-box-shadow: 1px 1px 2px #272727;
+	}
+
+	#titulo_container article {
+		width: 70%;
+		height: auto;
+		/*background-color: darkgoldenrod;*/
+		padding-left: 10px;
+	}
+
+	#titulo_container article h1 {
+		font-size: 1.5em; /*24px*/
+		font-weight: bold;
+		line-height: normal;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px #000000;
+		text-align: left;
+	}
+
+	#titulo_container article h2 {
+		width: auto;
+		font-size: 1em;
+		color: #C0C0C0;
+		text-shadow: 1px 1px 1px #000000;
+		margin-bottom: 20px;
+		text-align: left;
+	}
+
+	#titulo_container a {
+		width: auto;
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+	#titulo_container article div {
+		width: 100%;
+		height: auto;
+		margin-bottom: 5px; 
+		/*background-color: slateblue;*/
+		overflow: auto;
+	}	
+	
+	#titulo_container article div p {
+		width: auto;
+		font-size: 1.125em;
+		font-weight: bold;
+		float: left;
+		padding-right: 10px;
+		text-shadow: 1px 1px 1px #000000;
+	}
+	
+	#titulo_container article div p span{
+		color: #FF5F5E;
+		
+	}
+
+
+	#info ol {
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+		height: auto;
+		flex-wrap: wrap;
+		float: left;
+		/*background-color: darkgoldenrod;*/
+		margin-top: 10px;
+	}
+
+	.sinopse {
+		font-size: .75em; /*12px*/
+	}
+
+	#info ol li {
+		display: block;
+		width: 30%;
+		color: #ffffff;
+		height: auto;
+		float: left;
+		text-shadow: 1px 1px 1px #000000;
+	}
+
+	#info ol li h4{
+		color: #FF5F5E;
+		font-weight: bold;
+		text-shadow: 1px 1px 2px #000000;
+	}
+	
+	.pg_seletor {
+		width: 100%;
+		position: relative;
+		height: 50px;
+		text-align: center;
+		margin: auto;
+	}
+	
+	
+}
+
+
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO MOBILE DA PÁGINA TÍTULOS
+	- Largura máxima: 360px
+
+######################################################*/
+
+@media only screen and (max-width: 360px){
+	
+	/*#############################
+	FILTRO DE TÍTULOS
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"*/
+	
+	#filtro_container{
+		position: relative;
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+    }
+	
+	.form_filtro {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 5px 0px;
+	}
+	
+	.col-20 {
+	   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+	   height: 25px;
+	   overflow: hidden;
+	   width: 25%;
+		margin: 0px 2px;
+	}
+
+	.col-20 select{
+		background: transparent;
+		border: none;
+		font-size: 10px;
+		height: 25px;
+		width: 120%;
+		-webkit-appearance: none;
+	}	
+
+
+	.btn_submit_filtro {
+	    height: 25px;
+	    overflow: hidden;
+	    width: 20%;
+		margin: 0px 2px;
+
+	}	
+
+	.btn_submit_filtro input{
+		background: transparent;
+		border: none;
+		font-size: 10px;
+		height: 25px;
+		width: 100%;
+		color: #FFFFFF;
+	}		
+
+	.rounded {
+	    -webkit-border-radius: 20px;
+	    -moz-border-radius: 20px;
+	    border-radius: 20px;
+	}
+
+	.semi-square {
+		-webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	}
+	
+/* -------------------- Colors: Background */
+.slate   { background-color: #ddd; }
+.green   { background-color: #779126; }
+.blue    { background-color: #3b8ec2; }
+.yellow  { background-color: #eec111; }
+.black   { background-color: #000; }
+
+/* -------------------- Colors: Text */
+.slate select   { color: #000; }
+.green select   { color: #fff; }
+.blue select    { color: #fff; }
+.yellow select  { color: #000; }
+.black select   { color: #fff; }	
+	
+	
+/* -------------------- Select Box Styles: danielneumann.com Method */
+/* -------------------- Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+	select {
+		border: 0;
+	    color: #EEE;
+	    background: transparent;
+	    font-size: 10px;
+	    font-weight: bold;
+	    padding: 2px 2px;
+	    *background: #58B14C;
+	    -webkit-appearance: none;
+	}
+
+	input {
+	    border: 0;
+	    color: #EEE;
+	    background: transparent;
+	    font-size: 10px;
+	    font-weight: bold;
+	    padding: 2px 2px;
+	    *background: #58B14C;
+	    -webkit-appearance: none;
+	}
+	
+	
+	
+	
+	/*#############################
+	LISTA DE TÍTULOS VERSÃO TABLET E TELAS MENORES
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"
+		- Aqui é exibido o poster do filme e informações relevantes*/
+	
+	#corpo_container section {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: navajowhite;*/
+	}
+	
+	#lancamentos_lista {
+		position: relative;
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		/*background-color: aquamarine;*/
+		padding-top: 10px;
+	}
+	
+	
+	#titulo_container {
+		width: 100%;
+		height: auto;
+		/*background-color: aquamarine;*/
+		display: flex;
+		flex-direction: row;
+		padding: 5px;
+	}	
+
+	.titulo_poster {
+		width: 30%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		margin: 0px;
+	}
+
+	.titulo_poster img{
+		width: 100%;
+		border: 1px solid #000000;
+		-webkit-box-shadow: 1px 1px 2px #272727;
+		box-shadow: 1px 1px 2px #272727;
+	}	
+	
+	#titulo_container article {
+		width: 70%;
+		height: auto;
+		/*background-color: darkgoldenrod;*/
+		padding-left: 5px;
+	}
+
+	#titulo_container article h1 {
+		font-size: 1.125em; /*18px*/
+		font-weight: bold;
+		line-height: normal;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px #000000;
+		text-align: left;
+	}
+
+	#titulo_container article h2 {
+		width: auto;
+		font-size: .875em; /*14px*/
+		color: #C0C0C0;
+		text-shadow: 1px 1px 1px #000000;
+		margin-bottom: 10px;
+		text-align: left;
+	}
+
+	#titulo_container article a {
+		width: auto;
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+	#titulo_container article div {
+		position: relative;
+		width: 100%;
+		height: auto;
+		margin-bottom: 5px; 
+/*		background-color: slateblue;*/
+		overflow: auto;
+	}
+
+	
+	#titulo_container article div p {
+		width: auto;
+		font-size: .75em;
+		font-weight: bold;
+		float: left;
+		padding-right: 10px;
+		text-shadow: 1px 1px 1px #000000;
+	}
+	
+	#titulo_container article div p span{
+		color: #FF5F5E;	
+	}
+
+	
+	
+	
+}

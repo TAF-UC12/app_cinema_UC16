@@ -5,18 +5,35 @@ ini_set(“display_errors”, 0 );
 
 ?>
 
+
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
+<html lang="pt-br">
+
 <title>Títulos</title>
-<link href="css/estilo.css" rel="stylesheet" type="text/css">
-<link href="css/menu.css" rel="stylesheet" type="text/css">
-<link href="css/lancamentos.css" rel="stylesheet" type="text/css">
-<script defer src="js/fontawesome/fontawesome-all.js"></script>
+<!--METADADOS PARA HABILITAR QUERYS DE FORMATAÇÃO PARA SITE RESPONSIVO-->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no>
+<meta name="mobile-web-app-capable" content="yes">
+
+
+<!--LINK DO ÍCONE A SER MOSTRADO NA BARRA DE ENDEREÇOS DO NAVEGADOR-->
+<link rel="shortcut icon" href="img/icon48px.png">
+
+
+<!--LINKS INTERNOS DAS FOLHAS DE ESTILO CSS UTILIZADAS NA PÁGINA-->
+<link href="css/estilo_v2.css" rel="stylesheet" type="text/css">
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link href="css/lancamentos_v2.css" rel="stylesheet" type="text/css">
+
+<!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+<script defer src="js/fontawesome/fontawesome-all.js"></script>
+
 </head>
+
 
 <body>
 <main role="main">
@@ -24,23 +41,35 @@ ini_set(“display_errors”, 0 );
 <header>
 	
 	<div id="logo_topo">
-		<img src="img/logo.png" alt="logo do site" class="logo">
+		<img src="img/logo.png" alt="logo do site">
 	</div>	
-	
-	<div id="menu_topo">		
+		
+	<div id="barrabusca">
+		
+	</div>
+							
 	<?php
 	
 		include('menu.php');
 	
 	?>
-	</div>	
-	
 
 </header>
 
+
+<!--TÍTULO DE IDENTIFICAÇÃO DA CATEGORIA SENDO PESQUISADA-->
 	<div class='categoriaPaginaLancamentos'>
 
-		<h2><i class='fas fa-chevron-circle-left' onclick='goBack()'></i> &thinsp;&thinsp; Títulos</h2>
+	<?php
+	$categoria = $_GET["filtro_categoria"];
+	
+	if ($categoria == "filmes"){$tipo = "Cinema";}
+	if ($categoria == "series"){$tipo = "Series";}
+	if ($categoria == "games"){$tipo = "Games";}
+	
+?>
+
+		<p><i class='fas fa-chevron-circle-left' onclick='goBack()'></i> &thinsp;&thinsp; Títulos em <?php echo "<b>$tipo</b>"; ?></p>
 		
 		<script>
 		function goBack() {
@@ -48,22 +77,28 @@ ini_set(“display_errors”, 0 );
 		}
 		</script>
 
-	</div>			
-					
+	</div>	
 
-<section class="submenu_filtro">
+
+<!--SECTION PARA FILTRO DE TITULOS-->
+<section>
 	
 	<?php
-		require_once('filtro.php');
-	?>
+	
+		require_once('filtro_titulos.php');
+	
+	?>	
 	
 </section>
 
 
+<!--DIV CONTAINER DO CONTÉUDO PRINCIPAL DO SITE-->
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
-<section class="lancamentos_container">
-<div class="lancamentos_lista">
+
+<!--SECTION LISTA DE TÍTULOS-->
+<section>
+<div id="lancamentos_lista">
 
 	
 <?php		
@@ -111,37 +146,48 @@ switch ($filtro_categoria) {
 			$imgFundo = $linha["imgFundo"];
 			$trailer = $linha["trailer"];	
 		
-	
-	echo "<div id='filme_info'>
+	?>
+		
+	<div id='titulo_container'>
 
-					<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><div id='poster_filme'><img src='img/posters/$poster'></a>
-
-				</div>
-
-				<div id='info'>
-
-					<h1>$titulo</h1>
-					<h2>$titoriginal</h2>
-
-					<div>
-						<h3>Lançamento </h3>
-						<p>$estreia</p>
-					</div>
 					
-					<div>
-						<h3>Direção </h3>
-						<p>$diretor</p>
-					</div>
 					
-					<div class='fichaTecnica'>
-
-						<a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Info</button></a>
-
-					</div>
-
-				</div>
+	<div class='titulo_poster'>
 				
-			</div>";
+		<a href='ficha_tecnica.php?selecionado=<?php echo $id; ?>&categoria=<?php echo $categoria; ?>'>
+					
+			<img src='img/posters/<?php echo $poster;?>'>
+						
+		</a>
+
+	</div>
+
+	<article>
+		<hgroup>
+			<h1><?php echo "$titulo"; ?></h1>
+			<h2><?php echo "$titoriginal"; ?></h2>
+		<hgroup>
+		
+		<div>
+		
+			<p><span>Lançamento: </span> <?php echo "$estreia"; ?></p>
+
+		</div>
+					
+		<div>
+		
+			<p><span>Direção: </span> <?php echo "$diretor"; ?></p>
+			
+		</div>
+
+	</article>
+				
+</div>	
+		
+		
+		
+	<?php		
+			
 	}
 		
 	break;
@@ -150,7 +196,7 @@ switch ($filtro_categoria) {
         
 
     include "config/conectar.php";
-    $qtde_registros = 3;
+    $qtde_registros = 6;
     @$page = $_GET['pag'];
     if(!$page){
         $pagina = 1;
@@ -179,36 +225,49 @@ switch ($filtro_categoria) {
 			$imgFundo = $linha["imgFundo"];
 			$trailer = $linha["trailer"];	
 		
+		?>
 	
-	echo "<div id='filme_info'>
+<div id='titulo_container'>
 
-					<a href='ficha_tecnica.php?selecionado=$id&categoria=series'><div id='poster_filme'><img src='img/posters/$poster'></a>
-
-				</div>
-
-				<div id='info'>
-
-					<h1>$titulo</h1>
-
-					<div>
-						<h3>Lançamento </h3>
-						<p>$estreia</p>
-					</div>
 					
-					<div>
-						<h3>Elenco </h3>
-						<p>$elenco</p>
-					</div>
 					
-					<div class='fichaTecnica'>
-
-						<a href='ficha_tecnica.php?selecionado=$id&categoria=series'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
-
-					</div>
-
-				</div>
+	<div class='titulo_poster'>
 				
-			</div>";
+		<a href='ficha_tecnica.php?selecionado=<?php echo $id; ?>&categoria=<?php echo $categoria; ?>'>
+					
+			<img src='img/posters/<?php echo $poster;?>'>
+						
+		</a>
+
+	</div>
+
+	<article>
+		<hgroup>
+			<h1><?php echo "$titulo"; ?></h1>
+			<h2><?php echo "$titoriginal"; ?></h2>
+		<hgroup>
+		
+		<div>
+		
+			<p><span>Lançamento: </span> <?php echo "$estreia"; ?></p>
+
+		</div>
+					
+		<div>
+		
+			<p><span>Elenco: </span> </p><p><?php echo "$elenco"; ?></p>
+			
+		</div>
+
+	</article>
+				
+</div>
+
+
+
+
+	<?php		
+			
 	}
 		
 	break;	
@@ -218,7 +277,7 @@ switch ($filtro_categoria) {
         
 
     include "config/conectar.php";
-    $qtde_registros = 3;
+    $qtde_registros = 6;
     @$page = $_GET['pag'];
     if(!$page){
         $pagina = 1;
@@ -240,7 +299,7 @@ switch ($filtro_categoria) {
     //echo $contar_pages;
     
     while($linha  = mysqli_fetch_array($sel_parcial)){
-           $id = $linha["idgames"];	
+            $id = $linha["idgames"];	
 			$titulo = $linha["tituloGame"];
 			$desenvolvedora = $linha["nomeDesenvolvedora"];
 			$poster = $linha["poster"];	
@@ -252,36 +311,48 @@ switch ($filtro_categoria) {
 			$poster = $linha["imgGame"];
 			$trailer = $linha["trailer"];	
 		
-	
-	echo "<div id='filme_info'>
+	?>
+		
+<div id='titulo_container'>
 
-					<a href='ficha_tecnica.php?selecionado=$id&categoria=games'><div id='poster_filme'><img src='img/posters/$poster'></a>
-
-				</div>
-
-				<div id='info'>
-
-					<h1>$titulo</h1>
-
-					<div>
-						<h3>Lançamento </h3>
-						<p>$estreia</p>
-					</div>
 					
-					<div>
-						<h3>Desenvolvedora </h3>
-						<p>$desenvolvedora</p>
-					</div>
 					
-					<div class='fichaTecnica'>
-
-						<a href='ficha_tecnica.php?selecionado=$id&categoria=games'><button type='button' class='btn_ficha'><i class='fas fa-plus'></i> Ficha técnica</button></a>
-
-					</div>
-
-				</div>
+	<div class='titulo_poster'>
 				
-			</div>";
+		<a href='ficha_tecnica.php?selecionado=<?php echo $id; ?>&categoria=<?php echo $categoria; ?>'>
+					
+			<img src='img/posters/<?php echo $poster;?>'>
+						
+		</a>
+
+	</div>
+
+	<article>
+		<hgroup>
+			<h1><?php echo "$titulo"; ?></h1>
+			<h2><?php echo "$titoriginal"; ?></h2>
+		<hgroup>
+		
+		<div>
+		
+			<p><span>Lançamento: </span> <?php echo "$estreia"; ?></p>
+
+		</div>
+					
+		<div>
+		
+			<p><span>Desenvolvedora: </span> <?php echo "$desenvolvedora"; ?></p>
+			
+		</div>
+
+	</article>
+				
+</div>
+		
+		
+			
+	<?php		
+			
 	}
 		
 	break;	
@@ -315,16 +386,20 @@ switch ($filtro_categoria) {
 </section>
 	
 </div> <!--FIM DO CORPO DO SITE-->	
-	
+
+
+<!--MENU INFERIOR SOMENTE VISÍVEL NAS VERSOES MOBILE-->		
 <div id="submenu_inferior">
 	
 	<?php
 		require('submenu.php');
 	?>
 	
-</div>	
-	
-	
+</div>
+
+
+<!--FOOTER SOMENTE VISIVEL NA VERSÃO DESKTOP
+	MOBILE E TELAS MENORES ELE FICA OCULTO PELO MENU INFERIOR-->		
 <footer>
 	
 	<div id="logo_rodape">
@@ -335,11 +410,8 @@ switch ($filtro_categoria) {
 		<p>2018 Todos os diretos reservados</p>
 	</div>		
 		
-</footer>
-	
-			
+</footer>	
+
+
 </main>
-
-
-</body>
-</html>
+<body>

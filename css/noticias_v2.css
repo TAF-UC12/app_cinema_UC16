@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ESTILO PARA PÁGINA DE NOTÍCIAS
+	- Todos os estilos da página que mostra a lista de notícias devem estar aqui
+	- Evitar duplicidade de ids e classes em outras folhas*/
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
+	- Largura miníma: 769px
+
+######################################################*/
+
+
+@media only screen and (min-width: 769px){
+	
+	/*################################
+	SECTION MOBILE
+		- Essas sections ficam ocultas na versão desktop*/
+
+
+
+
+	
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
+	- Largura miníma: 361px
+	- Largura máxima: 768px
+
+######################################################*/
+
+@media screen and (max-width: 768px) and (min-width: 361px){
+	
+	/*################################
+	ASIDE
+		- Fica oculto na versão mobile*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+
+	
+	
+	
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
+	- Largura máxima: 360px
+
+######################################################*/
+
+@media only screen and (max-width: 360px){
+	
+	/*################################
+	ASIDE
+		- Fica oculto na versão mobile*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+	
+	
+	
+	
+}

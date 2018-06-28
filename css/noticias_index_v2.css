@@ -1,0 +1,241 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ESTILO PARA PÁGINA DE NOTÍCIAS
+	- Todos os estilos da página que mostra a lista de notícias devem estar aqui
+	- Evitar duplicidade de ids e classes em outras folhas*/
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
+	- Largura miníma: 769px
+
+######################################################*/
+
+
+@media only screen and (min-width: 769px){
+	
+	/*################################
+	SECTION MOBILE
+		- Essas sections ficam ocultas na versão desktop*/
+
+	.destaques_mobile {
+		display: none;
+	}
+
+	
+	
+	
+	
+	/*#############################
+	FILTRO DO FILTRO DE NOTÍCIAS
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"*/
+	
+	#filtro_container_noticias {
+		width: 100%;
+		height: auto;
+		background-color: #25043b;
+		padding: 5px 10px;
+		overflow: auto;
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+	#filtro_container_noticias li{
+		width: 25%;
+		float: left;
+		background-color: #313131;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	#filtro_container_noticias li:last-child{
+		margin-right: 0%;
+	}
+	
+	#filtro_container_noticias li a{
+		display: block;
+		color: #FFFFFF;
+		font-size: 1.25em;
+		font-weight: bold;
+		text-decoration: none;
+		padding: 5px 0px;
+	}
+	
+	#filtro_container_noticias li:hover {
+		box-shadow: 0px 0px 3px #ffffff;
+		transition: .5s all ease;
+	}
+	
+	
+	
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
+	- Largura miníma: 361px
+	- Largura máxima: 768px
+
+######################################################*/
+
+@media screen and (max-width: 768px) and (min-width: 361px){
+	
+	/*################################
+	ASIDE
+		- Fica oculto na versão mobile*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+
+	
+	
+	
+	/*#############################
+	FILTRO DO FILTRO DE NOTÍCIAS
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"*/
+	
+	#filtro_container_noticias {
+		width: 100%;
+		height: auto;
+		background-color: #25043b;
+		padding: 5px 10px;
+		overflow: auto;
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+	#filtro_container_noticias li{
+		width: 25%;
+		float: left;
+		background-color: #313131;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	#filtro_container_noticias li:last-child{
+		margin-right: 0%;
+	}
+	
+	#filtro_container_noticias li a{
+		display: block;
+		color: #FFFFFF;
+		font-size: 1em;
+		font-weight: bold;
+		text-decoration: none;
+		padding: 4px 0px;
+	}
+	
+	#filtro_container_noticias li:hover {
+		box-shadow: 0px 0px 3px #ffffff;
+		transition: .5s all ease;
+	}
+	
+	
+	
+	
+	
+	
+	/*################################
+	SECTIONS MOBILE E TABLET
+		- Essas sections da versão mobile e tablet
+		- Sections do aside na versão desktop fica oculta aqui*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+	
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
+	- Largura máxima: 360px
+
+######################################################*/
+
+@media only screen and (max-width: 360px){
+	
+	/*################################
+	ASIDE
+		- Fica oculto na versão mobile*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+	
+	
+
+	
+	/*#############################
+	FILTRO DO FILTRO DE NOTÍCIAS
+		- Alterações aparência devem ser feitas na folha de estilo "lancamentos_v2.css"*/
+	
+	#filtro_container_noticias {
+		width: 100%;
+		height: auto;
+		background-color: #25043b;
+		padding: 5px 10px;
+		overflow: auto;
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+	#filtro_container_noticias li{
+		width: 30%;
+		float: left;
+		background-color: #313131;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	#filtro_container_noticias li:last-child{
+		margin-right: 0%;
+	}
+	
+	#filtro_container_noticias li a{
+		display: block;
+		color: #FFFFFF;
+		font-size: .75em;
+		font-weight: bold;
+		text-decoration: none;
+		padding: 4px 0px;
+	}
+	
+	#filtro_container_noticias li:hover {
+		box-shadow: 0px 0px 3px #ffffff;
+		transition: .5s all ease;
+	}
+	
+	
+	
+	
+}

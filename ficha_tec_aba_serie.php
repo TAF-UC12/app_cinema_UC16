@@ -25,7 +25,7 @@ $duracao = $linha["duracao"];
 $ano = $linha["ano"];
 $temp = $linha["temporadas"];
 		
-			echo "<div id='filme_info' style='background-image: url(img/posters/backgrounds/background_series.jpg)'>
+			echo "<div id='filme_info'>
 		
 				<div id='menu_filme'>
 				

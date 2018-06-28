@@ -29,7 +29,7 @@ $pais = $linha["paisOrigem"];
 $poster = $linha["imgGame"];
 $trailer = $linha["trailer"];
 		
-			echo "<div id='filme_info' style='background-image: url(img/posters/backgrounds/background_games.jpg)'>
+			echo "<div id='filme_info'>
 		
 				<div id='menu_filme'>
 				

@@ -1,0 +1,964 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ESTILO PRINCIPAL PARA O CORPO DO SITE
+	- Todos os estilos aplicados a todas as páginas do site devem estar aqui
+	- Evitar duplicidade de ids e classes em outras folhas*/
+
+/*Zerar margins e paddings*/
+* {
+	margin: 0 auto;
+	padding: 0; 
+	-webkit-box-sizing:	border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+}
+
+/*Remove estilo padrao de tags 'a' (links)
+	- Cor padrão dos links são #ffffff*/
+* a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+/*Remove espaçamento em imagens com tags 'a' (links)*/
+* img {
+	vertical-align: middle;
+}
+
+/*Font padrão para todo o site*/
+@font-face {
+    font-family: minha_font;
+    src: url('font/Roboto-Regular.ttf');
+}
+
+/*Padrão para todo o site
+	- Cor da font padrão é #ffffff (branco)
+	- Cor de fundo é #232323*/
+body{
+	font-family: minha_font;
+	font-weight: normal;
+	background-color: #232323;
+	color: #ffffff;
+}
+
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO DESKTOP
+	- Largura miníma: 769px
+
+######################################################*/
+
+
+@media only screen and (min-width: 769px){
+
+/*###########################
+	HEADER*/	
+	
+	header {
+		position: relative;
+		width: 100%;
+		height: 110px;
+		background-color: #313131;
+		overflow: auto;
+	}
+
+	#logo_topo {
+		position: relative;
+		width: 120px;
+		height: auto;
+		/*background-color: yellow; */
+		float: left;
+		margin-left: 20px;
+	}
+	
+	#logo_topo img {
+		width: 100%;
+		height: auto;
+		padding: 0;
+	}
+	
+	#barrabusca {
+		position: relative;
+		width: 80%;
+		height: 60px;
+		/*background: #660809;*/
+		float: left;
+	}
+	
+	
+	
+	
+	/*#############################
+	MENU
+		- Somente tamanho e cor de fundo
+		- Alterações aparência devem ser feitas na folha de estilo "menu.css"
+		- Alterações conteúdo devem ser feitas em "menu.php"*/
+	
+	.mobile-menu {
+		width: 100%;
+		height: auto;
+		background-color: #313131;
+	}
+	
+
+	
+	
+	/*################################
+	SLIDESHOW
+		- Estilo do titulo dos slides*/
+	
+	.jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+	
+	#topo_slides_container section article{
+		position:absolute;
+		right: 8.333333333333333%; /*100px de 1200px de borda*/
+		bottom: 10px;
+		width: 300px;
+		height: auto;
+		background-color: rgba(61,61,61,0.80);
+		line-height:1.27;
+		padding:5px 5px 5px 5px;
+		border-radius: 10px;
+		box-sizing:border-box;
+		z-index: 1;
+	}
+
+	#topo_slides_container section article h1 {
+		font-size: 2em;
+		color: #ffffff;
+		text-shadow: 1px 1px 2px #000000;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	#topo_slides_container section article h2 {
+		font-size: 1em; /*12px*/
+		color: #B5B5B5
+		/*text-shadow: 1px 1px 2px #000000;*/
+
+	}
+
+	#topo_slides_container section article a {
+		text-decoration: none;
+		font-size: 1em;
+		color: #FFFFFF;
+		background-color: #000000;
+		float: right;
+		margin-top: 10px;
+		border-radius: 30px;
+		padding: 5px 15px;
+	}
+
+	#topo_slides_container section article a:hover {
+		color: #44B4FF;
+		box-shadow: 0px 0px 2px #ffffff;
+		transition: .5s all ease;
+	}
+
+/*jssor slider bullet skin 032 css*/
+        .jssorb032 {position:absolute;}
+        .jssorb032 .i {position:absolute;cursor:pointer;}
+        .jssorb032 .i .b {fill:#fff;fill-opacity:0.7;stroke:#000;stroke-width:1200;stroke-miterlimit:10;stroke-opacity:0.25;}
+        .jssorb032 .i:hover .b {fill:#000;fill-opacity:.6;stroke:#fff;stroke-opacity:.35;}
+        .jssorb032 .iav .b {fill:#000;fill-opacity:1;stroke:#fff;stroke-opacity:.35;}
+        .jssorb032 .i.idn {opacity:.3;}
+
+        /*jssor slider arrow skin 051 css*/
+        .jssora051 {display:block;position:absolute;cursor:pointer;}
+        .jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+        .jssora051:hover {opacity:.8;}
+        .jssora051.jssora051dn {opacity:.5;}
+        .jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+	
+	
+	
+	
+	
+	.categoriaPaginaHome {
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+	}
+	
+	.categoriaPaginaCinema {
+		width: 100%;
+		height: auto;
+		background-color: #1F3F60;
+	}
+	
+	.categoriaPaginaGames {
+		width: 100%;
+		height: auto;
+		background-color: #007F06;
+	}
+	
+	.categoriaPaginaSeries {
+		width: 100%;
+		height: auto;;
+		background-color: #D19600;
+	}
+	
+	.categoriaPaginaLancamentos {
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+	}
+	
+	.categoriaPaginaNoticias {
+		width: 100%;
+		height: auto;
+		background-color: #25043B;
+	}
+	
+	.categoriaPaginaHome p, .categoriaPaginaCinema p, .categoriaPaginaGames p, .categoriaPaginaSeries p, .categoriaPaginaLancamentos p, .categoriaPaginaNoticias p{
+		font-size: 1.375em;
+		text-align: center;
+		color: #FFFFFF;
+		padding: 5px 0px;
+	}
+	
+	
+	
+	/*###############################
+	CONTAINER PARA CONTEUDO PRINCIPAL DO SITE
+		- Tudo após adiv do slideshow fica nesse container
+		- Páginas sem slide se aplicam normalmente*/
+	
+	#corpo_container {
+		position: relative;
+		width: 90%;
+		height: auto;
+		/*background-color: aqua;*/
+	}
+	
+	
+	
+	
+	/*###############################
+	MENU INFERIOR MOBILE OCULTO NO DESKTOP*/
+	
+	#submenu_inferior {
+		display: none;
+		width: 100%;
+		height: auto;
+		position: -webkit-sticky; /* Safari */
+        position: sticky;
+		bottom: -1px;
+		padding: 5px;
+		background-color: #3d3d3d;
+		z-index: 1;
+	}
+	
+	
+	
+	
+	/*###############################
+	AVANÇA E VOLTA NA LISTA DE NOTICIAS*/
+	
+	.pg_seletor {
+		width: auto;
+		position: relative;
+		height: 50px;
+		text-align: center;
+		margin: auto;
+	}
+	
+	.pg_seletor a {
+		width: auto;
+		text-decoration: none;
+		/*background-color: steelblue;*/
+		color: #ffffff;
+		padding: 0px 10px;
+		font-size: 2em;
+	}
+	
+	.pg_seletor a:first-child {
+		border-bottom-left-radius: 25px;
+		border-top-left-radius: 25px;
+	}
+
+	.pg_seletor a:last-child {
+		border-bottom-right-radius: 25px;
+		border-top-right-radius: 25px;
+	}
+	
+	
+	
+	
+	
+	/*###############################
+	RODAPÉ DESKTOP*/
+	
+	footer {
+		width: 100%;
+		height: 50px;
+		background-color: #313131;
+		display: flex;
+		flex-direction: row;
+	}
+	
+	#logo_rodape {
+		width: 150px;
+		height: auto;
+		padding: 5px 0px 0px 20px
+	}
+	
+	#logo_rodape img {
+		width: 60%;
+		height: auto;
+	}
+	
+	#rodape_info {
+		width: auto;
+		height: auto;
+		flex-grow: 1;
+	}
+	
+	#rodape_info p {
+		padding-top: 15px;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES
+	- Largura miníma: 361px
+	- Largura máxima: 768px
+
+######################################################*/
+
+@media screen and (max-width: 768px) and (min-width: 361px){
+	
+	/*###########################
+	HEADER*/	
+	
+	header {
+		width: 100%;
+		height: 45px;
+		background-color: #313131;
+	}
+
+	#logo_topo {
+		width: 120px;
+		height: auto;
+		position: absolute;
+		left: 20px;
+		top: 0px;
+		z-index: 1;
+	}
+	
+	#logo_topo img {
+		width: 100%;
+		height: auto;
+	}
+	
+	
+	
+	
+	/*#############################
+	MENU
+		- Somente tamanho e cor de fundo
+		- Alterações aparência devem ser feitas na folha de estilo "menu.css"
+		- Alterações conteúdo devem ser feitas em "menu.php"*/
+	
+	.mobile-menu {
+		width: 100%;
+		height: auto;
+		background-color: #313131;
+	}
+	
+	
+	
+	
+	
+	.categoriaPaginaHome {
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+	}
+	
+	.categoriaPaginaCinema {
+		width: 100%;
+		height: auto;
+		background-color: #1F3F60;
+	}
+	
+	.categoriaPaginaGames {
+		width: 100%;
+		height: auto;
+		background-color: #007F06;
+	}
+	
+	.categoriaPaginaSeries {
+		width: 100%;
+		height: auto;
+		background-color: #D19600;
+	}
+	
+	.categoriaPaginaLancamentos {
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+	}
+	
+	.categoriaPaginaNoticias {
+		width: 100%;
+		height: auto;
+		background-color: #25043B;
+	}
+	
+	.categoriaPaginaHome p, .categoriaPaginaCinema > p, .categoriaPaginaGames p, .categoriaPaginaSeries p, .categoriaPaginaLancamentos p, .categoriaPaginaNoticias p{
+		width: auto;
+		height: auto;
+		font-size: 1.125em;
+		text-align: center;
+		color: #FFFFFF;
+		padding: 4px 0px;
+		
+	}
+	
+	
+	
+	
+	#barra_progresso {
+		width: 100%;
+		height: 10px;
+		background-color: #000000;
+	}
+	
+	#barra_status{
+		width: 0%;
+		height: 10px;
+	}
+	
+	
+	/*################################
+	SLIDESHOW
+		- Estilo do titulo dos slides*/
+	
+	#topo_slides_container section article{
+		position:absolute;
+		right: 20px;
+		bottom: 10px;
+		width: 90%;
+		height:auto;
+		background-color: rgba(61,61,61,0.80);
+		line-height:1.27;
+		padding:5px 5px 5px 5px;
+		border-radius: 10px;
+		box-sizing:border-box;
+		z-index: 1;
+	}
+
+	#topo_slides_container section article h1 {
+		color: #ffffff;
+		text-shadow: 1px 1px 2px #000000;
+		font-size: 2.5em;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	#topo_slides_container section article h2 {
+		font-size: 1.5em; /*12px*/
+		color: #B5B5B5;
+		/*text-shadow: 1px 1px 2px #000000;*/
+		display: none;
+
+	}
+
+	#topo_slides_container section article a {
+		text-decoration: none;
+		font-size: 1.5em;
+		color: #FFFFFF;
+		background-color: #000000;
+		float: right;
+		margin-top: 10px;
+		border-radius: 30px;
+		padding: 10px 25px;
+	}
+
+	#topo_slides_container section article a:hover {
+		color: #44B4FF;
+		transition: .5s all ease;
+	}	
+	
+	
+	
+	
+	
+	/*###############################
+	CONTAINER PARA CONTEUDO PRINCIPAL DO SITE
+		- Tudo após adiv do slideshow fica nesse container
+		- Páginas sem slide se aplicam normalmente*/
+	
+	#corpo_container {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: teal;*/
+	}
+	
+	
+	
+	
+	/*###############################
+	MENU INFERIOR MOBILE*/
+	
+	#submenu_inferior {
+		width: 100%;
+		height: auto;
+		position: -webkit-sticky; /* Safari */
+        position: sticky;
+		bottom: -1px;
+		padding: 5px;
+		background-color: #3d3d3d;
+		z-index: 1;
+	}
+	
+	.categorias {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		/*background-color: bisque;*/
+	}
+	
+	.categorias li{
+		width: 100%;
+		float: left;
+		list-style: none;
+		border-radius: 5px;
+		text-align: center;
+		font-size: 1em;
+		margin-right:5px ;
+		border: 2px solid #ffffff;
+	}
+	
+	.categorias li:last-child{
+		margin-right: 0px ;
+	}
+	
+	.categorias li a{
+		display: block;
+		text-decoration: none;
+		font-size: 1.5em; /*24px*/
+		font-weight: bold;
+		color: #FFFFFF;
+	}
+	
+	#categoria_home {
+		background-color: #969696;
+	}
+	
+	#categoria_filme {
+		background-color: #1F3F60;
+	}
+	
+	#categoria_serie {
+		background-color: #D19600;
+	}
+	
+	#categoria_game {
+		background-color: #007F06;
+	}
+	
+	#categoria_lanc {
+		background-color: #313131;
+	}
+	
+	.categorias li:hover {
+		box-shadow: 0px 0px 4px #ffffff;
+		transition: 1s ease all;
+	}
+	
+	#categoria_home p, #categoria_lanc p, #categoria_filme p, #categoria_serie p, #categoria_game p {
+		text-transform: uppercase;
+		font-size: .5em;
+		padding: 0 auto;
+		height: auto;
+		display: inherit;
+	}
+	
+	
+	
+	
+	/*###############################
+	AVANÇA E VOLTA NA LISTA DE NOTICIAS*/
+	
+	.pg_seletor {
+		width: auto;
+		position: relative;
+		height: 50px;
+		text-align: center;
+		margin: auto;
+	}
+	
+	.pg_seletor a {
+		width: auto;
+		text-decoration: none;
+		/*background-color: steelblue;*/
+		color: #ffffff;
+		padding: 0px 10px;
+		font-size: 2em;
+	}
+	
+	.pg_seletor a:first-child {
+		border-bottom-left-radius: 25px;
+		border-top-left-radius: 25px;
+	}
+
+	.pg_seletor a:last-child {
+		border-bottom-right-radius: 25px;
+		border-top-right-radius: 25px;
+	}
+	
+	
+	
+	
+	
+	/*###############################
+	RODAPÉ TABLET
+		- Fica oculto pelo menu mobile*/
+	
+	footer {
+		width: 100%;
+		height: auto;
+		background-color: #313131;
+		display: none;
+		flex-direction: row;
+	}
+	
+	#logo_rodape {
+		width: 150px;
+		height: auto;
+		padding-left: 20px
+	}
+	
+	#logo_rodape img {
+		width: 100%;
+		height: auto;
+	}
+	
+	#rodape_info {
+		width: auto;
+		height: auto;
+		flex-grow: 1;
+	}
+	
+	#rodape_info p {
+		padding-top: 15px;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO MOBILE
+	- Largura máxima: 360px
+
+######################################################*/
+
+@media only screen and (max-width: 360px){
+	
+	/*###########################
+	HEADER*/
+	
+	header {
+		width: 100%;
+		height: 45px;
+		background-color: #313131;
+	}
+
+	#logo_topo {
+		width: 100px;
+		height: auto;
+		position: absolute;
+		left: 10px;
+		top: 0px;
+		z-index: 1;
+	}
+	
+	#logo_topo img {
+		width: 100%;
+		height: auto;
+	}
+	
+	.mobile-menu{
+		width: 100%;
+		height: auto;
+		background-color: #313131;
+	}
+	
+	.categoriaPaginaHome {
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+	}
+	
+	.categoriaPaginaCinema {
+		width: 100%;
+		height: auto;
+		background-color: #1F3F60;
+	}
+	
+	.categoriaPaginaGames {
+		width: 100%;
+		height: auto;
+		background-color: #007F06;
+	}
+	
+	.categoriaPaginaSeries {
+		width: 100%;
+		height: auto;
+		background-color: #D19600;
+	}
+	
+	.categoriaPaginaLancamentos {
+		width: 100%;
+		height: auto;
+		background-color: #3D3D3D;
+	}
+	
+	.categoriaPaginaNoticias {
+		width: 100%;
+		height: auto;
+		background-color: #25043B;
+	}
+	
+	.categoriaPaginaHome p, .categoriaPaginaCinema p, .categoriaPaginaGames p, .categoriaPaginaSeries p, .categoriaPaginaLancamentos p, .categoriaPaginaNoticias p{
+		width: auto;
+		height: auto;
+		font-size: 1em;
+		text-align: center;
+		color: #FFFFFF;
+		padding: 2px 0px;
+	}
+	
+	
+	
+	
+	/*###############################
+	MENU INFERIOR MOBILE*/
+	
+	#submenu_inferior {
+		width: 100%;
+		height: auto;
+		position: -webkit-sticky; /* Safari */
+        position: sticky;
+		bottom: -1px;
+		padding: 5px;
+		background-color: #3d3d3d;
+		z-index: 1;
+	}
+	
+	.categorias {
+		display: flex;
+		justify-content: space-between;
+		/*background-color: bisque;*/
+	}
+	
+	.categorias li{
+		width: 100%;
+		float: left;
+		list-style: none;
+		border-radius: 5px;
+		text-align: center;
+		font-size: 1em;
+		margin-right:5px ;
+		border: 2px solid #ffffff;
+	}
+	
+	.categorias li:last-child{
+		margin-right: 0px ;
+	}
+	
+	.categorias li a{
+		display: block;
+		padding: 5px;
+		text-decoration: none;
+		font-weight: bold;
+		color: #FFFFFF;
+	}
+	
+	#categoria_home {
+		background-color: #969696;
+	}
+	
+	#categoria_filme {
+		background-color: #1F3F60;
+	}
+	
+	#categoria_serie {
+		background-color: #D19600;
+	}
+	
+	#categoria_game {
+		background-color: #007F06;
+	}
+	
+	#categoria_lanc {
+		background-color: #313131;
+	}
+	
+	.categorias li:hover {
+		box-shadow: 0px 0px 4px #ffffff;
+		transition: 1s ease all;
+	}
+	
+	#categoria_home p, #categoria_lanc p, #categoria_filme p, #categoria_serie p, #categoria_game p {
+		text-transform: uppercase;
+		font-size: .4em;
+		padding: 0 auto;
+		height: auto;
+		display: inherit;
+	}
+	
+	
+	
+	
+	/*################################
+	SLIDESHOW
+		- Estilo do titulo dos slides*/
+	
+	#topo_slides_container section article{
+		position:absolute;
+		right: 20px;
+		bottom: 10px;
+		width: 90%;
+		height:auto;
+		background-color: rgba(61,61,61,0.80);
+		line-height:1.27;
+		padding:5px 5px 5px 5px;
+		border-radius: 10px;
+		box-sizing:border-box;
+		z-index: 1;
+	}
+
+	#topo_slides_container section article h1 {
+		color: #ffffff;
+		text-shadow: 1px 1px 2px #000000;
+		font-size: 2.5em;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	#topo_slides_container section article h2 {
+		font-size: 1.5em; /*12px*/
+		color: #B5B5B5;
+		/*text-shadow: 1px 1px 2px #000000;*/
+		display: none;
+
+	}
+
+	#topo_slides_container section article a {
+		text-decoration: none;
+		font-size: 1.5em;
+		color: #FFFFFF;
+		background-color: #000000;
+		float: right;
+		margin-top: 10px;
+		border-radius: 30px;
+		padding: 10px 25px;
+	}
+
+	#topo_slides_container section article a:hover {
+		color: #44B4FF;
+		transition: .5s all ease;
+	}	
+	
+	
+	
+	
+	/*###############################
+	AVANÇA E VOLTA NA LISTA DE NOTICIAS*/
+	
+	.pg_seletor {
+		width: auto;
+		position: relative;
+		height: 32px;
+		text-align: center;
+		margin: auto;
+	}
+	
+	.pg_seletor a {
+		width: auto;
+		text-decoration: none;
+		/*background-color: steelblue;*/
+		color: #ffffff;
+		padding: 0px 10px;
+		font-size: 1.25em; /*20px*/
+	}
+	
+	.pg_seletor a:first-child {
+		border-bottom-left-radius: 16px;
+		border-top-left-radius: 16px;
+	}
+
+	.pg_seletor a:last-child {
+		border-bottom-right-radius: 16px;
+		border-top-right-radius: 16px;
+	}
+	
+	
+	
+	
+	/*###############################
+	RODAPÉ MOBILE
+		- Fica oculto pelo menu mobile*/
+	
+	footer {
+		width: 100%;
+		height: 50px;
+		background-color: #313131;
+		display: none;
+		flex-direction: row;
+	}
+	
+	#logo_rodape {
+		width: 150px;
+		height: auto;
+		padding-left: 20px
+	}
+	
+	#logo_rodape img {
+		width: 60%;
+		height: auto;
+	}
+	
+	#rodape_info {
+		width: auto;
+		height: auto;
+		flex-grow: 1;
+	}
+	
+	#rodape_info p {
+		padding-top: 15px;
+		text-align: center;
+		font-weight: bold;
+	}
+}

@@ -1,13 +1,15 @@
 
 .mobile-menu {
-display:block;
-width:100%;
+display: block;	
+width: 100%;
+height: auto;
 background: #313131/*e0b88f/*c99393/*e5d1a4/*dcc591/*EFD3A3*/;
 line-height: 1.6em;
 font-weight: 400;
 text-align:center;
-position: relative;
-margin:0 auto;
+position: relative;	
+float: left;
+clear: right;	
 }
 /*Strip the ul of padding and list styling*/
 .mobile-menu ul {
@@ -95,7 +97,6 @@ transition: all 0.4s ease 0s;
 	display: none;
   cursor: pointer;
   text-transform: uppercase;
-	border-bottom: 5px ridge #000000;
 }
 
 .mobile-menu .show-menu span{

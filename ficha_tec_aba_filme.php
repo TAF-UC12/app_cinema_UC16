@@ -23,7 +23,7 @@ $trailer = $linha["trailer"];
 $duracao = $linha["duracao"];
 
 		
-			echo "<div id='filme_info' style='background-image: url(img/posters/backgrounds/background_filmes.jpg)'>
+			echo "<div id='filme_info'>
 			
 			
 				<div id='menu_filme'>
