@@ -76,7 +76,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 	
 	#corpo_container aside section > p{
 		font-size: 1em;
-		width: 80px;
+		width: auto;
 		float: right;
 		text-align: right;
 		background-color: #B5B5B5;
@@ -682,20 +682,9 @@ MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
 		border: 0;
 	}
 	
-	.lancamentos_btn {
-		width: 100%;
-	}
 	
-	.lancamentos_btn button{
-		width: 40%;
-		height: 22px;
-		border-radius: 11px;
-		border-style: none;
-		background-color: #FF5F5E;
-		color: #FFFFFF;
-		text-align: center;
-		margin-left: 30%;
-	}
+	
+	
 	
 	
 	
@@ -715,13 +704,24 @@ MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
 		/*background-color: #555454;*/
 	}
 
-	#corpo_container section article h2{
-		width: 100%;
+	#corpo_container section > h2 {
+		width: auto;
 		font-size: 1.275em;
 		font-weight: bold;
 		color: #FFFFFF;
 		text-shadow: 1px 1px 2px #000000;
 		margin-bottom: 10px;
+		float: left;
+	}
+	
+	#corpo_container section > p{
+		font-size: 1em;
+		width: auto;
+		float: right;
+		text-align: right;
+		background-color: #B5B5B5;
+		border-radius: 10px;
+		padding: 2px 5px;
 	}
 	
 	.noticia {

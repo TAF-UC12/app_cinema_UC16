@@ -551,7 +551,8 @@ MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES
 		text-align: center;
 		font-size: 1em;
 		margin-right:5px ;
-		border: 2px solid #ffffff;
+/*		border: 1px groove #ffffff;*/
+		box-shadow: 1px 1px 2px #000000;
 	}
 	
 	.categorias li:last-child{
@@ -567,23 +568,23 @@ MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES
 	}
 	
 	#categoria_home {
-		background-color: #969696;
+		background-color: #575757;
 	}
 	
 	#categoria_filme {
-		background-color: #1F3F60;
+		background-color: #575757;
 	}
 	
 	#categoria_serie {
-		background-color: #D19600;
+		background-color: #575757;
 	}
 	
 	#categoria_game {
-		background-color: #007F06;
+		background-color: #575757;
 	}
 	
 	#categoria_lanc {
-		background-color: #313131;
+		background-color: #575757;
 	}
 	
 	.categorias li:hover {
@@ -790,7 +791,8 @@ MEDIA QUERY PARA VERSÃO MOBILE
 		text-align: center;
 		font-size: 1em;
 		margin-right:5px ;
-		border: 2px solid #ffffff;
+/*		border: 1px groove #ffffff;*/
+		box-shadow: 1px 1px 2px #000000;
 	}
 	
 	.categorias li:last-child{
@@ -806,23 +808,23 @@ MEDIA QUERY PARA VERSÃO MOBILE
 	}
 	
 	#categoria_home {
-		background-color: #969696;
+		background-color: #575757;
 	}
 	
 	#categoria_filme {
-		background-color: #1F3F60;
+		background-color: #575757;
 	}
 	
 	#categoria_serie {
-		background-color: #D19600;
+		background-color: #575757;
 	}
 	
 	#categoria_game {
-		background-color: #007F06;
+		background-color: #575757;
 	}
 	
 	#categoria_lanc {
-		background-color: #313131;
+		background-color: #575757;
 	}
 	
 	.categorias li:hover {

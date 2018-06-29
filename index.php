@@ -225,7 +225,7 @@ ini_set(“display_errors”, 0 );
 	
 		<h2>Últimos lançamentos</h2>
 		
-		<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i> Todos</button></a></p>
+		<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i></button></a></p>
 	
 		<div id="lancamentos_mobile">
 		
@@ -267,9 +267,9 @@ ini_set(“display_errors”, 0 );
 <!--SECTION DE LISTA DE NOTÍCIAS-->
 	<section>
 
-		<article class="lista_noticias">
+		<h2>Últimas notícias</h2>
 		
-			<h2>Últimas notícias</h2>
+		<article class="lista_noticias">
 			
 
 			<?php
@@ -323,7 +323,7 @@ ini_set(“display_errors”, 0 );
 		?>
 
 
-		<div class='noticia'>
+			<div class='noticia'>
 
 					<div class='imgNoticia'>
 						<img src='img/noticias/<?php echo $img; ?>' alt='<?php echo $img; ?>'>
@@ -368,9 +368,11 @@ ini_set(“display_errors”, 0 );
 		echo "</div>";	
 		?>
 
-			</article>	
+		</article>	
 
 	</section>	
+	
+	
 
 
 <!--ASIDE COM SECTIONS DE LANÇAMENTOS E TENTENCIAS DESKTOP-->
@@ -378,86 +380,89 @@ ini_set(“display_errors”, 0 );
 		
 		<section class="destaques_desktop">
 
-		<h2>Tendências</h2>
+			<h2>Tendências</h2>
 
-		<div id="tendencias_desktop">
-			
-			<?php		
-				require_once "config/conectar.php";
-			
-				//Agora é realizar a querie de busca no banco de dados
-				
-				$sql = "SELECT * FROM tendencias ORDER BY idtendencias LIMIT 6";	
+			<div id="tendencias_desktop">
 
-				$resultado = mysqli_query($strcon, $sql)
-				or die ("Não foi possível realizar a consulta ao banco de dados");
+				<?php		
+					require_once "config/conectar.php";
 
-				while ($linha=mysqli_fetch_array($resultado)) {
+					//Agora é realizar a querie de busca no banco de dados
 
-					$idtendencia = $linha["idtendencias"];	
-					$tendencia = $linha["nomeTendencia"];	
-					$img = $linha["imgTendencia"];
-				?>	
+					$sql = "SELECT * FROM tendencias ORDER BY idtendencias LIMIT 6";	
 
-						<div class='tendencia'>
+					$resultado = mysqli_query($strcon, $sql)
+					or die ("Não foi possível realizar a consulta ao banco de dados");
 
-							<a href='#'><img src='img/tendencias/<?php echo "$img";?>'><h4><?php echo "$tendencia";?></h4></a>
-							
-							
-						</div>
-			<?php			
-				}
-		?>		
+					while ($linha=mysqli_fetch_array($resultado)) {
+
+						$idtendencia = $linha["idtendencias"];	
+						$tendencia = $linha["nomeTendencia"];	
+						$img = $linha["imgTendencia"];
+					?>	
+
+							<div class='tendencia'>
+
+								<a href='#'><img src='img/tendencias/<?php echo "$img";?>'><h4><?php echo "$tendencia";?></h4></a>
 
 
-		</div>
+							</div>
+				<?php			
+					}
+			?>		
 
-
-	</section>
-
-	<section class="destaques_desktop">
-	
-		<h2>Últimos lançamentos</h2>
-		
-		<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i> Todos</button></a></p>
-	
-		<div id="lancamentos_desktop">
-		
-			<div class='desktop_info'>
-
-				<a href=""><img src='img/posters/2001.jpg'></a>
 
 			</div>
+
+
+		</section>
+
+		<section class="destaques_desktop">
+	
+			<h2>Últimos lançamentos</h2>
+
+			<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i></a></p>
+
+			<div id="lancamentos_desktop">
+
+				<div class='desktop_info'>
+
+					<a href=""><img src='img/posters/2001.jpg'></a>
+
+				</div>
 		
-		<div class='desktop_info'>
+				<div class='desktop_info'>
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
+					<a href=""><img src='img/posters/2001.jpg'></a>
 
-		</div>
-		
-		<div class='desktop_info'>
+				</div>
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
+				<div class='desktop_info'>
 
-		</div>
-		
-		<div class='desktop_info'>
+					<a href=""><img src='img/posters/2001.jpg'></a>
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
+				</div>
 
-		</div>
-		
-		<div class='desktop_info'>
+				<div class='desktop_info'>
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
+					<a href=""><img src='img/posters/2001.jpg'></a>
 
-		</div>
-		
-	</div>
+				</div>
+
+				<div class='desktop_info'>
+
+					<a href=""><img src='img/posters/2001.jpg'></a>
+
+				</div>
+
+			</div>
 	
 	
-</section>
-	</aside>																
+		</section>
+		
+	</aside>
+	
+	
 	
 </div> <!--FIM DO CORPO DO SITE-->	
 	
@@ -497,6 +502,9 @@ ini_set(“display_errors”, 0 );
 	Chama script que habilita o service_worker.js-->
 	
 <script src="js/chama_service-worker.js"></script>
-	
+
+<!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>	
 </body>
 </html>
