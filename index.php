@@ -31,7 +31,6 @@ ini_set(“display_errors”, 0 );
 
 
 <!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
-<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
 
@@ -504,7 +503,8 @@ ini_set(“display_errors”, 0 );
 <script src="js/chama_service-worker.js"></script>
 
 <!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
-<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
-<script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>	
+	<script src="js/jquery-3.3.1.js" type="text/javascript"></script>	
+
 </body>
+
 </html>

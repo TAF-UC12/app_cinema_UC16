@@ -183,7 +183,7 @@ $sql2 = "SELECT nomegenero FROM filmes
 					</div>
 
 					<div class='chamadaNoticia'>
-						<p><a href='noticia.php?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>'><?php echo $titulo; ?></a></p>
+						<p><a href='noticias.php?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>'><?php echo $titulo; ?></a></p>
 					</div>
 
 				</div>

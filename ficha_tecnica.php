@@ -31,7 +31,6 @@ ini_set(“display_errors”, 0 );
 
 
 <!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
-<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
 
 
@@ -142,7 +141,11 @@ break;
 </footer>	
 
 </main>
-	
+
+<!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+
+<!--JS RESPONSÁVEL POR OCULTAR E EXIBIR ABAS DOS TÍTULOS-->			
 <script src="js/aba_info_titulos.js"></script>
 	
 </body>

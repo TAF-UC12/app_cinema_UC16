@@ -22,9 +22,145 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 	SECTION MOBILE
 		- Essas sections ficam ocultas na versão desktop*/
 
+	
+	
+	
+	
+	/*################################
+	ARTICLE NOTICIA
+		- Article com header e conteudo da noticia*/
 
+	#noticia_completa {
+		/*background-color: #3E1818;*/
+		margin-bottom: 30px;
+	}
 
+	#noticia_completa header {
+		position: relative;
+		width: 100%;
+		height: auto;
+		background-color: transparent;
+	}
+	
+	#noticia_completa header h1 {
+		font-size: 1.375em;
+		margin-bottom: 20px;
+	}
 
+	#noticia_completa header h2 {
+		font-size: 1em;
+		margin-bottom: 20px;
+	}
+	
+	#info_post {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: darkred;*/
+	}
+	
+	#info_post div {
+		position: relative;
+		width: 50%;
+		height: auto;
+		/*background-color: seagreen;*/
+		padding: 5px 10px;
+		float: left;
+	}
+	
+	#info_post div p {
+		font-size: .75em;
+	}
+	
+	#noticia_completa img {
+		width: 100%;
+		height: auto;
+		margin: 20px 0px;
+	}
+	
+	#noticia_completa > p {
+		margin-top: 10px;
+	}
+	
+	
+	
+	
+	
+	
+	/*################################
+	ASIDE DESKTOP
+		- Aside da versão desktop*/
+	
+	#titulo_relacionado {
+		width: 100%;
+		height: auto;
+		margin: auto;
+		/*background-color: brown;*/
+		padding: 5px;
+	}
+	
+	#titulo_relacionado img{
+		width: 80%;
+		height: auto;
+		margin-left: 10%;
+	}
+	
+	#titulo_relacionado > div{
+		position: relative;
+		width: 100%;
+		height: auto;
+		margin-top: 5px;
+		padding: 5px 0px;
+		text-align: center;
+		/*background-color: steelblue;*/
+	}
+	
+	#titulo_relacionado > div h1{
+		font-size: 1.375em;
+		margin-bottom: 5px;
+	}
+	
+	#titulo_relacionado > div h2{
+		font-size: 1em;
+		/*margin-bottom: 5px;*/
+	}
+	
+	#noticia_relacionada {
+		width: 100%;
+		height: auto;
+		margin: auto;
+		/*background-color: brown;*/
+		padding: 5px;
+	}
+	
+	.noticia {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: violet;*/
+		margin-bottom: 10px;
+		
+	}
+	
+	.noticia img {
+		width: 20%;
+		height: auto;
+		float: left;
+	}
+	
+	.noticia a {
+		width: 80%;
+		height: auto;
+		padding-left: 10px;
+		float: left;
+	}
+	
+	.noticia h1 {
+		font-size: 1em;
+	}
+	
+	
+	
 	
 }
 
@@ -41,14 +177,166 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 
 @media screen and (max-width: 768px) and (min-width: 361px){
 	
+
 	/*################################
-	ASIDE
-		- Fica oculto na versão mobile*/
-	
+	SECTION DESKTOP
+		- Essas sections ficam ocultas na versão desktop*/
+
 	#corpo_container aside {
-		display: none;
+		width: 100%;
+		height: auto;
+		display: block;
+		background-color: navy;
+		overflow: auto;
+		
 	}
 	
+	#corpo_container aside section {
+		width: 100%;
+		height: auto;
+		background-color: seagreen;
+		overflow: auto;
+		
+	}
+	
+	#corpo_container aside section:last-child {
+		display: none;
+		
+	}
+	
+	/*################################
+	ARTICLE NOTICIA
+		- Article com header e conteudo da noticia*/
+
+	#noticia_completa {
+		/*background-color: #3E1818;*/
+		margin-bottom: 30px;
+	}
+
+	#noticia_completa header {
+		position: relative;
+		width: 100%;
+		height: auto;
+		background-color: transparent;
+	}
+	
+	#noticia_completa header h1 {
+		font-size: 1.375em;
+		margin-bottom: 20px;
+	}
+
+	#noticia_completa header h2 {
+		font-size: 1em;
+		margin-bottom: 20px;
+	}
+	
+	#info_post {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: darkred;*/
+	}
+	
+	#info_post div {
+		position: relative;
+		width: 50%;
+		height: auto;
+		/*background-color: seagreen;*/
+		padding: 5px 10px;
+		float: left;
+	}
+	
+	#info_post div p {
+		font-size: .75em;
+	}
+	
+	#noticia_completa img {
+		width: 100%;
+		height: auto;
+		margin: 20px 0px;
+	}
+	
+	#noticia_completa > p {
+		margin-top: 10px;
+	}
+	
+	
+	
+	
+	
+	
+	/*################################
+	ASIDE DESKTOP
+		- Aside da versão desktop*/
+	
+	#titulo_relacionado {
+		width: 100%;
+		height: auto;
+		margin: auto;
+		background-color: brown;
+		padding: 5px;
+		overflow: auto;
+	}
+	
+	#titulo_relacionado img{
+		width: 20%;
+		height: auto;
+		float: left;
+	}
+	
+	#titulo_relacionado > div{
+		position: relative;
+		width: 80%;
+		height: auto;
+		padding: 5px 20px;
+		text-align: left;
+		background-color: steelblue;
+		float: left;
+	}
+	
+	#titulo_relacionado > div h1{
+		font-size: 1.375em;
+		margin-bottom: 5px;
+	}
+	
+	#titulo_relacionado > div h2{
+		font-size: 1em;
+		/*margin-bottom: 5px;*/
+	}
+	
+	#noticia_relacionada {
+		width: 100%;
+		height: auto;
+		margin: auto;
+		/*background-color: brown;*/
+		padding: 5px;
+	}
+	
+	.noticia {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: violet;*/
+		margin-bottom: 10px;
+		
+	}
+	
+	.noticia img {
+		width: 20%;
+		height: auto;
+		float: left;
+	}
+	
+	.noticia a {
+		width: 80%;
+		height: auto;
+		padding-left: 10px;
+		float: left;
+	}
+	
+	.noticia h1 {
+		font-size: 1em;
+	}
 
 	
 	

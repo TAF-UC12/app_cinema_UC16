@@ -43,7 +43,6 @@ $categoria = $_GET["tipo"];
 
 
 <!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
-<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
 
@@ -489,6 +488,9 @@ $categoria = $_GET["tipo"];
 	</div>		
 		
 </footer>
+
+<!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
 
 </body>
 </html>

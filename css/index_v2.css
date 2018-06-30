@@ -109,21 +109,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 		height: auto;
 		border: 0;
 	}
-	
-	.lancamentos_btn {
-		width: 100%;
-	}
-	
-	.lancamentos_btn button{
-		width: 40%;
-		height: 22px;
-		border-radius: 11px;
-		border-style: none;
-		background-color: #FF5F5E;
-		color: #FFFFFF;
-		text-align: center;
-		margin-left: 30%;
-	}
+
 	
 	
 	#tendencias_desktop {
