@@ -46,7 +46,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		justify-content: space-between;
 	}
 	
-	#filtro_container_noticias li{
+	#filtro_container_noticias .info_lista {
 		width: 25%;
 		float: left;
 		background-color: #313131;
@@ -56,6 +56,17 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		border-radius: 15px;
 		transition: .25s all ease;
 	}
+	
+	#filtro_container_noticias .info_ativa {
+		width: 25%;
+		float: left;
+		background-color: #060606;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}	
 	
 	#filtro_container_noticias li:last-child{
 		margin-right: 0%;

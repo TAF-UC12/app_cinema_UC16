@@ -33,6 +33,7 @@
 }
 
 /*Padrão para todo o site
+	- Setar altura miníma do #corpo_container
 	- Cor da font padrão é #ffffff (branco)
 	- Cor de fundo é #232323*/
 body{
@@ -42,7 +43,9 @@ body{
 	color: #ffffff;
 }
 
-
+#corpo_container {
+		min-height: 500px;
+	}
 
 
 
@@ -272,7 +275,6 @@ MEDIA QUERY PARA VERSÃO DESKTOP
 	
 	.pg_seletor {
 		width: auto;
-		position: relative;
 		height: 50px;
 		text-align: center;
 		margin: auto;
@@ -553,6 +555,7 @@ MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES
 		margin-right:5px ;
 /*		border: 1px groove #ffffff;*/
 		box-shadow: 1px 1px 2px #000000;
+		padding: 10px 0px;
 	}
 	
 	.categorias li:last-child{
@@ -608,7 +611,6 @@ MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES
 	
 	.pg_seletor {
 		width: auto;
-		position: relative;
 		height: 50px;
 		text-align: center;
 		margin: auto;
@@ -793,6 +795,7 @@ MEDIA QUERY PARA VERSÃO MOBILE
 		margin-right:5px ;
 /*		border: 1px groove #ffffff;*/
 		box-shadow: 1px 1px 2px #000000;
+		padding: 5px 0px;
 	}
 	
 	.categorias li:last-child{
@@ -901,7 +904,6 @@ MEDIA QUERY PARA VERSÃO MOBILE
 	
 	.pg_seletor {
 		width: auto;
-		position: relative;
 		height: 32px;
 		text-align: center;
 		margin: auto;

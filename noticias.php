@@ -78,12 +78,24 @@ ini_set(“display_errors”, 0 );
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
 
+
+
 <!--SECTION CONTAINER DO CONTÉUDO DA NOTÍCIA
 	- Article com header e conteudo
 	- Header com hgroup e info auto e post-->
-<section>		
+<section>
+
+	<?php
 	
-	<?php		
+//PUXA O TIPO DE NOTÍCIA
+$tipocategoria = $_GET["categoria"];
+		
+if ($tipocategoria == "Cinema"){$tabela = "filmes" and $coluna = "idfilmes";}
+if ($tipocategoria == "Series"){$tabela = "series" and $coluna = "idseries";}	
+if ($tipocategoria == "Games"){$tabela = "games" and $coluna = "idgames";}		
+	
+	
+	
 require_once "config/conectar.php";
 //Agora é realizar a querie de busca no banco de dados	
 
@@ -112,8 +124,17 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	$rel_evento = $linha["relac_evento"];
 	$autor = $linha["nome"];
 	$autorEmail = $linha["email"];
-	
+	$imgAutor = $linha["imgAutor"];
 ?>	
+
+		<div id="tags">
+			
+			<li><?php echo "$tipocategoria";?></li>
+			<li>Tag1</li>
+			<li>Tag2</li>
+			
+		</div>
+
 	<article id="noticia_completa">
 		
 		<header>
@@ -127,7 +148,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 				
 				<div>
 					
-					<img src="#" alt="">
+					<img src="img/colaboradores/<?php echo "$imgAutor";?>" alt="">
 
 					<p>Notícia por: <?php echo "$autor";?></p>
 					<p><?php echo "$autorEmail";?></p>	
@@ -136,7 +157,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 				
 				<div>
 					
-					<p>Postado em:</p>
+					<p>Postado em: </p>
 					<p><?php echo "$data";?></p>
 					
 				</div>
@@ -167,13 +188,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	
 	<?php
 
-//SWITCH PUXA DADOS DE ACORDO COM O TIPO DE NOTÍCIA
-$tipocategoria = $_GET["categoria"];
-		
-if ($tipocategoria == "Cinema"){$tabela = "filmes" and $coluna = "idfilmes";}
-if ($tipocategoria == "Series"){$tabela = "series" and $coluna = "idseries";}	
-if ($tipocategoria == "Games"){$tabela = "games" and $coluna = "idgames";}		
-		
+//SWITCH PUXA DADOS DE ACORDO COM O TIPO DE NOTÍCIA				
 
 switch ($tipocategoria) {
 		

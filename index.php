@@ -68,22 +68,6 @@ ini_set(“display_errors”, 0 );
 <div class='categoriaPaginaHome'>
 	<p>Home</p>
 </div>
-
-
-<!--SOMENTE TESTE DE JS, APAGAR FUTURAMENTE-->
-<div id="barra_progresso">
-	<div id="barra_status"></div>
-</div>
-
-<script>
-	
-	document.getElementById("barra_progresso").addEventListener("click", function(){
-		document.getElementById("barra_status").style.width="100%";
-		document.getElementById("barra_status").style.transition="3s all";
-		document.getElementById("barra_status").style.background="#ffffff";
-	});
-
-</script>
 				
 
 <!--CONTAINER PARA A SECTION DO SLIDESHOW-->
@@ -224,7 +208,7 @@ ini_set(“display_errors”, 0 );
 	
 		<h2>Últimos lançamentos</h2>
 		
-		<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i></button></a></p>
+		<p><a href='lancamentos.php?filtro_categoria=filmes'><i class='fas fa-plus'></i></a></p>
 	
 		<div id="lancamentos_mobile">
 		
@@ -375,7 +359,7 @@ ini_set(“display_errors”, 0 );
 
 
 <!--ASIDE COM SECTIONS DE LANÇAMENTOS E TENTENCIAS DESKTOP-->
-	<aside class="categorias_lancamento_container">
+	<aside>
 		
 		<section class="destaques_desktop">
 
@@ -420,7 +404,7 @@ ini_set(“display_errors”, 0 );
 	
 			<h2>Últimos lançamentos</h2>
 
-			<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i></a></p>
+			<p><a href='lancamentos.php?filtro_categoria=filmes'><i class='fas fa-plus'></i></a></p>
 
 			<div id="lancamentos_desktop">
 

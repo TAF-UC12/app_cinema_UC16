@@ -226,7 +226,7 @@ $categoria = $_GET["tipo"];
 	
 		<h2>Últimos lançamentos</h2>
 		
-		<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i> Todos</button></a></p>
+		<p><a href='lancamentos.php?filtro_categoria=filmes'><i class='fas fa-plus'></i></button></a></p>
 	
 		<div id="lancamentos_mobile">
 		
@@ -268,10 +268,9 @@ $categoria = $_GET["tipo"];
 <!--SECTION DE LISTA DE NOTÍCIAS-->
 	<section>
 
-		<article class="lista_noticias">
-		
-			<h2>Últimas notícias</h2>
-			
+		<h2>Últimas notícias</h2>
+
+		<article class="lista_noticias">		
 
 			<?php
 				include "config/conectar.php";
@@ -342,7 +341,7 @@ $categoria = $_GET["tipo"];
 						</div>
 
 						<div class='chamadaNoticia'>
-							<p><a href='noticia.php?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>'><?php echo $titulo; ?></a></p>
+							<p><a href='noticias.php?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>'><?php echo $titulo; ?></a></p>
 						</div>
 
 					</div>
@@ -376,7 +375,7 @@ $categoria = $_GET["tipo"];
 
 
 <!--ASIDE COM SECTIONS DE LANÇAMENTOS E TENTENCIAS DESKTOP-->
-	<aside class="categorias_lancamento_container">
+	<aside>
 		
 		<section class="destaques_desktop">
 
@@ -421,7 +420,7 @@ $categoria = $_GET["tipo"];
 	
 		<h2>Últimos lançamentos</h2>
 		
-		<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i> Todos</button></a></p>
+		<p><a href='lancamentos.php?filtro_categoria=filmes'><i class='fas fa-plus'></i></button></a></p>
 	
 		<div id="lancamentos_desktop">
 		

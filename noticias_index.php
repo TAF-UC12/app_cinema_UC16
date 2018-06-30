@@ -317,7 +317,7 @@ ini_set(“display_errors”, 0 );
 
 
 <!--ASIDE COM SECTIONS DE LANÇAMENTOS E TENTENCIAS DESKTOP-->
-	<aside class="categorias_lancamento_container">
+	<aside>
 		
 		<section class="destaques_desktop">
 
@@ -362,7 +362,7 @@ ini_set(“display_errors”, 0 );
 	
 		<h2>Últimos lançamentos</h2>
 		
-		<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i> Todos</button></a></p>
+		<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i></button></a></p>
 	
 		<div id="lancamentos_desktop">
 		
@@ -433,6 +433,8 @@ ini_set(“display_errors”, 0 );
 
 <!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
 <script src="js/jquery-3.3.1.js" type="text/javascript"></script>	
+<script src="js/aba_info_titulos.js" type="text/javascript"></script>
+		
 			
 </body>
 </html>

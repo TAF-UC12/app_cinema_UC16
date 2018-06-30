@@ -38,12 +38,11 @@
 		width: 28%;
 		float: left;
 		list-style: none;
-		background-color: rgba(31,63,96,0.60);
+		background-color: #000000;
 		border-radius: 25px;
 		text-align: center;
 		padding: 5px 0px;
 		display: table;
-		border: 2px solid #ffffff;
 		transition: 1s ease all;
 	}
 	
@@ -62,12 +61,11 @@
 		width: 28%;
 		float: left;
 		list-style: none;
-		background-color: #1F3F60;
+		background-color: #f65f5e;
 		border-radius: 25px;
 		text-align: center;
 		padding: 5px 0px;
 		display: table;
-		border: 2px solid #ffffff;
 	}
 	
 	.info_ativa a{
@@ -81,7 +79,7 @@
 	}
 	
 	.info_lista:hover {
-		background-color: #1F3F60;
+		background-color: #f65f5e;
 		transition: 1s ease all;
 	}
 	
@@ -116,7 +114,6 @@
 #info3 {
 	width: 100%;
 	height: auto;
-	background-color: #000000;
 	padding: 10px;
 }
 	
@@ -351,7 +348,7 @@
 	
 #filme_info {
 	width: 100%;
-	height: auto;
+	min-height: 600px;
 	background-image: url(/app_cinema_UC16_v2/img/posters/backgrounds/background_filmes.jpg);
 	
 }
@@ -374,12 +371,11 @@
 		width: 28%;
 		float: left;
 		list-style: none;
-		background-color: rgba(31,63,96,0.60);
+		background-color: #000000;
 		border-radius: 25px;
 		text-align: center;
 		padding: 5px 0px;
 		display: table;
-		border: 2px solid #ffffff;
 	}
 	
 	.info_lista a{
@@ -396,12 +392,11 @@
 		width: 28%;
 		float: left;
 		list-style: none;
-		background-color: #1F3F60;
+		background-color: #f65f5e;
 		border-radius: 25px;
 		text-align: center;
 		padding: 5px 0px;
 		display: table;
-		border: 2px solid #ffffff;
 	}
 	
 	.info_ativa a{
@@ -415,7 +410,7 @@
 	}
 	
 	.info_lista:hover {
-		background-color: #1F3F60;
+		background-color: #f65f5e;
 		transition: 1s ease all;
 	}
 	
@@ -685,6 +680,13 @@
 
 @media only screen and (max-width: 360px){
 
+	#filme_info {
+		width: 100%;
+		height: auto;
+		background-image: url(/app_cinema_UC16_v2/img/posters/backgrounds/background_filmes.jpg);
+	
+	}
+	
 	#submenu_filme {
 	width: 100%;
 	height: auto;

@@ -25,6 +25,42 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 	
 	
 	
+	/*################################
+	TAGS DA NOTÍCIA
+		- */
+	
+	#tags {
+		position: relative;
+		width: 100%;
+		height: auto;
+/*		background-color: violet;*/
+		margin-bottom: 20px;
+		overflow: auto;
+	}
+	
+	#tags li:first-child {
+		float: left;
+		width: auto;
+		margin: 0px 10px 0px 0px;
+		padding: 5px 10px;
+		list-style: none;
+		background-color: #2D2D2D;
+		border-radius: 6px;
+	}
+	
+	#tags li {
+		float: left;
+		width: auto;
+		margin: 6px 5px 0px 0px;
+		padding: 2px 5px;
+		list-style: none;
+		background-color: #2D2D2D;
+		border-radius: 5px;
+	}
+	
+	
+	
+	
 	
 	/*################################
 	ARTICLE NOTICIA
@@ -40,6 +76,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		width: 100%;
 		height: auto;
 		background-color: transparent;
+		border-bottom: 2px inset #2D2D2D;
 	}
 	
 	#noticia_completa header h1 {
@@ -59,17 +96,31 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		/*background-color: darkred;*/
 	}
 	
+	
 	#info_post div {
 		position: relative;
 		width: 50%;
 		height: auto;
 		/*background-color: seagreen;*/
-		padding: 5px 10px;
+		padding: 5px 10px 5px 0px;
 		float: left;
+	}
+	
+	#info_post div img {
+		position: relative;
+		width: 32px;
+		height: auto;
+		/*background-color: darkred;*/
+		float: left;
+		margin: 0px;
+		overflow: hidden;
+		border-radius: 16px;
 	}
 	
 	#info_post div p {
 		font-size: .75em;
+		padding-left: 5px;
+		float: left;
 	}
 	
 	#noticia_completa img {
@@ -103,6 +154,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		width: 80%;
 		height: auto;
 		margin-left: 10%;
+		border: 1px solid #000000;
 	}
 	
 	#titulo_relacionado > div{
