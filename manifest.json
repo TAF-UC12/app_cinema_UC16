@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "any",
   "Scope": "/",
-  "start_url": "./index.php?launcher=true",
+  "start_url": "index.php?launcher=true",
   "icons": [
     {
       "src": "img/icons/icon-72x72.png",

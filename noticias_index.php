@@ -209,7 +209,7 @@ ini_set(“display_errors”, 0 );
 			
 	break;
 			
-		default;
+		default:
 			
 			include "config/conectar.php";
     $qtde_registros = 6;
@@ -348,58 +348,62 @@ ini_set(“display_errors”, 0 );
 							
 							
 						</div>
-			<?php			
-				}
-		?>		
+				<?php			
+					}
+			?>		
 
-
-		</div>
-
-
-	</section>
-
-	<section class="destaques_desktop">
-	
-		<h2>Últimos lançamentos</h2>
-		
-		<p><a href='ficha_tecnica.php?selecionado=$id&categoria=filmes'><i class='fas fa-plus'></i></button></a></p>
-	
-		<div id="lancamentos_desktop">
-		
-			<div class='desktop_info'>
-
-				<a href=""><img src='img/posters/2001.jpg'></a>
 
 			</div>
+
+
+		</section>
 		
-		<div class='desktop_info'>
-
-			<a href=""><img src='img/posters/2001.jpg'></a>
-
-		</div>
 		
-		<div class='desktop_info'>
-
-			<a href=""><img src='img/posters/2001.jpg'></a>
-
-		</div>
 		
-		<div class='desktop_info'>
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
-
-		</div>
-		
-		<div class='desktop_info'>
-
-			<a href=""><img src='img/posters/2001.jpg'></a>
-
-		</div>
-		
-	</div>
+		<section class="destaques_desktop">
 	
-	
-</section>
+			<h2>Últimos lançamentos</h2>
+
+			<p><a href='lancamentos.php?filtro_categoria=filmes'><i class='fas fa-plus'></i></a></p>
+
+			<div id="lancamentos_desktop">
+
+				<div class='desktop_info'>
+
+					<a href=""><img src='img/posters/2001.jpg'></a>
+
+				</div>
+
+				<div class='desktop_info'>
+
+					<a href=""><img src='img/posters/2001.jpg'></a>
+
+				</div>
+
+				<div class='desktop_info'>
+
+					<a href=""><img src='img/posters/2001.jpg'></a>
+
+				</div>
+
+				<div class='desktop_info'>
+
+					<a href=""><img src='img/posters/2001.jpg'></a>
+
+				</div>
+
+				<div class='desktop_info'>
+
+					<a href=""><img src='img/posters/2001.jpg'></a>
+
+				</div>
+
+			</div>
+
+
+		</section>
+		
 	</aside>																	
 	
 </div> <!--FIM DO CORPO DO SITE-->	

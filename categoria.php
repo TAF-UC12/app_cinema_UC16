@@ -388,7 +388,8 @@ $categoria = $_GET["tipo"];
 			
 				//Agora é realizar a querie de busca no banco de dados
 				
-				$sql = "SELECT * FROM tendencias ORDER BY idtendencias LIMIT 6";	
+				$sql = "SELECT * FROM tendencias 
+					WHERE idtipoPost = $categoria_header ORDER BY idtendencias LIMIT 6";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");

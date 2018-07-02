@@ -29,7 +29,6 @@ ini_set(“display_errors”, 0 );
 <link href="css/lancamentos_v2.css" rel="stylesheet" type="text/css">
 
 <!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
-<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
 
 </head>
@@ -414,4 +413,12 @@ switch ($filtro_categoria) {
 
 
 </main>
+
+
+<!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+
 <body>
+
+
+</html>

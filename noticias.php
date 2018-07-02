@@ -13,6 +13,7 @@ ini_set(“display_errors”, 0 );
 <html lang="pt-br">
 
 <title>Notícia completa</title>
+
 <!--METADADOS PARA HABILITAR QUERYS DE FORMATAÇÃO PARA SITE RESPONSIVO-->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no>
@@ -78,8 +79,6 @@ ini_set(“display_errors”, 0 );
 <div id="corpo_container"> <!--INICIO DO CORPO DO SITE-->	
 
 
-
-
 <!--SECTION CONTAINER DO CONTÉUDO DA NOTÍCIA
 	- Article com header e conteudo
 	- Header com hgroup e info auto e post-->
@@ -104,7 +103,7 @@ $idNoticia = $_GET["news"];
 $sql = "SELECT * FROM noticias
 		INNER JOIN login
 		ON noticias.autorPost = login.idlogin
-		WHERE idnoticias = $idNoticia";	
+		WHERE noticias.idnoticias = $idNoticia";	
 	
 $resultado = mysqli_query($strcon, $sql)
 or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -125,14 +124,37 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	$autor = $linha["nome"];
 	$autorEmail = $linha["email"];
 	$imgAutor = $linha["imgAutor"];
+	
 ?>	
+
 
 		<div id="tags">
 			
-			<li><?php echo "$tipocategoria";?></li>
-			<li>Tag1</li>
-			<li>Tag2</li>
+			<li id="tag<?php echo "$tipocategoria";?>"><?php echo "$tipocategoria";?></li>
+<?php				
 			
+		$sql10 = "SELECT nomeTag FROM tags
+				INNER JOIN tags_has_noticias
+				ON tags.idtags = tags_has_noticias.tags_idtags
+				INNER JOIN noticias
+				ON noticias.idnoticias = tags_has_noticias.noticias_idnoticias
+				WHERE noticias.idnoticias = $idNoticia";	
+	
+	$resultado = mysqli_query($strcon, $sql10)
+	or die ("Não foi possível realizar a consulta ao banco de dados");
+
+	while ($linha=mysqli_fetch_array($resultado)) {
+
+		$tags = $linha["nomeTag"];	
+
+	?>		
+			
+			
+			
+			<li><?php echo "$tags";?></li>
+	<?php
+	}
+		?>
 		</div>
 
 	<article id="noticia_completa">
@@ -175,7 +197,36 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	?>
 		
 				
-	</article>		
+	</article>
+	
+	<!--COMENTÁRIOS, COD DO DISCUS-->	
+	<div id="comentarios_container">
+		
+		<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://cineontherocks.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		
+		
+		
+		
+	</div>					
 	
 </section>		
 
@@ -216,7 +267,7 @@ $poster = $linha["poster"];
 			<div>
 
 				<h1><?php echo "$titulo";?></h1>
-				<h2><?php echo "$titoriginal";?></h2>			
+				<p><?php echo "$titoriginal";?></p>			
 
 			</div>
 		
@@ -232,7 +283,7 @@ $poster = $linha["poster"];
 	<!--SECTION COM OUTRAS NOTÍCIAS RELACIONADAS AO TITULO OU EVENTO-->
 	<section>
 							
-		<h3>Notícias sobre <?php echo "$titulo";?></h3>
+		<h2>Notícias sobre <?php echo "$titulo";?></h2>
 					
 			<div id='noticia_relacionada'>
 	
@@ -308,7 +359,7 @@ $poster = $linha["poster"];
 			<div>
 
 				<h1><?php echo "$titulo";?></h1>
-				<h2><?php echo "$emissora";?></h2>			
+				<p><?php echo "$emissora";?></p>			
 
 			</div>
 		
@@ -324,7 +375,7 @@ $poster = $linha["poster"];
 	<!--SECTION COM OUTRAS NOTÍCIAS RELACIONADAS AO TITULO OU EVENTO-->
 	<section>
 							
-		<h3>Notícias sobre <?php echo "$titulo";?></h3>
+		<h2>Notícias sobre <?php echo "$titulo";?></h2>
 					
 			<div id='noticia_relacionada'>
 	
@@ -379,25 +430,32 @@ break;
 	case "Games":
 		
 		$sql2 = "SELECT * FROM $tabela
-				INNER JOIN desenvolvedoras
-				ON $tabela.desenvolvedora = desenvolvedoras.iddesenvolvedoras
-				WHERE $coluna = $rel_game";	
+					INNER JOIN desenvolvedoras
+					ON $tabela.desenvolvedora = desenvolvedoras.iddesenvolvedoras
+					INNER JOIN publicadoras
+					ON games.publicadora = publicadoras.idpublicadora
+					INNER JOIN games_has_consoles
+					ON games.idgames = games_has_consoles.games_idgames
+					INNER JOIN consoles
+					ON games_has_consoles.consoles_idconsoles = consoles.idconsoles
+					WHERE $coluna = $rel_game LIMIT 1";	
 	
 
-$resultado = mysqli_query($strcon, $sql2)
-or die ("Não foi possível realizar a consulta ao banco de dados game");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
+		$resultado = mysqli_query($strcon, $sql2)
+		or die ("Não foi possível realizar a consulta ao banco de dados game");
 
-$id = $linha["idgames"];
-$titulo = $linha["tituloGame"];
-$desenvolvedora = $linha["nomeDesenvolvedora"];	
-$titoriginal = $linha["titulo_original"];
-$poster = $linha["imgGame"];
-	
-	
+		while ($linha=mysqli_fetch_array($resultado)) {
+
+		$id = $linha["idgames"];
+		$titulo = $linha["tituloGame"];
+		$desenvolvedora = $linha["nomeDesenvolvedora"];	
+		$publicadora = $linha["nomePublicadora"];
+		$lancamento = $linha["lancamentoGame"];
+		$poster = $linha["imgGame"];
+			
 ?>	
-		
+
+
 		<div id='titulo_relacionado'>
 		
 			<a href='ficha_tecnica.php?selecionado=<?php echo "$id";?>&categoria=<?php echo "$tabela";?>'><img src='img/posters/<?php echo "$poster";?>' alt=''></a>
@@ -405,23 +463,31 @@ $poster = $linha["imgGame"];
 			<div>
 
 				<h1><?php echo "$titulo";?></h1>
-				<h2><?php echo "$desenvolvedora";?></h2>			
+				<p><?php echo "$lancamento";?></p>
+				<p><?php echo "$desenvolvedora";?></p>
+				<p><?php echo "$publicadora";?></p>			
 
 			</div>
 		
 		</div>
 
 <?php
-}
+} //fecgamento do switch geral
 ?>		
-						
+		
+		
+		
+					
+										
+														
+																				
 	</section>
 	
 	
 	<!--SECTION COM OUTRAS NOTÍCIAS RELACIONADAS AO TITULO OU EVENTO-->
 	<section>
 							
-		<h3>Notícias sobre <?php echo "$titulo";?></h3>
+		<h2>Notícias sobre <?php echo "$titulo";?></h2>
 					
 			<div id='noticia_relacionada'>
 	
@@ -430,22 +496,22 @@ $poster = $linha["imgGame"];
 	
 	$sql4 = "SELECT * FROM noticias WHERE relac_games = $id AND idnoticias != $idNoticia ORDER BY idnoticias DESC LIMIT 3";	
 	
-$resultado = mysqli_query($strcon, $sql4)
-or die ("Não foi possível realizar a consulta ao banco de dados");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
+	$resultado = mysqli_query($strcon, $sql4)
+	or die ("Não foi possível realizar a consulta ao banco de dados");
 
-	$idnoticia = $linha["idnoticias"];	
-	$titulo = $linha["tituloNoticia"];
-	$subtitulo = $linha["subtitulo"];
-	$texto = $linha["texto"];	
-	$img = $linha["img"];
-	$tipo = $linha["tipoPost"];	
-	$rel_filme = $linha["relac_filmes"];	
-	$rel_serie = $linha["relac_series"];	
-	$rel_game = $linha["relac_games"];	
-	
-?>	
+	while ($linha=mysqli_fetch_array($resultado)) {
+
+		$idnoticia = $linha["idnoticias"];	
+		$titulo = $linha["tituloNoticia"];
+		$subtitulo = $linha["subtitulo"];
+		$texto = $linha["texto"];	
+		$img = $linha["img"];
+		$tipo = $linha["tipoPost"];	
+		$rel_filme = $linha["relac_filmes"];	
+		$rel_serie = $linha["relac_series"];	
+		$rel_game = $linha["relac_games"];	
+
+	?>	
 					
 							
 											
@@ -463,12 +529,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 			</div>
 		
 	</section>
-	
-
-									
-			</div>
-		
-	</section>
+						
 
 <?php	
 		
@@ -507,10 +568,9 @@ break;
 </main>
 
 
-<script src="js/aba_tipo_noticias.js"></script>
-
 <!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
 <script src="js/jquery-3.3.1.js"></script>	
+<script src="js/aba_tipo_noticias.js"></script>		
 			
 </body>
 </html>

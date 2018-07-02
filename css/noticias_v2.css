@@ -38,15 +38,29 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		overflow: auto;
 	}
 	
-	#tags li:first-child {
+	#tags li:first-child  {
 		float: left;
 		width: auto;
 		margin: 0px 10px 0px 0px;
 		padding: 5px 10px;
 		list-style: none;
-		background-color: #2D2D2D;
 		border-radius: 6px;
+		font-weight: bold;
+		font-size: 1em;
 	}
+	
+	#tagCinema:first-child {
+		background-color: #1f3f60;
+	}
+	
+	#tagSeries:first-child {
+		background-color: #d19600;
+	}
+	
+	#tagGames:first-child {
+		background-color: #007f06;
+	}
+	
 	
 	#tags li {
 		float: left;
@@ -54,8 +68,9 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		margin: 6px 5px 0px 0px;
 		padding: 2px 5px;
 		list-style: none;
-		background-color: #2D2D2D;
+		background-color: #F65F5E;
 		border-radius: 5px;
+		font-size: .75em;
 	}
 	
 	
@@ -80,13 +95,16 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 	}
 	
 	#noticia_completa header h1 {
-		font-size: 1.375em;
+		font-size: 2em; /*32px*/
 		margin-bottom: 20px;
+		text-align: center;
+		text-shadow: 1px 1px 2px #000000;
 	}
 
 	#noticia_completa header h2 {
 		font-size: 1em;
 		margin-bottom: 20px;
+		text-align: center;
 	}
 	
 	#info_post {
@@ -99,28 +117,31 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 	
 	#info_post div {
 		position: relative;
-		width: 50%;
+		width: 100%;
 		height: auto;
 		/*background-color: seagreen;*/
-		padding: 5px 10px 5px 0px;
-		float: left;
 	}
 	
 	#info_post div img {
 		position: relative;
-		width: 32px;
+		width: 50px;
 		height: auto;
-		/*background-color: darkred;*/
-		float: left;
-		margin: 0px;
-		overflow: hidden;
-		border-radius: 16px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 25px;
+		margin-bottom: 5px;
 	}
 	
 	#info_post div p {
 		font-size: .75em;
-		padding-left: 5px;
-		float: left;
+		text-align: center;
+	}
+	
+	#noticia_completa img {
+		width: 100%;
+		height: auto;
+		margin: 20px 0px;
 	}
 	
 	#noticia_completa img {
@@ -170,11 +191,13 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 	#titulo_relacionado > div h1{
 		font-size: 1.375em;
 		margin-bottom: 5px;
+		text-shadow: 1px 1px 2px #000000;
 	}
 	
-	#titulo_relacionado > div h2{
+	#titulo_relacionado > div p{
 		font-size: 1em;
-		/*margin-bottom: 5px;*/
+		margin-bottom: 5px;
+		text-shadow: 1px 1px 2px #000000;
 	}
 	
 	#noticia_relacionada {
@@ -185,30 +208,34 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		padding: 5px;
 	}
 	
+	
 	.noticia {
 		position: relative;
 		width: 100%;
 		height: auto;
 		/*background-color: violet;*/
 		margin-bottom: 10px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
 		
 	}
 	
 	.noticia img {
-		width: 20%;
-		height: auto;
-		float: left;
+		width: 70%;
+		height: 100%;
 	}
 	
 	.noticia a {
-		width: 80%;
+		width: auto;
 		height: auto;
 		padding-left: 10px;
-		float: left;
+		flex-grow: 1;
 	}
 	
 	.noticia h1 {
-		font-size: 1em;
+		font-size: .75em;
+		text-shadow: 1px 1px 2px #000000;
 	}
 	
 	
@@ -237,10 +264,9 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 	#corpo_container aside {
 		width: 100%;
 		height: auto;
-		display: block;
+		display: none;
 		background-color: navy;
-		overflow: auto;
-		
+		overflow: auto;		
 	}
 	
 	#corpo_container aside section {
@@ -255,6 +281,62 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 		display: none;
 		
 	}
+	
+	
+	
+	
+	
+	/*################################
+	TAGS DA NOTÍCIA
+		- */
+	
+	#tags {
+		position: relative;
+		width: 100%;
+		height: auto;
+/*		background-color: violet;*/
+		margin-bottom: 20px;
+		overflow: auto;
+	}
+	
+	#tags li:first-child {
+		float: left;
+		width: auto;
+		margin: 0px 10px 0px 0px;
+		padding: 5px 10px;
+		list-style: none;
+		border-radius: 6px;
+		font-weight: bold;
+		font-size: 1em;
+	}
+	
+	#tagCinema:first-child {
+		background-color: #1f3f60;
+	}
+	
+	#tagSeries:first-child {
+		background-color: #d19600;
+	}
+	
+	#tagGames:first-child {
+		background-color: #007f06;
+	}
+	
+	
+	#tags li {
+		float: left;
+		width: auto;
+		margin: 6px 5px 0px 0px;
+		padding: 2px 5px;
+		list-style: none;
+		background-color: #F65F5E;
+		border-radius: 5px;
+		font-size: .75em;
+	}
+	
+	
+	
+	
 	
 	/*################################
 	ARTICLE NOTICIA
@@ -273,13 +355,17 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 	}
 	
 	#noticia_completa header h1 {
-		font-size: 1.375em;
+		font-size: 1.5em; /*24px*/
 		margin-bottom: 20px;
+		text-align: center;
+		text-shadow: 1px 1px 2px #000000;
 	}
 
 	#noticia_completa header h2 {
+		width: 100%;
 		font-size: 1em;
 		margin-bottom: 20px;
+		text-align: center;
 	}
 	
 	#info_post {
@@ -289,17 +375,34 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 		/*background-color: darkred;*/
 	}
 	
+	
 	#info_post div {
 		position: relative;
-		width: 50%;
+		width: 100%;
 		height: auto;
 		/*background-color: seagreen;*/
-		padding: 5px 10px;
-		float: left;
+	}
+	
+	#info_post div img {
+		position: relative;
+		width: 50px;
+		height: auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 25px;
+		margin-bottom: 5px;
 	}
 	
 	#info_post div p {
 		font-size: .75em;
+		text-align: center;
+	}
+	
+	#noticia_completa img {
+		width: 100%;
+		height: auto;
+		margin: 20px 0px;
 	}
 	
 	#noticia_completa img {
@@ -417,6 +520,126 @@ MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
 	
 	
 	
+	
+	/*################################
+	TAGS DA NOTÍCIA
+		- */
+	
+	#tags {
+		position: relative;
+		width: 100%;
+		height: auto;
+/*		background-color: violet;*/
+		margin-bottom: 20px;
+		overflow: auto;
+	}
+	
+	#tags li:first-child {
+		float: left;
+		width: auto;
+		margin: 0px 10px 0px 0px;
+		padding: 3px 10px;
+		list-style: none;
+		border-radius: 3px;
+		font-weight: bold;
+		font-size: 1em;
+	}
+	
+	#tagCinema:first-child {
+		background-color: #1f3f60;
+	}
+	
+	#tagSeries:first-child {
+		background-color: #d19600;
+	}
+	
+	#tagGames:first-child {
+		background-color: #007f06;
+	}
+	
+	#tags li {
+		float: left;
+		width: auto;
+		margin: 4px 5px 0px 0px;
+		padding: 1px 4px;
+		list-style: none;
+		background-color: #F65F5E;
+		border-radius: 2px;
+		font-size: .75em;
+	}
+	
+	
+	
+	/*################################
+	ARTICLE NOTICIA
+		- Article com header e conteudo da noticia*/
+
+	#noticia_completa {
+		/*background-color: #3E1818;*/
+		margin-bottom: 30px;
+	}
+
+	#noticia_completa header {
+		position: relative;
+		width: 100%;
+		height: auto;
+		background-color: transparent;
+	}
+	
+	#noticia_completa header h1 {
+		font-size: 1.375em;
+		margin-bottom: 20px;
+		text-align: center;
+		text-shadow: 1px 1px 2px #000000;
+	}
+
+	#noticia_completa header h2 {
+		font-size: .75em;
+		margin-bottom: 20px;
+		text-align: center;
+		text-shadow: 1px 1px 2px #000000;
+	}
+	
+	#info_post {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: darkred;*/
+	}
+	
+	
+	#info_post div {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: seagreen;*/
+	}
+	
+	#info_post div img {
+		position: relative;
+		width: 50px;
+		height: auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 25px;
+		margin-bottom: 5px;
+	}
+	
+	#info_post div p {
+		font-size: .75em;
+		text-align: center;
+	}
+	
+	#noticia_completa img {
+		width: 100%;
+		height: auto;
+		margin: 20px 0px;
+	}
+	
+	#noticia_completa > p {
+		margin-top: 10px;
+	}
 	
 	
 }

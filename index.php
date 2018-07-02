@@ -31,8 +31,13 @@ ini_set(“display_errors”, 0 );
 
 
 <!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
+<link rel="manifest" href="manifest.json">
 <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
+
+
+<!--LINKS PARA HABILITAR PWA-->
+<link rel="manifest" href="manifest.json">
 
 
 <!--SCRIPT JS PARA FUNCIONAMENTO DO SLIDER DA PÁGINA-->

@@ -837,7 +837,7 @@ MEDIA QUERY PARA VERSÃO MOBILE
 	
 	#categoria_home p, #categoria_lanc p, #categoria_filme p, #categoria_serie p, #categoria_game p {
 		text-transform: uppercase;
-		font-size: .4em;
+		font-size: .6em;
 		padding: 0 auto;
 		height: auto;
 		display: inherit;
