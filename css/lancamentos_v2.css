@@ -190,7 +190,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA TITULOS
 
 	.titulo_poster img{
 		width: 100%;
-		border: 1px solid #000000;
+		border: 1px solid #3d3d3d;
 		-webkit-box-shadow: 2px 2px 3px #000000;
 		box-shadow: 2px 2px 3px #000000;
 		transition: .5s ease all;

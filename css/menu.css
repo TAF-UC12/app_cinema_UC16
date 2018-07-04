@@ -38,6 +38,7 @@ clear: right;
 	min-width:80px;
 	text-align: center;
 	color: #fff;
+	font-weight: bold;
   text-transform:uppercase;
 	background: #313131;
 	text-decoration: none;
@@ -51,7 +52,7 @@ transition: all 0.4s ease 0s;
 
 /*Hover state for top level links*/
 .mobile-menu li:hover a {
-	color: #4db3ff;
+	color: #F65F5E;
   /*background-color:#ccddee;*/
 }
 

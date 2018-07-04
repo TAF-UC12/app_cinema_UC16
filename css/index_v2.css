@@ -29,6 +29,10 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 	
 	
 	
+	
+	
+	
+	
 	/*################################
 	SECTION DESKTOP
 		- Essas sections da versão desktop
@@ -98,7 +102,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 	
 	.desktop_info {
 		width: 100px;
-		height: auto;
+		height: 100%;
 		/*background-color: aqua;*/
 		margin: 5px;
 		float: left;
@@ -417,16 +421,23 @@ MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES DO INDEX
 	
 	.mobile_info {
 		width: 100px;
-		height: auto;
-		/*background-color: aqua;*/
+		height: 100%;
+		background-color: #000000;
 		margin: 2px;
 		float: left;
 		border: 1px solid #3d3d3d;
+		overflow: auto;
 	}
 	
 	.mobile_info img{
 		width: 100%;
 		height: auto;
+	}
+	
+	.mobile_info img:hover {
+		-webkit-box-shadow: 4px 4px 6px #000000;
+		box-shadow: 4px 4px 6px #000000;
+		transition: 1s ease all;
 	}
 	
 	.lancamentos_btn {
@@ -656,11 +667,12 @@ MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
 	
 	.mobile_info {
 		width: 80px;
-		height: auto;
-		/*background-color: aqua;*/
+		height: 100%;
+		background-color:  #000000;
 		margin: 5px;
 		float: left;
 		border: 1px solid #3d3d3d;
+		overflow: auto;
 	}
 	
 	.mobile_info img{
@@ -668,12 +680,6 @@ MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
 		height: auto;
 		border: 0;
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	

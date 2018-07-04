@@ -192,7 +192,8 @@ $categoria = $_GET["tipo"];
 			
 				//Agora é realizar a querie de busca no banco de dados
 				
-				$sql = "SELECT * FROM tendencias ORDER BY idtendencias LIMIT 6";	
+				$sql = "SELECT * FROM tendencias 
+					WHERE idtipoPost = $categoria_header ORDER BY idtendencias LIMIT 6";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -212,7 +213,7 @@ $categoria = $_GET["tipo"];
 						</div>
 			<?php			
 				}
-		?>		
+		?>	
 
 
 		</div>
@@ -230,37 +231,126 @@ $categoria = $_GET["tipo"];
 	
 		<div id="lancamentos_mobile">
 		
+		<?php
+		
+			
+			switch ($categoria_header) {
+			
+			case "1":
+				
+				
+			require_once "config/conectar.php";
+			
+				//Agora é realizar a querie de busca no banco de dados
+				
+				$sql = "SELECT * FROM lancamentos
+						INNER JOIN lancamentos_has_filmes
+						ON lancamentos.idlancamentos = lancamentos_has_filmes.lancamentos_idlancamentos
+						INNER JOIN filmes
+						ON lancamentos_has_filmes.filmes_idfilmes = filmes.idfilmes
+						ORDER BY lancamentos.idlancamentos ASC LIMIT 6";	
+
+				$resultado = mysqli_query($strcon, $sql)
+				or die ("Não foi possível realizar a consulta ao banco de dados");
+
+				while ($linha=mysqli_fetch_array($resultado)) {
+
+					$idtitulo = $linha["filmes_idfilmes"];	
+					$titulo = $linha["titulo"];	
+					$imgPoster = $linha["poster"];
+				?>	
+			
+
 			<div class='mobile_info'>
 
-				<a href=""><img src='img/posters/2001.jpg'></a>
+				<a href="ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo "$idtitulo";?>&categoria=filmes"><img src='img/posters/<?php echo "$imgPoster";?>'></a>
 
 			</div>
 		
-		<div class='mobile_info'>
+		<?php
+				} //Fechamendo da query de cinema lançamentos desktop
+			?>
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
 
-		</div>
+		<?php
+			break;
+			
+				case "3":
+					
+					require_once "config/conectar.php";
+			
+				//Agora é realizar a querie de busca no banco de dados
+				
+				$sql = "SELECT * FROM lancamentos
+						INNER JOIN lancamentos_has_series
+						ON lancamentos.idlancamentos = lancamentos_has_series.lancamentos_idlancamentos
+						INNER JOIN series
+						ON lancamentos_has_series.series_idseries = series.idseries
+						ORDER BY lancamentos.idlancamentos ASC LIMIT 6";	
+
+				$resultado = mysqli_query($strcon, $sql)
+				or die ("Não foi possível realizar a consulta ao banco de dados");
+
+				while ($linha=mysqli_fetch_array($resultado)) {
+
+					$idtitulo = $linha["series_idseries"];	
+					$titulo = $linha["titulo"];	
+					$imgPoster = $linha["poster"];
+				?>
+					
+			<div class='mobile_info'>
+
+				<a href="ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo "$idtitulo";?>&categoria=series"><img src='img/posters/<?php echo "$imgPoster";?>'></a>
+
+			</div>
 		
-		<div class='mobile_info'>
+		<?php
+				} //Fechamendo da query de series lançamentos desktop
+			?>
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
-
-		</div>
 		
-		<div class='mobile_info'>
+		<?php
+			break;
+			
+				case "2":
+					
+					require_once "config/conectar.php";
+			
+				//Agora é realizar a querie de busca no banco de dados
+				
+				$sql = "SELECT * FROM lancamentos
+						INNER JOIN lancamentos_has_games
+						ON lancamentos.idlancamentos = lancamentos_has_games.lancamentos_idlancamentos
+						INNER JOIN games
+						ON lancamentos_has_games.games_idgames = games.idgames
+						ORDER BY lancamentos.idlancamentos ASC LIMIT 6";	
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
+				$resultado = mysqli_query($strcon, $sql)
+				or die ("Não foi possível realizar a consulta ao banco de dados");
 
-		</div>
+				while ($linha=mysqli_fetch_array($resultado)) {
+
+					$idtitulo = $linha["games_idgames"];	
+					$titulo = $linha["tituloGame"];	
+					$imgPoster = $linha["imgGame"];
+				?>
+				
+				<div class='mobile_info'>
+
+					<a href="ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo "$idtitulo";?>&categoria=games"><img src='img/posters/<?php echo "$imgPoster";?>'></a>
+
+				</div>
+				
+
+		<?php
+			} //Fechamendo da query de games lançamentos desktop
+			break;		
+			} //Fechamento do switch de lançamentos desktop
+		?>
 		
-		<div class='mobile_info'>
-
-			<a href=""><img src='img/posters/2001.jpg'></a>
-
-		</div>
+			
 		
-	</div>
+		</div>
 	
 </section>
 
@@ -424,38 +514,126 @@ $categoria = $_GET["tipo"];
 		<p><a href='lancamentos.php?filtro_categoria=filmes'><i class='fas fa-plus'></i></button></a></p>
 	
 		<div id="lancamentos_desktop">
+			
 		
+		<?php
+		
+			
+			switch ($id_tipo_post) {
+			
+			case "1":
+				
+				
+			require_once "config/conectar.php";
+			
+				//Agora é realizar a querie de busca no banco de dados
+				
+				$sql = "SELECT * FROM lancamentos
+						INNER JOIN lancamentos_has_filmes
+						ON lancamentos.idlancamentos = lancamentos_has_filmes.lancamentos_idlancamentos
+						INNER JOIN filmes
+						ON lancamentos_has_filmes.filmes_idfilmes = filmes.idfilmes
+						ORDER BY lancamentos.idlancamentos ASC LIMIT 6";	
+
+				$resultado = mysqli_query($strcon, $sql)
+				or die ("Não foi possível realizar a consulta ao banco de dados");
+
+				while ($linha=mysqli_fetch_array($resultado)) {
+
+					$idtitulo = $linha["filmes_idfilmes"];	
+					$titulo = $linha["titulo"];	
+					$imgPoster = $linha["poster"];
+				?>	
+			
+
 			<div class='desktop_info'>
 
-				<a href=""><img src='img/posters/2001.jpg'></a>
+				<a href="ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo "$idtitulo";?>&categoria=filmes"><img src='img/posters/<?php echo "$imgPoster";?>'></a>
 
 			</div>
 		
-		<div class='desktop_info'>
+		<?php
+				} //Fechamendo da query de cinema lançamentos desktop
+			?>
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
 
-		</div>
+		<?php
+			break;
+			
+				case "3":
+					
+					require_once "config/conectar.php";
+			
+				//Agora é realizar a querie de busca no banco de dados
+				
+				$sql = "SELECT * FROM lancamentos
+						INNER JOIN lancamentos_has_series
+						ON lancamentos.idlancamentos = lancamentos_has_series.lancamentos_idlancamentos
+						INNER JOIN series
+						ON lancamentos_has_series.series_idseries = series.idseries
+						ORDER BY lancamentos.idlancamentos ASC LIMIT 6";	
+
+				$resultado = mysqli_query($strcon, $sql)
+				or die ("Não foi possível realizar a consulta ao banco de dados");
+
+				while ($linha=mysqli_fetch_array($resultado)) {
+
+					$idtitulo = $linha["series_idseries"];	
+					$titulo = $linha["titulo"];	
+					$imgPoster = $linha["poster"];
+				?>
+					
+			<div class='desktop_info'>
+
+				<a href="ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo "$idtitulo";?>&categoria=series"><img src='img/posters/<?php echo "$imgPoster";?>'></a>
+
+			</div>
 		
-		<div class='desktop_info'>
+		<?php
+				} //Fechamendo da query de series lançamentos desktop
+			?>
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
-
-		</div>
 		
-		<div class='desktop_info'>
+		<?php
+			break;
+			
+				case "2":
+					
+					require_once "config/conectar.php";
+			
+				//Agora é realizar a querie de busca no banco de dados
+				
+				$sql = "SELECT * FROM lancamentos
+						INNER JOIN lancamentos_has_games
+						ON lancamentos.idlancamentos = lancamentos_has_games.lancamentos_idlancamentos
+						INNER JOIN games
+						ON lancamentos_has_games.games_idgames = games.idgames
+						ORDER BY lancamentos.idlancamentos ASC LIMIT 6";	
 
-			<a href=""><img src='img/posters/2001.jpg'></a>
+				$resultado = mysqli_query($strcon, $sql)
+				or die ("Não foi possível realizar a consulta ao banco de dados");
 
-		</div>
+				while ($linha=mysqli_fetch_array($resultado)) {
+
+					$idtitulo = $linha["games_idgames"];	
+					$titulo = $linha["tituloGame"];	
+					$imgPoster = $linha["imgGame"];
+				?>
+				
+				<div class='desktop_info'>
+
+					<a href="ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo "$idtitulo";?>&categoria=games"><img src='img/posters/<?php echo "$imgPoster";?>'></a>
+
+				</div>
+				
+
+		<?php
+			} //Fechamendo da query de games lançamentos desktop
+			break;		
+			} //Fechamento do switch de lançamentos desktop
+		?>
 		
-		<div class='desktop_info'>
-
-			<a href=""><img src='img/posters/2001.jpg'></a>
-
 		</div>
-		
-	</div>
 	
 	
 </section>

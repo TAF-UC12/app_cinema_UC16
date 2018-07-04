@@ -153,7 +153,7 @@ switch ($filtro_categoria) {
 					
 	<div class='titulo_poster'>
 				
-		<a href='ficha_tecnica.php?selecionado=<?php echo $id; ?>&categoria=<?php echo $categoria; ?>'>
+		<a href='ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo $id; ?>&categoria=<?php echo $categoria; ?>'>
 					
 			<img src='img/posters/<?php echo $poster;?>'>
 						
@@ -232,7 +232,7 @@ switch ($filtro_categoria) {
 					
 	<div class='titulo_poster'>
 				
-		<a href='ficha_tecnica.php?selecionado=<?php echo $id; ?>&categoria=<?php echo $categoria; ?>'>
+		<a href='ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo $id; ?>&categoria=<?php echo $categoria; ?>'>
 					
 			<img src='img/posters/<?php echo $poster;?>'>
 						
@@ -318,7 +318,7 @@ switch ($filtro_categoria) {
 					
 	<div class='titulo_poster'>
 				
-		<a href='ficha_tecnica.php?selecionado=<?php echo $id; ?>&categoria=<?php echo $categoria; ?>'>
+		<a href='ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo $id; ?>&categoria=<?php echo $categoria; ?>'>
 					
 			<img src='img/posters/<?php echo $poster;?>'>
 						

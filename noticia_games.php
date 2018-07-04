@@ -3,6 +3,8 @@
 error_reporting(0);
 ini_set(“display_errors”, 0 );
 
+$titulo_aba_bavegador = $_GET["titulo"];
+
 ?>
 
 
@@ -12,7 +14,7 @@ ini_set(“display_errors”, 0 );
 <meta charset="utf-8">
 <html lang="pt-br">
 
-<title>Notícia completa</title>
+<title>Games: <?php echo "$titulo_aba_bavegador";?></title>
 
 <!--METADADOS PARA HABILITAR QUERYS DE FORMATAÇÃO PARA SITE RESPONSIVO-->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

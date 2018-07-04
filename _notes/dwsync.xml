@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="categoria.php" server="192.168.1.10//var/www/html/" local="131749761974402990" remote="131749869600000000" Dst="1" />
+<file name="categoria.php" server="192.168.1.10//var/www/html/" local="131751341752575798" remote="131751449400000000" Dst="1" />
 <file name="ficha_tec_aba_filme.php" server="192.168.1.10//var/www/html/" local="131747990815133642" remote="131748098400000000" Dst="1" />
 <file name="ficha_tec_aba_game.php" server="192.168.1.10//var/www/html/" local="131747991195090364" remote="131748099000000000" Dst="1" />
 <file name="ficha_tec_aba_serie.php" server="192.168.1.10//var/www/html/" local="131747991442532520" remote="131748099000000000" Dst="1" />
-<file name="ficha_tecnica.php" server="192.168.1.10//var/www/html/" local="131747693631724634" remote="131747801400000000" Dst="1" />
+<file name="ficha_tecnica.php" server="192.168.1.10//var/www/html/" local="131751338646286527" remote="131751446400000000" Dst="1" />
 <file name="filtro_noticias.php" server="192.168.1.10//var/www/html/" local="131748624798100016" remote="131748732600000000" Dst="1" />
 <file name="filtro_titulos.php" server="192.168.1.10//var/www/html/" local="131746355463545272" remote="131746463400000000" Dst="1" />
-<file name="index.php" server="192.168.1.10//var/www/html/" local="131749609696062690" remote="131749717200000000" Dst="1" />
-<file name="lancamentos.php" server="192.168.1.10//var/www/html/" local="131749781660651952" remote="131749889400000000" Dst="1" />
+<file name="index.php" server="192.168.1.10//var/www/html/" local="131751387596769865" remote="131751495000000000" Dst="1" />
+<file name="lancamentos.php" server="192.168.1.10//var/www/html/" local="131751339655535853" remote="131751447600000000" Dst="1" />
 <file name="manifest.json" server="192.168.1.10//var/www/html/" local="131749607048526954" remote="131749714800000000" Dst="1" />
 <file name="menu.php" server="192.168.1.10//var/www/html/" local="131746355465128249" remote="131746463400000000" Dst="1" />
-<file name="noticias.php" server="192.168.1.10//var/www/html/" local="131749789781219505" remote="131749897200000000" Dst="1" />
-<file name="noticias_index.php" server="192.168.1.10//var/www/html/" local="131749761184034805" remote="131749869000000000" Dst="1" />
+<file name="noticias.php" server="192.168.1.10//var/www/html/" local="131751343291627069" remote="131751451200000000" Dst="1" />
+<file name="noticias_index.php" server="192.168.1.10//var/www/html/" local="131751394216983956" remote="131751502200000000" Dst="1" />
 <file name="submenu.php" server="192.168.1.10//var/www/html/" local="131746355466291329" remote="131746463400000000" Dst="1" />
 <file name="submenu_filme.php" server="192.168.1.10//var/www/html/" local="131746355466555110" remote="131746463400000000" Dst="1" />
+<file name="noticia_cinema.php" server="192.168.1.10//var/www/html/" local="131751347978110721" remote="131751455400000000" Dst="1" />
+<file name="noticia_series.php" server="192.168.1.10//var/www/html/" local="131751346163563038" remote="131751453600000000" Dst="1" />
+<file name="noticia_games.php" server="192.168.1.10//var/www/html/" local="131751350262674742" remote="131751457800000000" Dst="1" />
 </dwsync>
