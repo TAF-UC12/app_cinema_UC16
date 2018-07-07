@@ -3,6 +3,16 @@
 error_reporting(0);
 ini_set(“display_errors”, 0 );
 
+// atribui a uma variável $categoria para menud e filtro
+$categoria = $_GET["tipo"];
+
+// atribui a uma variável $paginaLink toda a URL da página
+$paginaLink = $_SERVER['SCRIPT_NAME'];
+
+// atribui a variável $paginaLink apenas o nome da página
+$paginaLink = basename($_SERVER['SCRIPT_NAME']);
+
+
 ?>
 
 
@@ -246,13 +256,17 @@ ini_set(“display_errors”, 0 );
 			$data = $linha["dataPost"];
 			$autor = $linha["nome"];
 		
-	if ($id_tipo_post == 1){$tipo_categoria = "Cinema"; $link_pg_categoria = "noticia_cinema.php";}
-	if ($id_tipo_post == 2){$tipo_categoria = "Games"; $link_pg_categoria = "noticia_games.php";}
-	if ($id_tipo_post == 3){$tipo_categoria = "Series"; $link_pg_categoria = "noticia_series.php";}
-		
-	if ($tipo == 1){$tipo_icon = "<i class='fas fa-film'></i>";}
-	if ($tipo == 2){$tipo_icon = "<i class='fas fa-gamepad'></i>";}
-	if ($tipo == 3){$tipo_icon = "<i class='fas fa-tv'></i>";}
+				if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
+				if ($id_tipo_post == 2){$tipo_categoria = "Games";}
+				if ($id_tipo_post == 3){$tipo_categoria = "Series";}
+
+				if ($tipo == 1){$tipo_icon = "<i class='fas fa-film'></i>";}
+				if ($tipo == 2){$tipo_icon = "<i class='fas fa-gamepad'></i>";}
+				if ($tipo == 3){$tipo_icon = "<i class='fas fa-tv'></i>";}
+					
+				if ($id_tipo_post == 1){$tipo_categoria = "Cinema"; $link_pg_categoria = "noticia_cinema.php";}
+				if ($id_tipo_post == 2){$tipo_categoria = "Games"; $link_pg_categoria = "noticia_games.php";}
+				if ($id_tipo_post == 3){$tipo_categoria = "Series"; $link_pg_categoria = "noticia_series.php";}	
 		
 	?>
 	
@@ -375,7 +389,7 @@ ini_set(“display_errors”, 0 );
 						ON lancamentos.idlancamentos = lancamentos_has_filmes.lancamentos_idlancamentos
 						INNER JOIN filmes
 						ON lancamentos_has_filmes.filmes_idfilmes = filmes.idfilmes
-						ORDER BY lancamentos.idlancamentos ASC LIMIT 2";	
+						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -410,7 +424,7 @@ ini_set(“display_errors”, 0 );
 						ON lancamentos.idlancamentos = lancamentos_has_series.lancamentos_idlancamentos
 						INNER JOIN series
 						ON lancamentos_has_series.series_idseries = series.idseries
-						ORDER BY lancamentos.idlancamentos ASC LIMIT 2";	
+						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -446,7 +460,7 @@ ini_set(“display_errors”, 0 );
 						ON lancamentos.idlancamentos = lancamentos_has_games.lancamentos_idlancamentos
 						INNER JOIN games
 						ON lancamentos_has_games.games_idgames = games.idgames
-						ORDER BY lancamentos.idlancamentos ASC LIMIT 2";	
+						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");

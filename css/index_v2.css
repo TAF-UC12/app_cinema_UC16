@@ -85,7 +85,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 		float: right;
 		text-align: right;
 		background-color: #B5B5B5;
-		border-radius: 10px;
+		border-radius: 20px;
 		padding: 2px 5px;
 	}
 	
@@ -333,7 +333,7 @@ MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES DO INDEX
 		float: right;
 		text-align: right;
 		background-color: #B5B5B5;
-		border-radius: 10px;
+		border-radius: 20px;
 		padding: 2px 5px;
 	}
 	
@@ -343,7 +343,7 @@ MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES DO INDEX
 		float: right;
 		text-align: right;
 		background-color: #B5B5B5;
-		border-radius: 10px;
+		border-radius: 20px;
 		padding: 2px 5px;
 	}
 	
@@ -713,7 +713,7 @@ MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
 		float: right;
 		text-align: right;
 		background-color: #B5B5B5;
-		border-radius: 10px;
+		border-radius: 20px;
 		padding: 2px 5px;
 	}
 	

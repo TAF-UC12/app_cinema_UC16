@@ -3,6 +3,12 @@
 error_reporting(0);
 ini_set(“display_errors”, 0 );
 
+// atribui a uma variável $paginaLink toda a URL da página
+$paginaLink = $_SERVER['SCRIPT_NAME'];
+
+// atribui a variável $paginaLink apenas o nome da página
+$paginaLink = basename($_SERVER['SCRIPT_NAME']);
+
 ?>
 
 
@@ -12,7 +18,7 @@ ini_set(“display_errors”, 0 );
 <meta charset="utf-8">
 <html lang="pt-br">
 
-<title>Home app</title>
+<title>Home</title>
 <!--METADADOS PARA HABILITAR QUERYS DE FORMATAÇÃO PARA SITE RESPONSIVO-->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no>
@@ -29,9 +35,7 @@ ini_set(“display_errors”, 0 );
 <link href="css/index_v2.css" rel="stylesheet" type="text/css">
 
 
-
 <!--LINKS DOS ARQUIVOS JS INTERNOS PARA FUNCIONAMENTO DOS ELEMENTOS DO SITE-->
-<link rel="manifest" href="manifest.json">
 <script src="js/jssor.slider-27.1.0.min.js" type="text/javascript"></script>
 <script defer src="js/fontawesome/fontawesome-all.js"></script>
 
@@ -147,6 +151,18 @@ ini_set(“display_errors”, 0 );
 					</svg>
 				</div>
 			</div>
+			
+			<!-- Arrow Navigator -->
+			<div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:-10px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+				<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+					<polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+				</svg>
+			</div>
+			<div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:-10px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+				<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+					<polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+				</svg>
+			</div>
 
 		</div>
 
@@ -179,7 +195,7 @@ ini_set(“display_errors”, 0 );
 			
 				//Agora é realizar a querie de busca no banco de dados
 				
-				$sql = "SELECT * FROM tendencias ORDER BY idtendencias LIMIT 6";	
+				$sql = "SELECT * FROM tendencias ORDER BY idtendencias DESC LIMIT 6";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -229,7 +245,7 @@ ini_set(“display_errors”, 0 );
 						ON lancamentos.idlancamentos = lancamentos_has_filmes.lancamentos_idlancamentos
 						INNER JOIN filmes
 						ON lancamentos_has_filmes.filmes_idfilmes = filmes.idfilmes
-						ORDER BY lancamentos.idlancamentos ASC LIMIT 2";	
+						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -264,7 +280,7 @@ ini_set(“display_errors”, 0 );
 						ON lancamentos.idlancamentos = lancamentos_has_series.lancamentos_idlancamentos
 						INNER JOIN series
 						ON lancamentos_has_series.series_idseries = series.idseries
-						ORDER BY lancamentos.idlancamentos ASC LIMIT 2";	
+						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -300,7 +316,7 @@ ini_set(“display_errors”, 0 );
 						ON lancamentos.idlancamentos = lancamentos_has_games.lancamentos_idlancamentos
 						INNER JOIN games
 						ON lancamentos_has_games.games_idgames = games.idgames
-						ORDER BY lancamentos.idlancamentos ASC LIMIT 2";	
+						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -407,7 +423,7 @@ ini_set(“display_errors”, 0 );
 						</div>
 
 						<div class='chamadaNoticia'>
-							<p><a href='<?php echo $link_pg_categoria; ?>?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>'><?php echo $titulo; ?></a></p>
+							<p><a href='<?php echo $link_pg_categoria; ?>?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>&titulo=<?php echo $titulo; ?>'><?php echo $titulo; ?></a></p>
 						</div>
 
 					</div>
@@ -456,7 +472,7 @@ ini_set(“display_errors”, 0 );
 
 					//Agora é realizar a querie de busca no banco de dados
 
-					$sql = "SELECT * FROM tendencias ORDER BY idtendencias LIMIT 6";	
+					$sql = "SELECT * FROM tendencias ORDER BY idtendencias DESC LIMIT 6";	
 
 					$resultado = mysqli_query($strcon, $sql)
 					or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -503,7 +519,7 @@ ini_set(“display_errors”, 0 );
 						ON lancamentos.idlancamentos = lancamentos_has_filmes.lancamentos_idlancamentos
 						INNER JOIN filmes
 						ON lancamentos_has_filmes.filmes_idfilmes = filmes.idfilmes
-						ORDER BY lancamentos.idlancamentos ASC LIMIT 2";	
+						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -538,7 +554,7 @@ ini_set(“display_errors”, 0 );
 						ON lancamentos.idlancamentos = lancamentos_has_series.lancamentos_idlancamentos
 						INNER JOIN series
 						ON lancamentos_has_series.series_idseries = series.idseries
-						ORDER BY lancamentos.idlancamentos ASC LIMIT 2";	
+						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -574,7 +590,7 @@ ini_set(“display_errors”, 0 );
 						ON lancamentos.idlancamentos = lancamentos_has_games.lancamentos_idlancamentos
 						INNER JOIN games
 						ON lancamentos_has_games.games_idgames = games.idgames
-						ORDER BY lancamentos.idlancamentos ASC LIMIT 2";	
+						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");

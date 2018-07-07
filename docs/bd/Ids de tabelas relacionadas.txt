@@ -1,0 +1,90 @@
+TABELAS COM SEUS IDS PARA FACILITAR INSERÇÃO NAS TABELAS RELACIONADAS
+
+TABELA: TAGS
+
+1, 'E3 2018'
+2, 'Reportagem'
+3, 'PlayStation'
+4, 'Microsoft'
+5, 'Nintendo'
+6, 'Oscar'
+7, 'PS4'
+8, 'Xbox One'
+9, 'Marvel'
+10, 'Vingadores'
+11, 'TV'
+12, 'Hulu'
+13, 'Bilheteria'
+14, 'Westworld'
+15, 'Spoiler'
+16, 'HBO'
+17,  Steam
+18,  Switch
+19,  Remaster
+20,  GoT
+21,  EA
+22,  FX
+23,  Dell
+24,  Hardware
+25,  CBS
+26,  Jurassic World
+
+
+1 Vingadores: Guerra Infinita
+2 A Noite do Jogo
+3 Jurassic World: Reino Ameaçado
+4 Deadpool 2
+5 Máquinas Mortais
+6 Os Incríveis 2
+7 Oito Mulheres e um Segredo
+8 Missão Impossível - Efeito Fallout
+9 Homem-Formiga e a Vespa
+10 Sexy por acidente
+11 Mulheres Alteradas
+12 Estrada de Sonhos
+
+
+
+1, Terror
+2  Ação
+3  Drama
+4  Suspense
+5  Aventura
+6  Nacional
+7  Comédia
+8  Fantasia
+9  Sci-Fi
+10 Western
+11 Não especificado
+12 FPS
+13 Estratégia
+14 RPG
+15 Simulador
+16 Esporte
+17 Sandbox
+18 Plataforma
+19 2D
+20 Animação
+21 Policial
+22 Battle Royal
+23 TPS
+24 Casual
+25 Luta
+26 Interativo
+27 Corrida
+28 Documentário
+
+
+
+1  PlayStation 4
+2  Xbox One
+3  Nintendo Switch
+4  PlayStation 3
+5  Xbox 360
+6  Nintendo WiiU
+7  PS Vita
+8  Nintendo 3DS
+9  PC
+10 iOS
+11 Windows
+12 macOS

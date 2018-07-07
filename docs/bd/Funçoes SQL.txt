@@ -51,3 +51,4 @@ ON lancamentos.idlancamentos = lancamentos_has_series.lancamentos_idlancamentos
 INNER JOIN series
 ON lancamentos_has_series.series_idseries = series.idseries
 ORDER BY lancamentos.idlancamentos ASC LIMIT 3
+

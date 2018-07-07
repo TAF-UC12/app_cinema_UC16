@@ -3,6 +3,13 @@
 error_reporting(0);
 ini_set(“display_errors”, 0 );
 
+
+// atribui a uma variável $paginaLink toda a URL da página
+$paginaLink = $_SERVER['SCRIPT_NAME'];
+
+// atribui a variável $paginaLink apenas o nome da página
+$paginaLink = basename($_SERVER['SCRIPT_NAME']);
+
 ?>
 
 

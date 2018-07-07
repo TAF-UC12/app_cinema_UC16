@@ -3,6 +3,8 @@
 error_reporting(0);
 ini_set(“display_errors”, 0 );
 
+// atribui a uma variável $categoria para menud e filtro
+$categoria = $_GET["tipo"];
 
 $titulo_aba_bavegador = $_GET["titulo"];
 
@@ -308,7 +310,15 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	$tipo = $linha["tipoPost"];	
 	$rel_filme = $linha["relac_filmes"];	
 	$rel_serie = $linha["relac_series"];	
-	$rel_game = $linha["relac_games"];	
+	$rel_game = $linha["relac_games"];
+	
+	if ($id_tipo_post == 1){$tipo_categoria = "Cinema"; $link_pg_categoria = "noticia_cinema.php";}
+	if ($id_tipo_post == 2){$tipo_categoria = "Games"; $link_pg_categoria = "noticia_games.php";}
+	if ($id_tipo_post == 3){$tipo_categoria = "Series"; $link_pg_categoria = "noticia_series.php";}
+		
+	if ($tipo == 1){$tipo_icon = "<i class='fas fa-film'></i>";}
+	if ($tipo == 2){$tipo_icon = "<i class='fas fa-gamepad'></i>";}
+	if ($tipo == 3){$tipo_icon = "<i class='fas fa-tv'></i>";}
 	
 ?>	
 					
@@ -317,7 +327,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 				<div class="noticia">
 
 					<img src='img/noticias/<?php echo "$img";?>' alt=''>
-					<a href='noticia.php?news=<?php echo "$idnoticia";?>&categoria=Cinema'><h1><?php echo "$titulo";?></h1></a>
+					<a href='<?php echo $link_pg_categoria; ?>?news=<?php echo $idnoticia; ?>&categoria=Cinema&titulo=<?php echo $titulo; ?>'><h1><?php echo "$titulo";?></h1></a>
 
 				</div>
 <?php
