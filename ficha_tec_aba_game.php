@@ -28,7 +28,12 @@ $diretor = $linha["diretor"];
 $pais = $linha["paisOrigem"];
 $poster = $linha["imgGame"];
 $trailer = $linha["trailer"];
-		
+
+//Data devidamente configurada
+$lancamento = substr($estreia,8,2) . "/" .substr($estreia,5,2) . 
+"/" . substr($estreia,0,4);	
+	
+	
 			echo "<div id='filme_info'>
 		
 				<div id='menu_filme'>
@@ -54,7 +59,7 @@ $trailer = $linha["trailer"];
 
 					<div>
 						<h3>Lançamento </h3>
-						<p>$estreia</p>
+						<p>$lancamento</p>
 					</div>
 					
 					<div>

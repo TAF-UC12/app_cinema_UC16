@@ -22,7 +22,11 @@ $imgFundo = $linha["imgFundo"];
 $trailer = $linha["trailer"];
 $duracao = $linha["duracao"];
 
-		
+//Data devidamente configurada
+$lancamento = substr($estreia,8,2) . "/" .substr($estreia,5,2) . 
+"/" . substr($estreia,0,4);
+	
+	
 			echo "<div id='filme_info'>
 			
 			
@@ -49,7 +53,7 @@ $duracao = $linha["duracao"];
 
 					<div>
 						<h3>Lançamento </h3>
-						<p>$estreia</p>
+						<p>$lancamento</p>
 					</div>
 					
 					<div>

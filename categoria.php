@@ -69,6 +69,8 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 	</div>	
 		
 	<div id="barrabusca">
+	
+		
 		
 	</div>
 							
@@ -117,8 +119,13 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
 			//Agora é realizar a querie de busca no banco de dados
 
-			$sql = "SELECT * FROM noticias WHERE destaque = 'on' AND tipo = $categoria ORDER BY 
-			idnoticias DESC LIMIT 3";
+			$sql = "SELECT * FROM noticias
+						INNER JOIN tipoPostagem
+						ON noticias.tipo = tipoPostagem.idtipoPostagem
+						INNER JOIN login
+						ON noticias.autorPost = login.idlogin 		
+						WHERE destaque = 'on' AND tipo = $categoria ORDER BY 
+						idnoticias DESC LIMIT 3";
 
 
 			$resultado = mysqli_query($strcon, $sql)
@@ -129,10 +136,29 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
 			while ($linha=mysqli_fetch_array($resultado)) {
 
-			$id = $linha["idnoticias"];	
-			$titulo = $linha["tituloNoticia"];
-			$subtitulo = $linha["subtitulo"];
-			$imgDestaque = $linha["imgDestaque"];	
+			$idnoticia = $linha["idnoticias"];	
+						$titulo = $linha["tituloNoticia"];
+						$subtitulo = $linha["subtitulo"];
+						$texto = $linha["texto"];	
+						$img = $linha["img"];
+						$imgDestaque = $linha["imgDestaque"];
+						$tipo = $linha["tipoPost"];	
+						$id_tipo_post = $linha["idtipoPostagem"];
+						$data = $linha["dataPost"];
+						$autor = $linha["nome"];
+
+
+				if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
+				if ($id_tipo_post == 2){$tipo_categoria = "Games";}
+				if ($id_tipo_post == 3){$tipo_categoria = "Series";}
+
+				if ($tipo == 1){$tipo_icon = "<i class='fas fa-film'></i>";}
+				if ($tipo == 2){$tipo_icon = "<i class='fas fa-gamepad'></i>";}
+				if ($tipo == 3){$tipo_icon = "<i class='fas fa-tv'></i>";}
+					
+				if ($id_tipo_post == 1){$tipo_categoria = "Cinema"; $link_pg_categoria = "noticia_cinema.php";}
+				if ($id_tipo_post == 2){$tipo_categoria = "Games"; $link_pg_categoria = "noticia_games.php";}
+				if ($id_tipo_post == 3){$tipo_categoria = "Series"; $link_pg_categoria = "noticia_series.php";}	
 		
 		?>
 						<div data-p='225.00'>
@@ -144,7 +170,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 									<h2><?php echo "$subtitulo" ?></h2>
 								</hgroup>
 
-								<a href='noticia.php?news=<?php echo "$id" ?>&pgtitulo=<?php echo "$titulo" ?>'><i class='fas fa-arrow-circle-right'></i> Continuar lendo</a>
+								<a href='<?php echo $link_pg_categoria; ?>?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>&titulo=<?php echo $titulo; ?>'><i class='fas fa-arrow-circle-right'></i> Continuar lendo</a>
 
 							</article>
 
@@ -421,6 +447,10 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 						$id_tipo_post = $linha["idtipoPostagem"];
 						$data = $linha["dataPost"];
 						$autor = $linha["nome"];
+					
+					//Data devidamente configurada
+						$datapost = substr($data,8,2) . "/" .substr($data,5,2) . 
+						"/" . substr($data,0,4);
 
 				if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
 				if ($id_tipo_post == 2){$tipo_categoria = "Games";}
@@ -445,12 +475,12 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
 							<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo_icon; ?></button>
 
-							<p><i class="far fa-calendar-alt"></i> <?php echo $data; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i> <?php echo $autor; ?></p>
+							<p><i class="far fa-calendar-alt"></i> <?php echo $datapost; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i> <?php echo $autor; ?></p>
 
 						</div>
 
 						<div class='chamadaNoticia'>
-							<p><a href='noticias.php?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>'><?php echo $titulo; ?></a></p>
+							<p><a href='<?php echo $link_pg_categoria; ?>?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>&titulo=<?php echo $titulo; ?>'><?php echo $titulo; ?></a></p>
 						</div>
 
 					</div>

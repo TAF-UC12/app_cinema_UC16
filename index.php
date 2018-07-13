@@ -9,6 +9,8 @@ $paginaLink = $_SERVER['SCRIPT_NAME'];
 // atribui a variável $paginaLink apenas o nome da página
 $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
+$dataAtual = date('d/m/y');
+
 ?>
 
 
@@ -60,7 +62,8 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 	</div>	
 		
 	<div id="barrabusca">
-		
+	
+	
 	</div>
 							
 	<?php
@@ -101,8 +104,12 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
 			//Agora é realizar a querie de busca no banco de dados
 
-			$sql = "SELECT * FROM noticias WHERE destaque = 'on' ORDER BY 
-			idnoticias DESC LIMIT 3";
+			$sql = "SELECT * FROM noticias
+						INNER JOIN tipoPostagem
+						ON noticias.tipo = tipoPostagem.idtipoPostagem
+						INNER JOIN login
+						ON noticias.autorPost = login.idlogin
+					WHERE destaque = 'on' ORDER BY idnoticias DESC LIMIT 3";
 
 
 			$resultado = mysqli_query($strcon, $sql)
@@ -113,10 +120,28 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
 			while ($linha=mysqli_fetch_array($resultado)) {
 
-			$id = $linha["idnoticias"];	
-			$titulo = $linha["tituloNoticia"];
-			$subtitulo = $linha["subtitulo"];
-			$imgDestaque = $linha["imgDestaque"];	
+						$idnoticia = $linha["idnoticias"];	
+						$titulo = $linha["tituloNoticia"];
+						$subtitulo = $linha["subtitulo"];
+						$texto = $linha["texto"];	
+						$img = $linha["img"];
+						$imgDestaque = $linha["imgDestaque"];
+						$tipo = $linha["tipoPost"];	
+						$id_tipo_post = $linha["idtipoPostagem"];
+						$data = $linha["dataPost"];
+						$autor = $linha["nome"];
+
+				if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
+				if ($id_tipo_post == 2){$tipo_categoria = "Games";}
+				if ($id_tipo_post == 3){$tipo_categoria = "Series";}
+
+				if ($tipo == 1){$tipo_icon = "<i class='fas fa-film'></i>";}
+				if ($tipo == 2){$tipo_icon = "<i class='fas fa-gamepad'></i>";}
+				if ($tipo == 3){$tipo_icon = "<i class='fas fa-tv'></i>";}
+					
+				if ($id_tipo_post == 1){$tipo_categoria = "Cinema"; $link_pg_categoria = "noticia_cinema.php";}
+				if ($id_tipo_post == 2){$tipo_categoria = "Games"; $link_pg_categoria = "noticia_games.php";}
+				if ($id_tipo_post == 3){$tipo_categoria = "Series"; $link_pg_categoria = "noticia_series.php";}
 		
 		?>
 						<div data-p='225.00'>
@@ -128,7 +153,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 									<h2><?php echo "$subtitulo" ?></h2>
 								</hgroup>
 
-								<a href='noticia.php?news=<?php echo "$id" ?>&pgtitulo=<?php echo "$titulo" ?>'><i class='fas fa-arrow-circle-right'></i> Continuar lendo</a>
+								<a href='<?php echo $link_pg_categoria; ?>?news=<?php echo $idnoticia; ?>&categoria=<?php echo $tipo; ?>&titulo=<?php echo $titulo; ?>'><i class='fas fa-arrow-circle-right'></i> Continuar lendo</a>
 
 							</article>
 
@@ -236,6 +261,11 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 		
 	<?php	
 		
+	
+			$categoria = "filmes";
+			$categoria3 = "series";
+			$categoria2 = "games";
+			
 				require_once "config/conectar.php";
 			
 				//Agora é realizar a querie de busca no banco de dados
@@ -245,7 +275,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 						ON lancamentos.idlancamentos = lancamentos_has_filmes.lancamentos_idlancamentos
 						INNER JOIN filmes
 						ON lancamentos_has_filmes.filmes_idfilmes = filmes.idfilmes
-						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
+						ORDER BY filmes.lancamento ASC LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
@@ -255,13 +285,15 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 					$idtitulo = $linha["filmes_idfilmes"];	
 					$titulo = $linha["titulo"];	
 					$imgPoster = $linha["poster"];
+					$lancamento = $linha["lancamento"]	
+						
 				?>
 		
 		
 		
 			<div class='mobile_info'>
 
-				<a href=""><img src='img/posters/<?php echo "$imgPoster";?>'></a>
+				<a href='ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo $idtitulo; ?>&categoria=<?php echo $categoria; ?>'><img src='img/posters/<?php echo "$imgPoster";?>'></a>
 
 			</div>
 		
@@ -296,7 +328,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 		
 			<div class='mobile_info'>
 
-				<a href=""><img src='img/posters/<?php echo "$imgPoster";?>'></a>
+				<a href="ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo $idtitulo; ?>&categoria=<?php echo $categoria3; ?>"><img src='img/posters/<?php echo "$imgPoster";?>'></a>
 
 			</div>
 			
@@ -330,7 +362,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 		
 			<div class='mobile_info'>
 
-				<a href=""><img src='img/posters/<?php echo "$imgPoster";?>'></a>
+				<a href="ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo $idtitulo; ?>&categoria=<?php echo $categoria2; ?>"><img src='img/posters/<?php echo "$imgPoster";?>'></a>
 
 			</div>
 
@@ -390,6 +422,11 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 						$id_tipo_post = $linha["idtipoPostagem"];
 						$data = $linha["dataPost"];
 						$autor = $linha["nome"];
+					
+						//Data devidamente configurada
+						$datapost = substr($data,8,2) . "/" .substr($data,5,2) . 
+						"/" . substr($data,0,4);
+					
 
 				if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
 				if ($id_tipo_post == 2){$tipo_categoria = "Games";}
@@ -418,7 +455,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
 							<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo $tipo_icon; ?></button>
 
-							<p><i class="far fa-calendar-alt"></i> <?php echo $data; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i> <?php echo $autor; ?></p>
+							<p><i class="far fa-calendar-alt"></i> <?php echo $datapost; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i> <?php echo $autor; ?></p>
 
 						</div>
 

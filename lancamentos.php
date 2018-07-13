@@ -51,6 +51,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 	</div>	
 		
 	<div id="barrabusca">
+	
 		
 	</div>
 							
@@ -150,7 +151,11 @@ switch ($filtro_categoria) {
 			$diretor = $linha["diretor"];
 			$pais = $linha["paisOrigem"];
 			$imgFundo = $linha["imgFundo"];
-			$trailer = $linha["trailer"];	
+			$trailer = $linha["trailer"];
+		
+		//Data devidamente configurada
+						$datalancamento = substr($estreia,8,2) . "/" .substr($estreia,5,2) . 
+						"/" . substr($estreia,0,4);
 		
 	?>
 		
@@ -176,7 +181,7 @@ switch ($filtro_categoria) {
 		
 		<div>
 		
-			<p><span>Lançamento: </span> <?php echo "$estreia"; ?></p>
+			<p><span>Lançamento: </span> <?php echo "$datalancamento"; ?></p>
 
 		</div>
 					
@@ -229,7 +234,11 @@ switch ($filtro_categoria) {
 			$elenco = $linha["elenco"];	
 			$pais = $linha["paisOrigem"];
 			$imgFundo = $linha["imgFundo"];
-			$trailer = $linha["trailer"];	
+			$trailer = $linha["trailer"];
+		
+		//Data devidamente configurada
+						$datalancamento = substr($estreia,8,2) . "/" .substr($estreia,5,2) . 
+						"/" . substr($estreia,0,4);
 		
 		?>
 	
@@ -255,7 +264,7 @@ switch ($filtro_categoria) {
 		
 		<div>
 		
-			<p><span>Lançamento: </span> <?php echo "$estreia"; ?></p>
+			<p><span>Lançamento: </span> <?php echo "$datalancamento"; ?></p>
 
 		</div>
 					
@@ -315,7 +324,11 @@ switch ($filtro_categoria) {
 			$diretor = $linha["diretor"];
 			$pais = $linha["paisOrigem"];
 			$poster = $linha["imgGame"];
-			$trailer = $linha["trailer"];	
+			$trailer = $linha["trailer"];
+		
+		//Data devidamente configurada
+						$datalancamento = substr($estreia,8,2) . "/" .substr($estreia,5,2) . 
+						"/" . substr($estreia,0,4);
 		
 	?>
 		
@@ -341,7 +354,7 @@ switch ($filtro_categoria) {
 		
 		<div>
 		
-			<p><span>Lançamento: </span> <?php echo "$estreia"; ?></p>
+			<p><span>Lançamento: </span> <?php echo "$datalancamento"; ?></p>
 
 		</div>
 					

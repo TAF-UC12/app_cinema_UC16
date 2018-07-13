@@ -37,7 +37,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 	#filtro_container_noticias {
 		width: 100%;
 		height: auto;
-		background-color: #25043b;
+		background-color: #3d3d3d;
 		padding: 5px 10px;
 		overflow: auto;
 		margin-bottom: 20px;
@@ -46,7 +46,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		justify-content: space-between;
 	}
 	
-	#filtro_container_noticias .info_lista {
+	.info_lista {
 		width: 25%;
 		float: left;
 		background-color: #313131;
@@ -57,7 +57,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		transition: .25s all ease;
 	}
 	
-	#filtro_container_noticias .info_ativa {
+	.info_ativa {
 		width: 25%;
 		float: left;
 		background-color: #060606;
@@ -66,7 +66,40 @@ MEDIA QUERY PARA VERSÃO DESKTOP DA PÁGINA DE NOTÍCIAS
 		text-align: center;
 		border-radius: 15px;
 		transition: .25s all ease;
-	}	
+	}
+	
+	.info_ativaC {
+		width: 25%;
+		float: left;
+		background-color: #1F3F60;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	.info_ativaS {
+		width: 25%;
+		float: left;
+		background-color: #D19600;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	.info_ativaG {
+		width: 25%;
+		float: left;
+		background-color: #007F06;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
 	
 	#filtro_container_noticias li:last-child{
 		margin-right: 0%;
@@ -122,7 +155,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 	#filtro_container_noticias {
 		width: 100%;
 		height: auto;
-		background-color: #25043b;
+		background-color: #3D3D3D;
 		padding: 5px 10px;
 		overflow: auto;
 		margin-bottom: 20px;
@@ -131,7 +164,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 		justify-content: space-between;
 	}
 	
-	#filtro_container_noticias .info_lista{
+	.info_lista{
 		width: 25%;
 		float: left;
 		background-color: #313131;
@@ -142,10 +175,43 @@ MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
 		transition: .25s all ease;
 	}
 	
-	#filtro_container_noticias .info_ativa {
+	.info_ativa {
 		width: 25%;
 		float: left;
 		background-color: #060606;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	.info_ativaC {
+		width: 25%;
+		float: left;
+		background-color: #1F3F60;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	.info_ativaS {
+		width: 25%;
+		float: left;
+		background-color: #D19600;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	.info_ativaG {
+		width: 25%;
+		float: left;
+		background-color: #007F06;
 		margin-right: 5%;
 		list-style: none;
 		text-align: center;
@@ -220,7 +286,7 @@ MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
 	#filtro_container_noticias {
 		width: 100%;
 		height: auto;
-		background-color: #25043b;
+		background-color: #3D3D3D;
 		padding: 5px 10px;
 		overflow: auto;
 		margin-bottom: 20px;
@@ -229,7 +295,7 @@ MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
 		justify-content: space-between;
 	}
 	
-	#filtro_container_noticias .info_lista{
+	.info_lista{
 		width: 30%;
 		float: left;
 		background-color: #313131;
@@ -240,10 +306,43 @@ MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
 		transition: .25s all ease;
 	}
 	
-	#filtro_container_noticias .info_ativa {
+	.info_ativa {
 		width: 30%;
 		float: left;
 		background-color: #060606;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	.info_ativaC {
+		width: 30%;
+		float: left;
+		background-color: #1F3F60;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	.info_ativaS {
+		width: 30%;
+		float: left;
+		background-color: #D19600;
+		margin-right: 5%;
+		list-style: none;
+		text-align: center;
+		border-radius: 15px;
+		transition: .25s all ease;
+	}
+	
+	.info_ativaG {
+		width: 30%;
+		float: left;
+		background-color: #007F06;
 		margin-right: 5%;
 		list-style: none;
 		text-align: center;

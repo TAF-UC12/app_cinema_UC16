@@ -32,7 +32,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 <!--LINKS INTERNOS DAS FOLHAS DE ESTILO CSS UTILIZADAS NA PÁGINA-->
 <link href="css/estilo_v2.css" rel="stylesheet" type="text/css">
 <link href="css/menu.css" rel="stylesheet" type="text/css">
-<link href="css/index_v2.css" rel="stylesheet" type="text/css">
+<link href="css/contato.css" rel="stylesheet" type="text/css">
 
 
 
@@ -57,6 +57,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 	</div>	
 		
 	<div id="barrabusca">
+	 
 		
 	</div>
 							
@@ -89,37 +90,51 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
 		<h2>Fale conosco</h2>
 		
-		<article>
-			<hgroup>
-				<h1>Contato por email</h1>
-				<h2>Dúvidas, sugestões entre outros</h2>
-				<p>Preencha abaixo o formulário de contato com sua mensagem com assunto e nossa equipe e se possivél nossa equipe irá entrar em contato!</p>
-			</hgroup>
+			<p>Preencha abaixo o formulário de contato com sua mensagem e assunto e nossa equipe se possível irá entrar em contato!</p>
+			
 			
 			<form name="contato" action="" method="POST">
 				<fieldset>
 					<fieldset class="grupo">
+					
 						<div class="campo">
 							<label for="nome">Nome</label>
-							<input type="text" id="nome" name="nome" value="">
+							<input type="text" id="nome" name="nome" value="" placeholder="Seu nome...">
 						</div>
+						
 						<div class="campo">
 							<label for="snome">Sobrenome</label>
-							<input type="text" id="snome" name="snome" value="">
+							<input type="text" id="snome" name="snome" value="" placeholder="Seu sobrenome...">
 						</div>
+					
+						<div class="campo">
+							<label for="email">E-mail</label>
+							<input type="text" id="email" name="email" value="" placeholder="Seu email...">
+						</div>
+						
 					</fieldset>
+					
+					<fieldset class="grupo">
+					
+						<div class="campo">
 
-					<div class="campo">
-						<label for="email">E-mail</label>
-						<input type="text" id="email" name="email" style="width: 20em" value="">
-					</div>
+							<label for="sinopse">Mensagem</label>
 
+							<textarea id="subject" name="sinopse" placeholder="Digite sua mensagem..." style="height:200px"></textarea>
 
-					<button type="submit" name="id"><a href="index.php?p=confirma">Enviar</a></button>
+						</div>
+						
+					</fieldset>
+					
+					<fieldset class="grupo">
+
+						<button type="submit" name="id"><a href="index.php?p=confirma">Enviar</a></button>
+					
+					</fieldset>
+					
 				</fieldset>
+				
 			</form>
-
-		</article>	
 
 	</section>	
 	
@@ -129,14 +144,24 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 <!--ASIDE DA PG CONTATO AINDA SEM CONTEÚDO-->
 	<aside>
 		
-		<section class="destaques_desktop">
+		<section>
 
-			<h2>Título sessão</h2>
+			<div class="midias_sociais">
+			
+				<img src="img/logo.png" alt="logo do site">
 
-			<div id="tendencias_desktop">
+				<p>Siga nossas redes sociais e fique por dentro das últimas novidades!</p>
 
+				<div>
+					
+					<a href="#"><i class="fab fa-facebook-square"></i></a>
+					<a href="#"><i class="fab fa-twitter-square"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-snapchat-square"></i></a>
+
+				</div>
+			
 			</div>
-
 
 		</section>
 

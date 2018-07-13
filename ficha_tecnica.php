@@ -5,6 +5,13 @@ ini_set(“display_errors”, 0 );
 
 $titulo_aba_navegador = $_GET["titulo"];
 
+// atribui a uma variável $paginaLink toda a URL da página
+$paginaLink = $_SERVER['SCRIPT_NAME'];
+
+// atribui a variável $paginaLink apenas o nome da página
+$paginaLink = basename($_SERVER['SCRIPT_NAME']);
+
+
 ?>
 
 
@@ -48,6 +55,11 @@ $titulo_aba_navegador = $_GET["titulo"];
 	<div id="logo_topo">
 		<img src="img/logo.png" alt="logo do site" class="logo">
 	</div>	
+	
+	<div id="barrabusca">
+	
+	
+	</div>
 	
 	<div id="menu_topo">		
 	<?php

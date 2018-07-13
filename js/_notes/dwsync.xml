@@ -10,6 +10,6 @@
 <file name="aba_tipo_noticias.js" server="192.168.1.10//var/www/html/" local="131746356442836889" remote="131746471800000000" Dst="1" />
 <file name="chama_service-worker.js" server="192.168.1.10//var/www/html/" local="131746356488443001" remote="131746471800000000" Dst="1" />
 <file name="filtro_titulos.js" server="192.168.1.10//var/www/html/" local="131744209403508811" remote="131746471800000000" Dst="1" />
-<file name="slideshow.js" server="192.168.1.10//var/www/html/" local="131746356491384165" remote="131746471800000000" Dst="1" />
+<file name="slideshow.js" server="192.168.1.10//var/www/html/" local="131754757194905648" remote="131754864600000000" Dst="1" />
 <file name="aba_seletor_noticias.js" server="192.168.1.10//var/www/html/" local="131748616545323797" remote="131748724200000000" Dst="1" />
 </dwsync>

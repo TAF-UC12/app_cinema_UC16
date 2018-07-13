@@ -210,19 +210,19 @@ MEDIA QUERY PARA VERSÃO DESKTOP
 	.categoriaPaginaCinema {
 		width: 100%;
 		height: auto;
-		background-color: #1F3F60;
+		background-color: rgba(31,63,96,0.40);
 	}
 	
 	.categoriaPaginaGames {
 		width: 100%;
 		height: auto;
-		background-color: #007F06;
+		background-color: rgba(0,127,6,0.40);
 	}
 	
 	.categoriaPaginaSeries {
 		width: 100%;
 		height: auto;;
-		background-color: #D19600;
+		background-color: rgba(209,150,0,.40);
 	}
 	
 	.categoriaPaginaLancamentos {
@@ -234,7 +234,7 @@ MEDIA QUERY PARA VERSÃO DESKTOP
 	.categoriaPaginaNoticias {
 		width: 100%;
 		height: auto;
-		background-color: #25043B;
+		background-color: #3D3D3D;
 	}
 	
 	.categoriaPaginaHome p, .categoriaPaginaCinema p, .categoriaPaginaGames p, .categoriaPaginaSeries p, .categoriaPaginaLancamentos p, .categoriaPaginaNoticias p{
@@ -412,19 +412,19 @@ MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES
 	.categoriaPaginaCinema {
 		width: 100%;
 		height: auto;
-		background-color: #1F3F60;
+		background-color: rgba(31,63,96,0.40);
 	}
 	
 	.categoriaPaginaGames {
 		width: 100%;
 		height: auto;
-		background-color: #007F06;
+		background-color: rgba(0,127,6,0.40);
 	}
 	
 	.categoriaPaginaSeries {
 		width: 100%;
-		height: auto;
-		background-color: #D19600;
+		height: auto;;
+		background-color: rgba(209,150,0,.40);
 	}
 	
 	.categoriaPaginaLancamentos {
@@ -436,7 +436,7 @@ MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES
 	.categoriaPaginaNoticias {
 		width: 100%;
 		height: auto;
-		background-color: #25043B;
+		background-color: #3D3D3D;
 	}
 	
 	.categoriaPaginaHome p, .categoriaPaginaCinema > p, .categoriaPaginaGames p, .categoriaPaginaSeries p, .categoriaPaginaLancamentos p, .categoriaPaginaNoticias p{
@@ -766,19 +766,19 @@ MEDIA QUERY PARA VERSÃO MOBILE
 	.categoriaPaginaCinema {
 		width: 100%;
 		height: auto;
-		background-color: #1F3F60;
+		background-color: rgba(31,63,96,0.40);
 	}
 	
 	.categoriaPaginaGames {
 		width: 100%;
 		height: auto;
-		background-color: #007F06;
+		background-color: rgba(0,127,6,0.40);
 	}
 	
 	.categoriaPaginaSeries {
 		width: 100%;
-		height: auto;
-		background-color: #D19600;
+		height: auto;;
+		background-color: rgba(209,150,0,.40);
 	}
 	
 	.categoriaPaginaLancamentos {
@@ -790,7 +790,7 @@ MEDIA QUERY PARA VERSÃO MOBILE
 	.categoriaPaginaNoticias {
 		width: 100%;
 		height: auto;
-		background-color: #25043B;
+		background-color: #3D3D3D;
 	}
 	
 	.categoriaPaginaHome p, .categoriaPaginaCinema p, .categoriaPaginaGames p, .categoriaPaginaSeries p, .categoriaPaginaLancamentos p, .categoriaPaginaNoticias p{

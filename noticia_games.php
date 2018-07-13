@@ -5,6 +5,12 @@ ini_set(“display_errors”, 0 );
 
 $titulo_aba_bavegador = $_GET["titulo"];
 
+// atribui a uma variável $paginaLink toda a URL da página
+$paginaLink = $_SERVER['SCRIPT_NAME'];
+
+// atribui a variável $paginaLink apenas o nome da página
+$paginaLink = basename($_SERVER['SCRIPT_NAME']);
+
 ?>
 
 
@@ -49,6 +55,7 @@ $titulo_aba_bavegador = $_GET["titulo"];
 	</div>	
 		
 	<div id="barrabusca">
+
 		
 	</div>
 							
@@ -127,6 +134,10 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	$autorEmail = $linha["email"];
 	$imgAutor = $linha["imgAutor"];
 	
+//Data devidamente configurada
+	$datapost = substr($data,8,2) . "/" .substr($data,5,2) . 
+	"/" . substr($data,0,4);
+	
 ?>	
 
 
@@ -174,15 +185,15 @@ while ($linha=mysqli_fetch_array($resultado)) {
 					
 					<img src="img/colaboradores/<?php echo "$imgAutor";?>" alt="">
 
-					<p>Notícia por: <?php echo "$autor";?></p>
+					<p>Por <?php echo " $autor";?></p>
 					<p><?php echo "$autorEmail";?></p>	
 				
 				</div>
 				
 				<div>
 					
-					<p>Postado em: </p>
-					<p><?php echo "$data";?></p>
+					<p>Postado em <?php echo " $datapost";?></p>
+					
 					
 				</div>
 				
@@ -240,196 +251,6 @@ s.setAttribute('data-timestamp', +new Date());
 	<section>
 	
 	<?php
-
-//SWITCH PUXA DADOS DE ACORDO COM O TIPO DE NOTÍCIA				
-
-switch ($tipocategoria) {
-		
-    case "Cinema":
-		
-$sql2 = "SELECT * FROM $tabela WHERE $coluna = $rel_filme";	
-	
-$resultado = mysqli_query($strcon, $sql2)
-or die ("Não foi possível realizar a consulta ao banco de dados cinema");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
-
-$id = $linha["idfilmes"];
-$titulo = $linha["titulo"];
-$titoriginal = $linha["titulo_original"];
-$poster = $linha["poster"];
-	
-	
-?>	
-		
-		<div id='titulo_relacionado'>
-		
-			<a href='ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo "$id";?>&categoria=filmes'><img src='img/posters/<?php echo "$poster";?>' alt=''></a>
-
-			<div>
-
-				<h1><?php echo "$titulo";?></h1>
-				<p><?php echo "$titoriginal";?></p>			
-
-			</div>
-		
-		</div>
-
-<?php
-}
-?>		
-						
-	</section>
-	
-	
-	<!--SECTION COM OUTRAS NOTÍCIAS RELACIONADAS AO TITULO OU EVENTO-->
-	<section>
-							
-		<h2>Notícias sobre <?php echo "$titulo";?></h2>
-					
-			<div id='noticia_relacionada'>
-	
-		
-		<?php
-	
-	$sql4 = "SELECT * FROM noticias WHERE relac_filmes = $id AND idnoticias != $idNoticia ORDER BY idnoticias DESC LIMIT 3";	
-	
-$resultado = mysqli_query($strcon, $sql4)
-or die ("Não foi possível realizar a consulta ao banco de dados");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
-
-	$idnoticia = $linha["idnoticias"];	
-	$titulo = $linha["tituloNoticia"];
-	$subtitulo = $linha["subtitulo"];
-	$texto = $linha["texto"];	
-	$img = $linha["img"];
-	$tipo = $linha["tipoPost"];	
-	$rel_filme = $linha["relac_filmes"];	
-	$rel_serie = $linha["relac_series"];	
-	$rel_game = $linha["relac_games"];	
-	
-?>	
-					
-							
-											
-				<div class="noticia">
-
-					<img src='img/noticias/<?php echo "$img";?>' alt=''>
-					<a href='noticia.php?news=<?php echo "$idnoticia";?>&categoria=Cinema'><h1><?php echo "$titulo";?></h1></a>
-
-				</div>
-<?php
-}
-?>
-				
-										
-			</div>
-		
-	</section>
-
-<?php		
-		
-	break;
-		
-		
-		
-	case "Series":	
-		
-		$sql2 = "SELECT * FROM series
-		INNER JOIN emissoras
-		ON series.canal = emissoras.idemissoras
-		WHERE $coluna = $rel_serie";	
-	
-$resultado = mysqli_query($strcon, $sql2)
-or die ("Não foi possível realizar a consulta ao banco de dados 8");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
-
-$id = $linha["idseries"];
-$titulo = $linha["titulo"];
-$emissora = $linha["nomeEmissora"];
-$poster = $linha["poster"];	
-	
-	
-?>	
-		
-		<div id='titulo_relacionado'>
-		
-			<a href='ficha_tecnica.php?titulo=<?php echo $titulo; ?>&selecionado=<?php echo "$id";?>&categoria=<?php echo "$tabela";?>'><img src='img/posters/<?php echo "$poster";?>' alt=''></a>
-
-			<div>
-
-				<h1><?php echo "$titulo";?></h1>
-				<p><?php echo "$emissora";?></p>			
-
-			</div>
-		
-		</div>
-
-<?php
-}
-?>		
-						
-	</section>
-	
-	
-	<!--SECTION COM OUTRAS NOTÍCIAS RELACIONADAS AO TITULO OU EVENTO-->
-	<section>
-							
-		<h2>Notícias sobre <?php echo "$titulo";?></h2>
-					
-			<div id='noticia_relacionada'>
-	
-		
-		<?php
-	
-	$sql4 = "SELECT * FROM `noticias`
-		 INNER JOIN series
-		 ON noticias.relac_series = series.idseries
-		 WHERE relac_series = $id AND idnoticias != $idNoticia ORDER BY idnoticias DESC
-		 LIMIT 3";	
-	
-$resultado = mysqli_query($strcon, $sql4)
-or die ("Não foi possível realizar a consulta ao banco de dados 666");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
-
-	$idnoticia = $linha["idnoticias"];	
-	$titulo = $linha["tituloNoticia"];
-	$subtitulo = $linha["subtitulo"];
-	$texto = $linha["texto"];	
-	$img = $linha["img"];
-	$tipo = $linha["tipoPost"];	
-	$rel_filme = $linha["relac_filmes"];	
-	$rel_serie = $linha["relac_series"];	
-	$rel_game = $linha["relac_games"];
-	
-?>	
-					
-							
-											
-				<div class="noticia">
-
-					<img src='img/noticias/<?php echo "$img";?>' alt=''>
-					<a href='noticia.php?news=<?php echo "$idnoticia";?>&categoria=Series'><h1><?php echo "$titulo";?></h1></a>
-
-				</div>
-<?php
-	
-}
-?>
-				
-										
-			</div>
-		
-	</section>
-
-<?php	
-		
-break;	
-		
-	case "Games":
 		
 		$sql2 = "SELECT * FROM $tabela
 					INNER JOIN desenvolvedoras
@@ -520,7 +341,7 @@ break;
 				<div class="noticia">
 
 					<img src='img/noticias/<?php echo "$img";?>' alt=''>
-					<a href='noticia.php?news=<?php echo "$idnoticia";?>&categoria=Cinema'><h1><?php echo "$titulo";?></h1></a>
+					<a href='noticia_games.php?news=<?php echo "$idnoticia";?>&categoria=Cinema'><h1><?php echo "$titulo";?></h1></a>
 
 				</div>
 <?php
@@ -532,13 +353,6 @@ break;
 		
 	</section>
 						
-
-<?php	
-		
-break;		
-		
-}
-?>	
 	
 	
 </aside>																	

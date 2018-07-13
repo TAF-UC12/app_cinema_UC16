@@ -1,0 +1,387 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ESTILO PARA PÁGINA INDEX
+	- Todos os estilos do index deve estar aqui
+	- Evitar duplicidade de ids e classes em outras folhas*/
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO DESKTOP DO INDEX
+	- Largura miníma: 769px
+
+######################################################*/
+
+
+@media only screen and (min-width: 769px){
+		
+	/*################################
+	SECTION DESKTOP
+		- Essas sections da versão desktop
+		- Sections do corpo do site e aside*/
+	
+	#corpo_container section {
+		width: 60%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		padding: 10px;
+		float: left;
+	}
+
+	
+	#corpo_container section h2{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 15px;
+	}
+	
+	#corpo_container aside {
+		width: 40%;
+		height: auto;
+		/*background-color: brown;*/
+		float: left;
+	}
+	
+	#corpo_container aside section {
+		width: 100%;
+		height: auto;
+		/*background-color: chartreuse;*/
+		overflow: auto;
+	}
+	
+	.midias_sociais img{
+		width: 80%;
+		height: auto;
+		margin-left: 10%;
+		/*background-color: chartreuse;*/
+	}
+	
+	.midias_sociais p {
+		font-size: 1.125em;
+		width: auto;
+		text-align: center;
+		text-shadow: 1px 1px 2px #000000;
+		/*background-color: #B5B5B5;*/
+		margin: 40px 0 0 0;
+	}
+	
+	.midias_sociais > div {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	
+	.midias_sociais > div a {
+		font-size: 3em;
+		color: #66ccff;
+		margin: 5px;
+		transition: .2s all ease;
+	}
+	
+	.midias_sociais > div a:hover {
+		color: #ffffff;
+		transition: .5s all ease;
+	}
+	
+
+	
+	/*################################
+	FORMULÁRIO DESKTOP
+		- Formulário de contato*/	
+	form {
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+
+	fieldset {
+		border-style: none;
+		margin-top: 20px;
+		padding: 5px 0;
+	}
+	
+	.grupo {
+		margin-top: 10px;
+	}
+
+	input[type=text], input[type=password], input[type=number], select, textarea {
+		width: 100%;
+		padding: 5px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		resize: vertical;
+	}
+
+	label {
+		padding: 15px 15px 5px 0;
+		display: inline-block;
+	}
+
+	button[type=submit] {
+		background-color: #1F3F60;
+		color: white;
+		padding: 8px 25px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		float: right;
+		transition: .5s all ease;
+	}
+
+	button[type=submit]:hover {
+		background-color: #45a049;
+	}
+
+	
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO TABLET E TELAS MENORES DO INDEX
+	- Largura miníma: 361px
+	- Largura máxima: 768px
+
+######################################################*/
+
+@media screen and (max-width: 768px) and (min-width: 361px){
+	
+	/*################################
+	ASIDE
+		- Fica oculto na versão mobile*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+	
+	
+	
+	
+	
+	/*################################
+	SECTIONS MOBILE E TABLET
+		- Essas sections da versão mobile e tablet
+		- Sections do aside na versão desktop fica oculta aqui*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+	#corpo_container section {
+		width: 100%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		padding: 10px;
+	}
+	
+	#corpo_container section h2{
+		width: 100%;
+		font-size: 1.275em;
+		font-weight: bold;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 15px;
+		float: left;
+	}
+	
+	#corpo_container section > p{
+		font-size: 1em;
+		width: auto;
+		float: right;
+		text-align: left;
+		padding: 2px 5px;
+	}
+	
+	#corpo_container aside section > p{
+		font-size: 1em;
+		width: auto;
+		float: right;
+		text-align: right;
+		border-radius: 20px;
+		padding: 2px 5px;
+	}
+	
+	
+	
+	
+		/*################################
+	FORMULÁRIO
+		- Formulário de contato*/	
+
+	fieldset {
+		width: 80%;
+		border-style: none;
+		margin: 20px auto;
+		padding: 5px 0;
+	}
+	
+	.grupo {
+		margin-top: 10px;
+	}
+
+	input[type=text], input[type=password], input[type=number], select, textarea {
+		width: 100%;
+		padding: 5px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		resize: vertical;
+	}
+
+	label {
+		padding: 15px 15px 5px 0;
+		display: inline-block;
+	}
+
+	button[type=submit] {
+		background-color: #1F3F60;
+		color: white;
+		padding: 8px 25px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		float: right;
+		transition: .5s all ease;
+	}
+
+	button[type=submit]:hover {
+		background-color: #45a049;
+	}
+
+
+	
+}
+
+
+
+
+/*######################################################
+
+MEDIA QUERY PARA VERSÃO MOBILE DO INDEX
+	- Largura máxima: 360px
+
+######################################################*/
+
+@media only screen and (max-width: 360px){
+	
+	/*################################
+	ASIDE
+		- Fica oculto na versão mobile*/
+	
+	#corpo_container aside {
+		display: none;
+	}
+	
+	
+	
+
+	/*################################
+	TÍTULOS DO SLIDESHOW
+		- Estilo do titulo dos slides*/
+	
+	
+	
+	
+	
+	/*################################
+	SECTIONS MOBILE E TABLET
+		- Essas sections da versão mobile e tablet
+		- Sections do aside na versão desktop fica oculta aqui*/
+	
+	#corpo_container section {
+		width: 100%;
+		height: auto;
+		/*background-color: blueviolet;*/
+		padding: 10px;
+	}
+	
+	
+	
+	
+	
+	
+	/*################################
+	SECTION
+		- Estilo do da lista de notícias em home*/
+	
+	#corpo_container section {
+		position: relative;
+		width: 100%;
+		height: auto;
+		/*background-color: #555454;*/
+	}
+
+	#corpo_container section > h2 {
+		width: auto;
+		font-size: 1.275em;
+		font-weight: bold;
+		text-align: center;
+		color: #FFFFFF;
+		text-shadow: 1px 1px 2px #000000;
+		margin-bottom: 10px;
+		float: left;
+	}
+	
+	#corpo_container section > p{
+		font-size: 1em;
+		width: auto;
+		float: right;
+		text-align: left;
+		padding: 2px 5px;
+	}
+	
+	
+	
+		/*################################
+	FORMULÁRIO DESKTOP
+		- Formulário de contato*/	
+
+	fieldset {
+		width: 100%;
+		border-style: none;
+		margin-top: 20px;
+		padding: 5px 0;
+	}
+	
+	.grupo {
+		margin-top: 10px;
+	}
+
+	input[type=text], input[type=password], input[type=number], select, textarea {
+		width: 100%;
+		padding: 5px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		resize: vertical;
+	}
+
+	label {
+		padding: 15px 15px 5px 0;
+		display: inline-block;
+	}
+
+	button[type=submit] {
+		background-color: #1F3F60;
+		color: white;
+		padding: 8px 25px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		float: right;
+		transition: .5s all ease;
+	}
+
+	button[type=submit]:hover {
+		background-color: #45a049;
+	}
+
+}

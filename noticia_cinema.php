@@ -3,10 +3,14 @@
 error_reporting(0);
 ini_set(“display_errors”, 0 );
 
-// atribui a uma variável $categoria para menud e filtro
-$categoria = $_GET["tipo"];
-
+// atribui título a aba do navegador
 $titulo_aba_bavegador = $_GET["titulo"];
+
+// atribui a uma variável $paginaLink toda a URL da página
+$paginaLink = $_SERVER['SCRIPT_NAME'];
+
+// atribui a variável $paginaLink apenas o nome da página
+$paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
 ?>
 
@@ -52,6 +56,7 @@ $titulo_aba_bavegador = $_GET["titulo"];
 	</div>	
 		
 	<div id="barrabusca">
+
 		
 	</div>
 							
@@ -130,6 +135,10 @@ while ($linha=mysqli_fetch_array($resultado)) {
 	$autorEmail = $linha["email"];
 	$imgAutor = $linha["imgAutor"];
 	
+	//Data devidamente configurada
+	$datapost = substr($data,8,2) . "/" .substr($data,5,2) . 
+	"/" . substr($data,0,4);
+	
 ?>	
 
 
@@ -177,15 +186,15 @@ while ($linha=mysqli_fetch_array($resultado)) {
 					
 					<img src="img/colaboradores/<?php echo "$imgAutor";?>" alt="">
 
-					<p>Notícia por: <?php echo "$autor";?></p>
+					<p>Por <?php echo " $autor";?></p>
 					<p><?php echo "$autorEmail";?></p>	
 				
 				</div>
 				
 				<div>
 					
-					<p>Postado em: </p>
-					<p><?php echo "$data";?></p>
+					<p>Postado em <?php echo " $datapost";?></p>
+					
 					
 				</div>
 				
@@ -244,11 +253,8 @@ s.setAttribute('data-timestamp', +new Date());
 	
 	<?php
 
-//SWITCH PUXA DADOS DE ACORDO COM O TIPO DE NOTÍCIA				
+// PUXA DADOS DE ACORDO COM O TIPO DE NOTÍCIA				
 
-switch ($tipocategoria) {
-		
-    case "Cinema":
 		
 $sql2 = "SELECT * FROM $tabela WHERE $coluna = $rel_filme";	
 	
@@ -339,217 +345,7 @@ while ($linha=mysqli_fetch_array($resultado)) {
 		
 	</section>
 
-<?php		
-		
-	break;
-		
-		
-		
-	case "Series":	
-		
-		$sql2 = "SELECT * FROM series
-		INNER JOIN emissoras
-		ON series.canal = emissoras.idemissoras
-		WHERE $coluna = $rel_serie";	
-	
-$resultado = mysqli_query($strcon, $sql2)
-or die ("Não foi possível realizar a consulta ao banco de dados 8");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
-
-$id = $linha["idseries"];
-$titulo = $linha["titulo"];
-$emissora = $linha["nomeEmissora"];
-$poster = $linha["poster"];	
-	
-	
-?>	
-		
-		<div id='titulo_relacionado'>
-		
-			<a href='ficha_tecnica.php?selecionado=<?php echo "$id";?>&categoria=<?php echo "$tabela";?>'><img src='img/posters/<?php echo "$poster";?>' alt=''></a>
-
-			<div>
-
-				<h1><?php echo "$titulo";?></h1>
-				<p><?php echo "$emissora";?></p>			
-
-			</div>
-		
-		</div>
-
-<?php
-}
-?>		
 						
-	</section>
-	
-	
-	<!--SECTION COM OUTRAS NOTÍCIAS RELACIONADAS AO TITULO OU EVENTO-->
-	<section>
-							
-		<h2>Notícias sobre <?php echo "$titulo";?></h2>
-					
-			<div id='noticia_relacionada'>
-	
-		
-		<?php
-	
-	$sql4 = "SELECT * FROM `noticias`
-		 INNER JOIN series
-		 ON noticias.relac_series = series.idseries
-		 WHERE relac_series = $id AND idnoticias != $idNoticia ORDER BY idnoticias DESC
-		 LIMIT 3";	
-	
-$resultado = mysqli_query($strcon, $sql4)
-or die ("Não foi possível realizar a consulta ao banco de dados 666");
-	
-while ($linha=mysqli_fetch_array($resultado)) {
-
-	$idnoticia = $linha["idnoticias"];	
-	$titulo = $linha["tituloNoticia"];
-	$subtitulo = $linha["subtitulo"];
-	$texto = $linha["texto"];	
-	$img = $linha["img"];
-	$tipo = $linha["tipoPost"];	
-	$rel_filme = $linha["relac_filmes"];	
-	$rel_serie = $linha["relac_series"];	
-	$rel_game = $linha["relac_games"];
-	
-?>	
-					
-							
-											
-				<div class="noticia">
-
-					<img src='img/noticias/<?php echo "$img";?>' alt=''>
-					<a href='noticia.php?news=<?php echo "$idnoticia";?>&categoria=Series'><h1><?php echo "$titulo";?></h1></a>
-
-				</div>
-<?php
-	
-}
-?>
-				
-										
-			</div>
-		
-	</section>
-
-<?php	
-		
-break;	
-		
-	case "Games":
-		
-		$sql2 = "SELECT * FROM $tabela
-					INNER JOIN desenvolvedoras
-					ON $tabela.desenvolvedora = desenvolvedoras.iddesenvolvedoras
-					INNER JOIN publicadoras
-					ON games.publicadora = publicadoras.idpublicadora
-					INNER JOIN games_has_consoles
-					ON games.idgames = games_has_consoles.games_idgames
-					INNER JOIN consoles
-					ON games_has_consoles.consoles_idconsoles = consoles.idconsoles
-					WHERE $coluna = $rel_game LIMIT 1";	
-	
-
-		$resultado = mysqli_query($strcon, $sql2)
-		or die ("Não foi possível realizar a consulta ao banco de dados game");
-
-		while ($linha=mysqli_fetch_array($resultado)) {
-
-		$id = $linha["idgames"];
-		$titulo = $linha["tituloGame"];
-		$desenvolvedora = $linha["nomeDesenvolvedora"];	
-		$publicadora = $linha["nomePublicadora"];
-		$lancamento = $linha["lancamentoGame"];
-		$poster = $linha["imgGame"];
-			
-?>	
-
-
-		<div id='titulo_relacionado'>
-		
-			<a href='ficha_tecnica.php?selecionado=<?php echo "$id";?>&categoria=<?php echo "$tabela";?>'><img src='img/posters/<?php echo "$poster";?>' alt=''></a>
-
-			<div>
-
-				<h1><?php echo "$titulo";?></h1>
-				<p><?php echo "$lancamento";?></p>
-				<p><?php echo "$desenvolvedora";?></p>
-				<p><?php echo "$publicadora";?></p>			
-
-			</div>
-		
-		</div>
-
-<?php
-} //fecgamento do switch geral
-?>		
-		
-		
-		
-					
-										
-														
-																				
-	</section>
-	
-	
-	<!--SECTION COM OUTRAS NOTÍCIAS RELACIONADAS AO TITULO OU EVENTO-->
-	<section>
-							
-		<h2>Notícias sobre <?php echo "$titulo";?></h2>
-					
-			<div id='noticia_relacionada'>
-	
-		
-		<?php
-	
-	$sql4 = "SELECT * FROM noticias WHERE relac_games = $id AND idnoticias != $idNoticia ORDER BY idnoticias DESC LIMIT 3";	
-	
-	$resultado = mysqli_query($strcon, $sql4)
-	or die ("Não foi possível realizar a consulta ao banco de dados");
-
-	while ($linha=mysqli_fetch_array($resultado)) {
-
-		$idnoticia = $linha["idnoticias"];	
-		$titulo = $linha["tituloNoticia"];
-		$subtitulo = $linha["subtitulo"];
-		$texto = $linha["texto"];	
-		$img = $linha["img"];
-		$tipo = $linha["tipoPost"];	
-		$rel_filme = $linha["relac_filmes"];	
-		$rel_serie = $linha["relac_series"];	
-		$rel_game = $linha["relac_games"];	
-
-	?>	
-					
-							
-											
-				<div class="noticia">
-
-					<img src='img/noticias/<?php echo "$img";?>' alt=''>
-					<a href='noticia.php?news=<?php echo "$idnoticia";?>&categoria=Cinema'><h1><?php echo "$titulo";?></h1></a>
-
-				</div>
-<?php
-}
-?>
-				
-										
-			</div>
-		
-	</section>
-						
-
-<?php	
-		
-break;		
-		
-}
-?>	
 	
 	
 </aside>																	

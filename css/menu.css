@@ -60,7 +60,25 @@
 	.ativo {
 		color: #66ccff;
 	  /*background-color:#ccddee;*/
-		border-bottom: 4px solid #66ccff;
+		border-bottom: 4px solid #ffffff;
+	}
+
+	.ativoC {
+		color: #66ccff;
+	  /*background-color:#ccddee;*/
+		border-bottom: 4px solid #1F3F60;
+	}
+
+	.ativoS {
+		color: #66ccff;
+	  /*background-color:#ccddee;*/
+		border-bottom: 4px solid #D19600;
+	}
+
+	.ativoG {
+		color: #66ccff;
+	  /*background-color:#ccddee;*/
+		border-bottom: 4px solid #007F06;
 	}
 
 	/*Style for dropdown links*/

@@ -60,6 +60,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 	</div>	
 		
 	<div id="barrabusca">
+
 		
 	</div>
 							
@@ -256,6 +257,11 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 			$data = $linha["dataPost"];
 			$autor = $linha["nome"];
 		
+		//Data devidamente configurada
+	$datapost = substr($data,8,2) . "/" .substr($data,5,2) . 
+	"/" . substr($data,0,4);
+	
+		
 				if ($id_tipo_post == 1){$tipo_categoria = "Cinema";}
 				if ($id_tipo_post == 2){$tipo_categoria = "Games";}
 				if ($id_tipo_post == 3){$tipo_categoria = "Series";}
@@ -284,7 +290,7 @@ $paginaLink = basename($_SERVER['SCRIPT_NAME']);
 
 						<button type='button' class='<?php echo $tipo_categoria; ?>'><?php echo "$tipo_icon";?></button>
 
-						<p><i class="far fa-calendar-alt"></i> <?php echo $data; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i> <?php echo $autor; ?></p>
+						<p><i class="far fa-calendar-alt"></i> <?php echo $datapost; ?> &thinsp;&thinsp;&thinsp;&thinsp;<i class="fas fa-user"></i> <?php echo $autor; ?></p>
 
 					</div>
 
