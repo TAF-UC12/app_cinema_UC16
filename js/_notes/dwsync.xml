@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="js-image-slider.js" server="192.168.1.10//var/www/html/" local="131746356489939640" remote="131746471800000000" Dst="1" />
-<file name="jquery-3.3.1.js" server="192.168.1.10//var/www/html/" local="131746356489459232" remote="131746471800000000" Dst="1" />
-<file name="jssor.slider-27.1.0.min.js" server="192.168.1.10//var/www/html/" local="131746356490348435" remote="131746471800000000" Dst="1" />
-<file name="service-worker.js" server="192.168.1.10//var/www/html/" local="131746356491070967" remote="131746471800000000" Dst="1" />
-<file name="npm.js" server="192.168.1.10//var/www/html/" local="131746356490719210" remote="131746471800000000" Dst="1" />
-<file name="app.js" server="192.168.1.10//var/www/html/" local="131746356488159641" remote="131746471800000000" Dst="1" />
-<file name="aba_info_titulos.js" server="192.168.1.10//var/www/html/" local="131746356442485212" remote="131746471800000000" Dst="1" />
-<file name="aba_tipo_noticias.js" server="192.168.1.10//var/www/html/" local="131746356442836889" remote="131746471800000000" Dst="1" />
-<file name="chama_service-worker.js" server="192.168.1.10//var/www/html/" local="131746356488443001" remote="131746471800000000" Dst="1" />
-<file name="filtro_titulos.js" server="192.168.1.10//var/www/html/" local="131744209403508811" remote="131746471800000000" Dst="1" />
-<file name="slideshow.js" server="192.168.1.10//var/www/html/" local="131754757194905648" remote="131754864600000000" Dst="1" />
-<file name="aba_seletor_noticias.js" server="192.168.1.10//var/www/html/" local="131748616545323797" remote="131748724200000000" Dst="1" />
+<file name="js-image-slider.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="jquery-3.3.1.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="jssor.slider-27.1.0.min.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="service-worker.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="npm.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="app.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="aba_info_titulos.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="aba_tipo_noticias.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="chama_service-worker.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="filtro_titulos.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="slideshow.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="aba_seletor_noticias.js" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762591400000000" Dst="1" />
+<file name="aba_info_titulos.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626990000000" Dst="1" />
+<file name="aba_seletor_noticias.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626990000000" Dst="1" />
+<file name="aba_tipo_noticias.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627000000000" Dst="1" />
+<file name="app.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627000000000" Dst="1" />
+<file name="chama_service-worker.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627000000000" Dst="1" />
+<file name="filtro_titulos.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627000000000" Dst="1" />
+<file name="jquery-3.3.1.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627010000000" Dst="1" />
+<file name="js-image-slider.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627010000000" Dst="1" />
+<file name="jssor.slider-27.1.0.min.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627010000000" Dst="1" />
+<file name="npm.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627020000000" Dst="1" />
+<file name="service-worker.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627020000000" Dst="1" />
+<file name="slideshow.js" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800627020000000" Dst="1" />
 </dwsync>

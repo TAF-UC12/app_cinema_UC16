@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="categorias.css" server="192.168.1.10//var/www/html/" local="131746355985543168" remote="131746464000000000" Dst="1" />
-<file name="estilo_v2.css" server="192.168.1.10//var/www/html/" local="131755796447659769" remote="131755904400000000" Dst="1" />
-<file name="ficha_tecnica.css" server="192.168.1.10//var/www/html/" local="131754047066331000" remote="131754154800000000" Dst="1" />
-<file name="index_v2.css" server="192.168.1.10//var/www/html/" local="131753943777035879" remote="131754054600000000" Dst="1" />
-<file name="lancamentos.css" server="192.168.1.10//var/www/html/" local="131746355987774359" remote="131746464000000000" Dst="1" />
-<file name="lancamentos_v2.css" server="192.168.1.10//var/www/html/" local="131751143041502272" remote="131751250800000000" Dst="1" />
-<file name="menu.css" server="192.168.1.10//var/www/html/" local="131755784086721489" remote="131755891800000000" Dst="1" />
-<file name="noticias.css" server="192.168.1.10//var/www/html/" local="131751379736529761" remote="131751487200000000" Dst="1" />
-<file name="noticias_index_v2.css" server="192.168.1.10//var/www/html/" local="131755801774527245" remote="131755909200000000" Dst="1" />
-<file name="noticias_v2.css" server="192.168.1.10//var/www/html/" local="131755815540120833" remote="131755923000000000" Dst="1" />
-<file name="contato.css" server="192.168.1.10//var/www/html/" local="131755757092080487" remote="131755864800000000" Dst="1" />
+<file name="categorias.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="estilo_v2.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="ficha_tecnica.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="index_v2.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="lancamentos.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="lancamentos_v2.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="menu.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="noticias.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="noticias_index_v2.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="noticias_v2.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="contato.css" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590200000000" Dst="1" />
+<file name="categorias.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626680000000" Dst="1" />
+<file name="contato.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626680000000" Dst="1" />
+<file name="estilo_v2.css" server="192.168.1.4//var/www/html/" local="131770204010156648" remote="131800626680000000" Dst="1" />
+<file name="ficha_tecnica.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626680000000" Dst="1" />
+<file name="index_v2.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626690000000" Dst="1" />
+<file name="lancamentos.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626690000000" Dst="1" />
+<file name="lancamentos_v2.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626690000000" Dst="1" />
+<file name="menu.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626690000000" Dst="1" />
+<file name="noticias.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626690000000" Dst="1" />
+<file name="noticias_index_v2.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626690000000" Dst="1" />
+<file name="noticias_v2.css" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626700000000" Dst="1" />
+<file name="tendencia.css" server="192.168.1.4//var/www/html/" local="131759940650899243" remote="131800626700000000" Dst="1" />
 </dwsync>

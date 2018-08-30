@@ -270,19 +270,15 @@ $dataAtual = date('d/m/y');
 			
 				//Agora é realizar a querie de busca no banco de dados
 				
-				$sql = "SELECT * FROM lancamentos
-						INNER JOIN lancamentos_has_filmes
-						ON lancamentos.idlancamentos = lancamentos_has_filmes.lancamentos_idlancamentos
-						INNER JOIN filmes
-						ON lancamentos_has_filmes.filmes_idfilmes = filmes.idfilmes
-						ORDER BY filmes.lancamento ASC LIMIT 2";	
+				$sql = "SELECT * FROM filmes
+						WHERE filmes.lancamento BETWEEN CURDATE() - INTERVAL 120 DAY AND CURDATE() LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
 
 				while ($linha=mysqli_fetch_array($resultado)) {
 
-					$idtitulo = $linha["filmes_idfilmes"];	
+					$idtitulo = $linha["idfilmes"];	
 					$titulo = $linha["titulo"];	
 					$imgPoster = $linha["poster"];
 					$lancamento = $linha["lancamento"]	
@@ -307,19 +303,15 @@ $dataAtual = date('d/m/y');
 			
 				//Agora é realizar a querie de busca no banco de dados
 				
-				$sql = "SELECT * FROM lancamentos
-						INNER JOIN lancamentos_has_series
-						ON lancamentos.idlancamentos = lancamentos_has_series.lancamentos_idlancamentos
-						INNER JOIN series
-						ON lancamentos_has_series.series_idseries = series.idseries
-						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
+				$sql = "SELECT * FROM series
+						WHERE series.lancamento BETWEEN CURDATE() - INTERVAL 120 DAY AND CURDATE() LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
 
 				while ($linha=mysqli_fetch_array($resultado)) {
 
-					$idtitulo = $linha["series_idseries"];	
+					$idtitulo = $linha["idseries"];	
 					$titulo = $linha["titulo"];	
 					$imgPoster = $linha["poster"];
 				?>
@@ -343,19 +335,15 @@ $dataAtual = date('d/m/y');
 			
 				//Agora é realizar a querie de busca no banco de dados
 				
-				$sql = "SELECT * FROM lancamentos
-						INNER JOIN lancamentos_has_games
-						ON lancamentos.idlancamentos = lancamentos_has_games.lancamentos_idlancamentos
-						INNER JOIN games
-						ON lancamentos_has_games.games_idgames = games.idgames
-						ORDER BY lancamentos.idlancamentos DESC LIMIT 2";	
+				$sql = "SELECT * FROM games
+						WHERE games.lancamentoGame BETWEEN CURDATE() - INTERVAL 120 DAY AND CURDATE() LIMIT 2";	
 
 				$resultado = mysqli_query($strcon, $sql)
 				or die ("Não foi possível realizar a consulta ao banco de dados");
 
 				while ($linha=mysqli_fetch_array($resultado)) {
 
-					$idtitulo = $linha["games_idgames"];	
+					$idtitulo = $linha["idgames"];	
 					$titulo = $linha["tituloGame"];	
 					$imgPoster = $linha["imgGame"];
 				?>

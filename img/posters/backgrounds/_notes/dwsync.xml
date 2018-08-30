@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="background_filmes.jpg" server="192.168.1.10//var/www/html/" local="131724618923978377" remote="131725414800000000" Dst="1" />
-<file name="background_games.jpg" server="192.168.1.10//var/www/html/" local="131724617517647269" remote="131725414800000000" Dst="1" />
-<file name="background_series.jpg" server="192.168.1.10//var/www/html/" local="131724618768516428" remote="131725414800000000" Dst="1" />
+<file name="background_filmes.jpg" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590800000000" Dst="1" />
+<file name="background_games.jpg" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590800000000" Dst="1" />
+<file name="background_series.jpg" server="192.168.1.10//var/www/html/" local="131759061860000000" remote="131762590800000000" Dst="1" />
+<file name="background_filmes.jpg" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626890000000" Dst="1" />
+<file name="background_games.jpg" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626900000000" Dst="1" />
+<file name="background_series.jpg" server="192.168.1.4//var/www/html/" local="131759061860000000" remote="131800626900000000" Dst="1" />
 </dwsync>
